@@ -1,7 +1,5 @@
 <template>
-  <v-container class="pa-0" fluid>
-    <Editor />
-  </v-container>
+  <Editor />
 </template>
 
 <script>
@@ -10,5 +8,5 @@ export default {
   components: {
     Editor
   }
-}
+};
 </script>

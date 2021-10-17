@@ -1,51 +1,65 @@
 <template>
-  <v-container class="pa-0" fluid>
-    <div id="gjs">
-      <h1>Hello World Component!</h1>
-    </div>
+  <v-container fluid class="pa-0 editorContainer">
+    <v-sheet class="editorSheet ma-0 pa-0" height="100vh">
+      <div class="panel__top">
+        <div class="left">
+          <div class="panel__devices"></div>
+          <div title="Railer editor" class="logo">
+            <img src="../assets/images/logoLight.png" class="logo_image" />
+            <span>Railer</span>
+          </div>
+        </div>
+        <div class="panel__basic-actions"></div>
+      </div>
+      <div class="editor-row">
+        <div class="panel__left">
+          <div class="blocks-container" id="blocks"></div>
+        </div>
+        <div class="editor-canvas">
+          <div id="gjs"></div>
+        </div>
+        <div class="panel__right">
+          <div class="traits-container"></div>
+          <div class="styles-container"></div>
+        </div>
+      </div>
+    </v-sheet>
   </v-container>
 </template>
 
 <script>
-import "grapesjs/dist/css/grapes.min.css"
-import grapesjs from "grapesjs"
+import emailEditor from "./editor"
 export default {
+  data: () => ({
+    gjsHeight: 600,
+    gjsWidth: 600,
+  }),
+  beforeMount() {
+    localStorage.setItem("#gjscomponents", "")
+    localStorage.setItem("#gjscss", "")
+    localStorage.setItem("#gjshtml", "")
+    localStorage.setItem("#gjsstyles", "")
+  },
   mounted() {
     this.$nextTick(() => {
-      this.initEditor()
+      const editorSheet = document.querySelector(".editorSheet")
+      this.gjsHeight = editorSheet.offsetHeight
+      this.gjsWidth = editorSheet.offsetWidth
+
+      emailEditor()
+
+      // Hide Scrollbar
+      let elHtml = document.getElementsByTagName("html")[0]
+      elHtml.style.overflowY = "hidden"
     })
   },
-  methods: {
-    initEditor() {
-      const editor = grapesjs.init({
-        // Indicate where to init the editor. You can also pass an HTMLElement
-        container: "#gjs",
-        // Get the content for the canvas directly from the element
-        // As an alternative we could use: `components: '<h1>Hello World Component!</h1>'`,
-        fromElement: true,
-        // Size of the editor
-        height: "300px",
-        width: "auto",
-        // Disable the storage manager for the moment
-        storageManager: false,
-        // Avoid any default panel
-        panels: { defaults: [] },
-      })
-    },
+  destroyed() {
+    let elHtml = document.getElementsByTagName("html")[0]
+    elHtml.style.overflowY = null
   },
 }
 </script>
 
-<style scoped>
-/* Let's highlight canvas boundaries */
-#gjs {
-  border: 3px solid #444;
-}
-
-/* Reset some default styling */
-.gjs-cv-canvas {
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
+<style>
+@import url(./assets/editor.css);
 </style>

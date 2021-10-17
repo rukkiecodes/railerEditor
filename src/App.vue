@@ -9,9 +9,12 @@
 <script>
 export default {
   name: "App",
-}
+};
 </script>
 
 <style>
 @import url(./assets/icon/css/materialdesignicons.min.css);
+::-webkit-scrollbar {
+  width: 0px;
+}
 </style>
