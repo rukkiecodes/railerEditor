@@ -2,7 +2,7 @@
 import nav from "../images/nav.svg"
 
 export default {
-  category: "Extra",
+  category: "Components",
   label: `<div class="styleBlock"><img style="width: 80%" src="${nav}"><span>Navbar</span></div>`,
   attributes: { class: "nav_block" },
   content: `

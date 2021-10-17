@@ -21,6 +21,9 @@ import gridItem from "./blocks/gridItem"
 import listItems from "./blocks/listItems"
 import form from "./blocks/form"
 import navbar from "./blocks/navbar"
+import textInput from "./blocks/textInput"
+import fileInput from "./blocks/fileInput"
+import radioInput from "./blocks/radioInput"
 
 export default () => {
   const editor = grapesjs.init({
@@ -57,12 +60,12 @@ export default () => {
               },
             },
             {
-              id: "device-iPad",
+              id: "device-tablet",
               label: `<span class="mdi mdi-tablet-ipad"></span>`,
-              command: "set-device-iPad",
+              command: "set-device-tablet",
               togglable: false,
               attributes: {
-                title: "iPad",
+                title: "Tablet",
                 style: "font-size: .9em",
               },
             },
@@ -92,6 +95,14 @@ export default () => {
       appendTo: ".styles-container",
       sectors: [
         {
+          name: "Coloring",
+          open: true,
+          // Use built-in properties
+          buildProps: ["color", "background-color"],
+          // Use `properties` to define/override single property
+          properties: [],
+        },
+        {
           name: "Box model",
           open: true,
           // Use built-in properties
@@ -111,16 +122,8 @@ export default () => {
           ],
         },
         {
-          name: "Coloring",
-          open: false,
-          // Use built-in properties
-          buildProps: ["color", "background-color"],
-          // Use `properties` to define/override single property
-          properties: [],
-        },
-        {
           name: "Extra",
-          open: false,
+          open: true,
           buildProps: [
             "background-color",
             "box-shadow",
@@ -153,7 +156,7 @@ export default () => {
           width: "", // default size
         },
         {
-          name: "Ipad",
+          name: "tablet",
           width: "620px", // this value will be used on canvas width
           widthMedia: "768px", // this value will be used in CSS @media
         },
@@ -172,8 +175,8 @@ export default () => {
     // Disable the storage manager for the moment
     storageManager: false,
   })
-
   editor.addComponents(placeholder)
+
   // BLOCK MANAGER
   const bm = editor.BlockManager
 
@@ -196,6 +199,9 @@ export default () => {
   bm.add("listItems-basic", listItems)
   bm.add("form-form", form)
   bm.add("nav-extra", navbar)
+  bm.add("textInput-extra", textInput)
+  bm.add("fileInput-extra", fileInput)
+  bm.add("radioInput-extra", radioInput)
 
   editorConfig(editor)
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 31.75 31.75"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="radioInput.svg"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="9.5315274"
+     inkscape:cx="59.644166"
+     inkscape:cy="57.650781"
+     inkscape:window-width="1366"
+     inkscape:window-height="731"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:none;fill-opacity:0.998614;stroke-width:0.74083333;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stroke:#a0aabf;stroke-opacity:0.98823529;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path29"
+       cx="16.302235"
+       cy="13.279329"
+       r="9.4914789" />
+    <ellipse
+       style="fill:none;fill-opacity:0.998614;stroke:#a0aabf;stroke-width:4.31853;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.988235;paint-order:markers stroke fill"
+       id="path29-3"
+       cx="16.478359"
+       cy="13.207299"
+       rx="4.1918578"
+       ry="4.0933762" />
+  </g>
+</svg>

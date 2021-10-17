@@ -2,14 +2,30 @@
   <v-container fluid class="pa-0 editorContainer">
     <v-sheet class="editorSheet ma-0 pa-0" height="100vh">
       <div class="panel__top">
-        <div class="panel__devices"></div>
         <div title="Railer editor" class="logo">
           <img src="../assets/images/logoLight.png" class="logo_image" />
           <span>Railer</span>
         </div>
-        <!-- <div class="left">
-        </div> -->
-        <div class="panel__basic-actions"></div>
+        <div class="panel__devices"></div>
+        <div class="right">
+          <div class="panel__basic-actions"></div>
+          <v-btn
+            dark
+            small
+            depressed
+            class="mr-3 text-capitalize font-weight-bold"
+            color="green accent-4"
+            >Save</v-btn
+          >
+          <v-btn
+            dark
+            small
+            depressed
+            class="mr-2 text-capitalize font-weight-bold"
+            color="deep-purple accent-4"
+            >Preview</v-btn
+          >
+        </div>
       </div>
       <div class="editor-row">
         <div class="panel__left">

@@ -20,19 +20,6 @@ export default (editor) => {
         },
       },
       {
-        id: "preview",
-        className: "btn-preview",
-        label: `<span class="mdi mdi-eye-outline"></span>`,
-        context: "preview",
-        attributes: {
-          title: "Preview",
-          class: "panel-buttons",
-        },
-        command(editor) {
-          console.log(editor)
-        },
-      },
-      {
         id: "export",
         className: "btn-open-export",
         label: `<span class="mdi mdi-code-tags"></span>`,
@@ -134,8 +121,8 @@ export default (editor) => {
   editor.Commands.add("set-device-desktop", {
     run: (editor) => editor.setDevice("Desktop"),
   })
-  editor.Commands.add("set-device-iPad", {
-    run: (editor) => editor.setDevice("Ipad"),
+  editor.Commands.add("set-device-tablet", {
+    run: (editor) => editor.setDevice("tablet"),
   })
   editor.Commands.add("set-device-mobile", {
     run: (editor) => editor.setDevice("Mobile"),
