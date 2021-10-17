@@ -1,0 +1,39 @@
+{
+  "name": "railer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@syncfusion/ej2-vue-documenteditor": "^19.2.59",
+    "axios": "^0.21.3",
+    "core-js": "^3.6.5",
+    "docx": "^6.0.3",
+    "emmet": "git+https://github.com/cloud9ide/emmet-core.git#41973fcc70392864c7a469cf5dcd875b88b93d4a",
+    "file-saver": "^2.0.5",
+    "grapesjs": "^0.17.25",
+    "grapesjs-preset-webpage": "^0.1.11",
+    "gsap": "^3.7.1",
+    "quill": "^1.3.7",
+    "request": "^2.88.2",
+    "vue": "^2.6.11",
+    "vue-cookie": "^1.1.4",
+    "vue-router": "^3.2.0",
+    "vue2-ace-editor": "^0.0.15",
+    "vuetify": "^2.4.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.2",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  }
+}
