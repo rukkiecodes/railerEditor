@@ -3,7 +3,7 @@ import form from "../images/form.svg"
 
 export default {
   category: "Form",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${form}"><span>Form</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${form}"><span>Form</span></div>`,
   attributes: { class: "form_block" },
   content: `
       <form class="form">

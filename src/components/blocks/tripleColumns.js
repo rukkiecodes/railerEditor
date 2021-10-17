@@ -2,7 +2,7 @@
 import tripleColumn from "../images/tripleColumn.svg"
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${tripleColumn}"><span>1/3 Section</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${tripleColumn}"><span>1/3 Section</span></div>`,
   attributes: { class: "1/3 Section" },
   content: [
     `

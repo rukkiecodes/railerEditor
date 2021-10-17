@@ -2,7 +2,7 @@
 import doubleFractionColumn from "../images/doubleFractionColumn.svg"
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${doubleFractionColumn}"><span>3/7 Section</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${doubleFractionColumn}"><span>3/7 Section</span></div>`,
   attributes: { title: "3/7 Section" },
   content: [
     `

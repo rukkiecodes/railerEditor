@@ -2,13 +2,13 @@
   <v-container fluid class="pa-0 editorContainer">
     <v-sheet class="editorSheet ma-0 pa-0" height="100vh">
       <div class="panel__top">
-        <div class="left">
-          <div class="panel__devices"></div>
-          <div title="Railer editor" class="logo">
-            <img src="../assets/images/logoLight.png" class="logo_image" />
-            <span>Railer</span>
-          </div>
+        <div class="panel__devices"></div>
+        <div title="Railer editor" class="logo">
+          <img src="../assets/images/logoLight.png" class="logo_image" />
+          <span>Railer</span>
         </div>
+        <!-- <div class="left">
+        </div> -->
         <div class="panel__basic-actions"></div>
       </div>
       <div class="editor-row">

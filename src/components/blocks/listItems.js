@@ -2,7 +2,7 @@
 import listItems from "../images/listItems.svg"
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${listItems}"><span>List items</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${listItems}"><span>List items</span></div>`,
   attributes: { title: "List items" },
   content: [
     `

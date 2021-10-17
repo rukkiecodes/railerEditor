@@ -2,7 +2,7 @@
 import gridItems from "../images/gridItems.svg"
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${gridItems}"><span>Grid items</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${gridItems}"><span>Grid items</span></div>`,
   attributes: { title: "Grid items" },
   content: [
     `

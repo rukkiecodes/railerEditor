@@ -2,7 +2,7 @@
 import button from "../images/button.svg"
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${button}"><span>Button</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${button}"><span>Button</span></div>`,
   attributes: { title: "Button" },
   content: [
     `

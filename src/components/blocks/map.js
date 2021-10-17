@@ -3,7 +3,7 @@ import map from "../images/map.svg"
 
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${map}"><span>Map</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${map}"><span>Map</span></div>`,
   attributes: { class: "map_block" },
   content: [
     `

@@ -2,7 +2,7 @@
 import doubleColumn from "../images/doubleColumn.svg"
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${doubleColumn}"><span>1/2 Section</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${doubleColumn}"><span>1/2 Section</span></div>`,
   attributes: { title: "1/2 Section" },
   content: [
     `

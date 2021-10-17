@@ -2,7 +2,7 @@
 import divide from "../images/divide.svg"
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${divide}"><span>Divider</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${divide}"><span>Divider</span></div>`,
   attributes: { title: "Divider" },
   content: [
     `

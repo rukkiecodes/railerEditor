@@ -3,7 +3,7 @@ import singleColumn from "../images/singleColumn.svg"
 
 export default {
   category: "Basic",
-  label: `<div class="styleBlock"><img style="width: 90%" src="${singleColumn}"><span>1 Section</span></div>`,
+  label: `<div class="styleBlock"><img style="width: 80%" src="${singleColumn}"><span>1 Section</span></div>`,
   attributes: { title: "1 Sectiom" },
   content: [
     `
