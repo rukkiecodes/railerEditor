@@ -16,6 +16,10 @@ export default {
           <input type="email" placeholder="Type here your email" class="input" />
         </div>
         <div class="form-group">
+          <label class="label">Password</label>
+          <input type="password" placeholder="Type here your password" class="input" />
+        </div>
+        <div class="form-group">
           <label class="label">Gender</label>
           <input type="checkbox" value="M" class="checkbox" />
           <label class="checkbox-label">Male</label>
