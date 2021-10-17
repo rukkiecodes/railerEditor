@@ -24,6 +24,8 @@ import navbar from "./blocks/navbar"
 import textInput from "./blocks/textInput"
 import fileInput from "./blocks/fileInput"
 import radioInput from "./blocks/radioInput"
+import checkboxInput from "./blocks/checkboxInput"
+import dateInput from "./blocks/dateInput"
 
 export default () => {
   const editor = grapesjs.init({
@@ -202,6 +204,8 @@ export default () => {
   bm.add("textInput-extra", textInput)
   bm.add("fileInput-extra", fileInput)
   bm.add("radioInput-extra", radioInput)
+  bm.add("checkboxInput-extra", checkboxInput)
+  bm.add("dateInput-extra", dateInput)
 
   editorConfig(editor)
 }
