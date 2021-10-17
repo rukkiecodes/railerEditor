@@ -22,10 +22,13 @@ import listItems from "./blocks/listItems"
 import form from "./blocks/form"
 import navbar from "./blocks/navbar"
 import textInput from "./blocks/textInput"
+import emailInput from "./blocks/emailInput"
+import passwordInput from "./blocks/passwordInput"
 import fileInput from "./blocks/fileInput"
 import radioInput from "./blocks/radioInput"
 import checkboxInput from "./blocks/checkboxInput"
 import dateInput from "./blocks/dateInput"
+import datetimeLocal from "./blocks/datetimeLocal"
 
 export default () => {
   const editor = grapesjs.init({
@@ -124,7 +127,7 @@ export default () => {
           ],
         },
         {
-          name: "Extra",
+          name: "components",
           open: true,
           buildProps: [
             "background-color",
@@ -200,12 +203,15 @@ export default () => {
   bm.add("gridItem-basic", gridItem)
   bm.add("listItems-basic", listItems)
   bm.add("form-form", form)
-  bm.add("nav-extra", navbar)
-  bm.add("textInput-extra", textInput)
-  bm.add("fileInput-extra", fileInput)
-  bm.add("radioInput-extra", radioInput)
-  bm.add("checkboxInput-extra", checkboxInput)
-  bm.add("dateInput-extra", dateInput)
+  bm.add("nav-components", navbar)
+  bm.add("textInput-components", textInput)
+  bm.add("emailInput-components", emailInput)
+  bm.add("passwordInput-components", passwordInput)
+  bm.add("fileInput-components", fileInput)
+  bm.add("radioInput-components", radioInput)
+  bm.add("checkboxInput-components", checkboxInput)
+  bm.add("dateInput-components", dateInput)
+  bm.add("datetimeLocal-components", datetimeLocal)
 
   editorConfig(editor)
 }
