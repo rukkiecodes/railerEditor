@@ -4,8 +4,7 @@ export default {
   category: "Basic",
   label: `<div class="styleBlock"><img style="width: 80%" src="${gridItems}"><span>Grid items</span></div>`,
   attributes: { title: "Grid items" },
-  content: [
-    `
+  content: `
       <table class="grid-item-row" style="box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-bottom: 10px; margin-left: auto; padding-top: 5px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; width: 100%;" width="100%">
         <tbody style="box-sizing: border-box;">
           <tr style="box-sizing: border-box;">
@@ -59,5 +58,4 @@ export default {
         </tbody>
       </table>
     `,
-  ],
 }

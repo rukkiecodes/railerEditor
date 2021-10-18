@@ -4,8 +4,7 @@ export default {
   category: "Basic",
   label: `<div class="styleBlock"><img style="width: 80%" src="${listItems}"><span>List items</span></div>`,
   attributes: { title: "List items" },
-  content: [
-    `
+  content: `
       <table class="list-item" style="box-sizing: border-box; height: auto; width: 100%; margin-top: 0px; margin-right: auto; margin-bottom: 10px; margin-left: auto; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;" width="100%">
         <tbody style="box-sizing: border-box;">
           <tr style="box-sizing: border-box;">
@@ -53,5 +52,4 @@ export default {
         </tbody>
       </table>
     `,
-  ],
 }

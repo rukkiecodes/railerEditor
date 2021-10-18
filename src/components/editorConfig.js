@@ -61,7 +61,6 @@ export default (editor) => {
         /* IE11 */
         elem.msRequestFullscreen()
       }
-      // console.log(editor)
     },
   })
   editor.Commands.add("clear-canvas", {

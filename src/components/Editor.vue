@@ -51,12 +51,6 @@ export default {
     gjsHeight: 600,
     gjsWidth: 600,
   }),
-  beforeMount() {
-    localStorage.setItem("#gjscomponents", "")
-    localStorage.setItem("#gjscss", "")
-    localStorage.setItem("#gjshtml", "")
-    localStorage.setItem("#gjsstyles", "")
-  },
   mounted() {
     this.$nextTick(() => {
       const editorSheet = document.querySelector(".editorSheet")

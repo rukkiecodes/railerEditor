@@ -1,6 +1,6 @@
 <template>
-  <v-container class="pa-0">
-    <v-sheet class="overflow-y-auto" v-html="html"></v-sheet>
+  <v-container class="pa-0 ma-auto">
+    <v-sheet class="overflow-y-auto mx-auto" v-html="html"></v-sheet>
   </v-container>
 </template>
 
@@ -14,10 +14,6 @@ export default {
     this.$nextTick(() => {
       this.loadHtml()
     })
-  },
-
-  updated() {
-    this.loadHtml()
   },
 
   methods: {

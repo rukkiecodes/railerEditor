@@ -4,8 +4,7 @@ export default {
   category: "Basic",
   label: `<div class="styleBlock"><img style="width: 80%" src="${tripleColumn}"><span>1/3 Section</span></div>`,
   attributes: { class: "1/3 Section" },
-  content: [
-    `
+  content: `
           <div class="row">
             <div class="cell">
             </div>
@@ -32,6 +31,6 @@ export default {
                 flex-wrap:wrap;
               }
             }
-          </style>`,
-  ],
+          </style>
+    `,
 }

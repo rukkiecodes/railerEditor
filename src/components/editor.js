@@ -1,7 +1,7 @@
 import "./assets/grapes.css"
 import grapesjs from "grapesjs"
+
 import editorConfig from "./editorConfig"
-import placeholder from "./scripts/placeholder"
 
 import oneColumn from "./blocks/oneColumn"
 import twoColumns from "./blocks/twoColumns"
@@ -58,7 +58,7 @@ export default () => {
               label: `<span class="mdi mdi-desktop-mac"></span>`,
               command: "set-device-desktop",
               active: true,
-              togglable: false,
+              togglable: true,
               attributes: {
                 title: "Desktop",
                 style: "font-size: 1.4em",
@@ -68,7 +68,7 @@ export default () => {
               id: "device-tablet",
               label: `<span class="mdi mdi-tablet-ipad"></span>`,
               command: "set-device-tablet",
-              togglable: false,
+              togglable: true,
               attributes: {
                 title: "Tablet",
                 style: "font-size: .9em",
@@ -78,7 +78,7 @@ export default () => {
               id: "device-mobile",
               label: `<span class="mdi mdi-cellphone-android"></span>`,
               command: "set-device-mobile",
-              togglable: false,
+              togglable: true,
               attributes: {
                 title: "Mobile",
                 style: "font-size: .8em",
@@ -177,10 +177,24 @@ export default () => {
       appendTo: ".traits-container",
     },
 
+    canvas: {
+      styles: [
+        "https://use.fontawesome.com/releases/v5.8.2/css/all.css",
+        "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
+        "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css",
+        "https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css",
+      ],
+      scripts: [
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js",
+      ],
+    },
+
     // Disable the storage manager for the moment
     storageManager: false,
   })
-  editor.addComponents(placeholder)
 
   // BLOCK MANAGER
   const bm = editor.BlockManager

@@ -4,8 +4,7 @@ export default {
   category: "Basic",
   label: `<div class="styleBlock"><img style="width: 80%" src="${doubleColumn}"><span>1/2 Section</span></div>`,
   attributes: { title: "1/2 Section" },
-  content: [
-    `
+  content: `
           <div class="row">
             <div class="cell">
             </div>
@@ -31,5 +30,4 @@ export default {
               }
             }
           </style>`,
-  ],
 }

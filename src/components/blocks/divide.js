@@ -4,8 +4,7 @@ export default {
   category: "Basic",
   label: `<div class="styleBlock"><img style="width: 80%" src="${divide}"><span>Divider</span></div>`,
   attributes: { title: "Divider" },
-  content: [
-    `
+  content: `
       <table id="im7j" style="box-sizing: border-box; width: 100%; margin-top: 10px; margin-bottom: 10px;" width="100%">
         <tbody style="box-sizing: border-box;">
           <tr style="box-sizing: border-box;">
@@ -15,5 +14,4 @@ export default {
         </tbody>
       </table>
     `,
-  ],
 }

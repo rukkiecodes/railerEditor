@@ -2,8 +2,7 @@ export default {
   category: "Basic",
   label: "Link",
   attributes: { class: "fa fa-link" },
-  content: [
-    `
+  content: `
         <a id="i2qi">Link</a>
         <style>
           #i2qi{
@@ -11,5 +10,4 @@ export default {
           }
         </style>
         `,
-  ],
 }
