@@ -1,3 +1,4 @@
+// @ts-nocheck
 import buttons from "./buttons"
 
 export default (editor) => {
@@ -48,7 +49,17 @@ export default (editor) => {
   })
   editor.Commands.add("fullscreen", {
     run: (editor) => {
-      console.log(editor)
+      const elem = document.querySelector(".editorContainer")
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen()
+      } else if (elem.webkitRequestFullscreen) {
+        /* Safari */
+        elem.webkitRequestFullscreen()
+      } else if (elem.msRequestFullscreen) {
+        /* IE11 */
+        elem.msRequestFullscreen()
+      }
+      // console.log(editor)
     },
   })
   editor.Commands.add("import", {
