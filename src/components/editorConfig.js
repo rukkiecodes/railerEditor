@@ -1,7 +1,7 @@
 // @ts-nocheck
 import store from "../store"
 import router from "../router"
-import buttons from "./buttons"
+import buttons from "./scripts/buttons"
 
 export default (editor) => {
   editor.Panels.addPanel({
