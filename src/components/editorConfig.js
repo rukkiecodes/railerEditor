@@ -1,4 +1,6 @@
 // @ts-nocheck
+import store from "../store"
+import router from "../router"
 import buttons from "./buttons"
 
 export default (editor) => {
@@ -62,11 +64,6 @@ export default (editor) => {
       // console.log(editor)
     },
   })
-  editor.Commands.add("import", {
-    run: (editor) => {
-      console.log(editor)
-    },
-  })
   editor.Commands.add("clear-canvas", {
     run: (editor) => {
       const verify = confirm(
@@ -76,6 +73,13 @@ export default (editor) => {
         editor.DomComponents.clear()
         editor.CssComposer.clear()
       }
+    },
+  })
+  editor.Commands.add("previewDesign", {
+    run: (editor) => {
+      const canvasDocument = editor.Canvas.getDocument()
+      store.state.editor.html = canvasDocument.querySelector("html")
+      router.push("/preview")
     },
   })
 }

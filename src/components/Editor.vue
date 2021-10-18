@@ -21,8 +21,8 @@
             dark
             small
             depressed
-            class="mr-2 text-capitalize font-weight-bold"
             color="deep-purple accent-4"
+            class="mr-2 text-capitalize font-weight-bold previewButton"
             >Preview</v-btn
           >
         </div>

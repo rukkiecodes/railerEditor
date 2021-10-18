@@ -4161,6 +4161,13 @@ grapesjs-blocks-basic@^0.1.7:
   resolved "https://registry.yarnpkg.com/grapesjs-blocks-basic/-/grapesjs-blocks-basic-0.1.8.tgz#9eab7c8fd7bc30537143677320b07d85b9bd2e8f"
   integrity sha512-Iy5M4qGkEE2llb5ZFxitDolRJ3CrQkcK1SQIjRRlkWIAC99On3T/09iFR7NkpTBfsgfdNwcwnSVOMOhSnVLDtw==
 
+grapesjs-component-code-editor@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/grapesjs-component-code-editor/-/grapesjs-component-code-editor-1.0.17.tgz#62398866806c5d1f41b9094c79330436aed8df0a"
+  integrity sha512-pKqCTVLoilZ1P18mvbJnA0bUvdBX60BfGGeqlQIitNyBt4ThTscm5jBUI8EtCEtmBUJzFjO4MHWngjduaXrjFA==
+  dependencies:
+    split.js "^1.6.2"
+
 grapesjs-component-countdown@^0.1.2:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/grapesjs-component-countdown/-/grapesjs-component-countdown-0.1.3.tgz#7df54b2a6c0bdf3275370f974ac9bd732188aae3"
@@ -7460,6 +7467,11 @@ split-string@^3.0.1, split-string@^3.0.2:
   integrity sha512-NzNVhJDYpwceVVii8/Hu6DKfD2G+NrQHlS/V/qgv763EYudVwEcMQNxd2lh+0VrUByXN/oJkl5grOhYWvQUYiw==
   dependencies:
     extend-shallow "^3.0.0"
+
+split.js@^1.6.2:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/split.js/-/split.js-1.6.4.tgz#13d47cba53382adef230a53294ce5dacb2a2f2e1"
+  integrity sha512-kYmQZprRJrF1IOjg/E+gdBEsKFv5kbgUE6RJVJZvrIzTOK/IHzKSqIeiJnWs7IP5D9TnpTQ2CbanuDuIWcyDUQ==
 
 sprintf-js@~1.0.2:
   version "1.0.3"

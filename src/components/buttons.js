@@ -65,17 +65,26 @@ export default [
       class: "panel-buttons",
     },
   },
-  {
-    id: "import",
-    className: "btn-import",
-    label: `<span class="mdi mdi-download"></span>`,
-    context: "import",
-    command: "import",
-    attributes: {
-      title: "Import",
-      class: "panel-buttons",
-    },
-  },
+  // {
+  //   id: "import",
+  //   className: "btn-import",
+  //   label: `<span class="mdi mdi-download"></span>`,
+  //   context: "import",
+  //   command: "open-code",
+  //   attributes: {
+  //     title: "Import",
+  //     class: "panel-buttons",
+  //   },
+  // },
+  // {
+  //   attributes: {
+  //     title: "Open Code",
+  //   },
+  //   className: "fa fa-file-code-o",
+  //   command: "open-code",
+  //   togglable: true, //do not close when button is clicked again
+  //   id: "open-code",
+  // },
   {
     id: "clear-canvas",
     className: "btn-clear-canvas",

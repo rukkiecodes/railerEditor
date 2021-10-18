@@ -213,5 +213,11 @@ export default () => {
   bm.add("dateInput-components", dateInput)
   bm.add("datetimeLocal-components", datetimeLocal)
 
+  // PREVIEW DOCUMENT
+  const previewButton = document.querySelector(".previewButton")
+  previewButton.addEventListener("click", () => {
+    editor.runCommand("previewDesign")
+  })
+
   editorConfig(editor)
 }
