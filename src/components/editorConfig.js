@@ -58,7 +58,13 @@ export default (editor) => {
   })
   editor.Commands.add("clear-canvas", {
     run: (editor) => {
-      console.log(editor)
+      const verify = confirm(
+        "Clearing the cancas will delete all changes made. Wand to proceed?"
+      )
+      if (verify) {
+        editor.DomComponents.clear()
+        editor.CssComposer.clear()
+      }
     },
   })
 }

@@ -1,4 +1,4 @@
-import "grapesjs/dist/css/grapes.min.css"
+import "./assets/grapes.css"
 import grapesjs from "grapesjs"
 import editorConfig from "./editorConfig"
 import placeholder from "./scripts/placeholder"

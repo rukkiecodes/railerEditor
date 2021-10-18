@@ -13,8 +13,8 @@
             dark
             small
             depressed
-            class="mr-3 text-capitalize font-weight-bold"
             color="green accent-4"
+            class="mr-3 text-capitalize font-weight-bold"
             >Save</v-btn
           >
           <v-btn
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+// @ts-nocheck
 import emailEditor from "./editor"
 export default {
   data: () => ({

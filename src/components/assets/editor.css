@@ -8,7 +8,7 @@
 
 .panel__top {
   padding: 0;
-  height: 5.6vh;
+  height: 6.3vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,7 +54,7 @@
           align-items: stretch;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  height: 94.4vh;
+  height: 93.7vh;
 }
 
 .editor-canvas {
@@ -66,7 +66,7 @@
 .panel__right {
   -ms-flex-preferred-size: 230px;
       flex-basis: 230px;
-  height: 94.4vh;
+  height: 93.7vh;
   background: #373D49;
   position: relative;
   overflow-y: auto;
@@ -75,7 +75,7 @@
 .panel__left {
   -ms-flex-preferred-size: 230px;
       flex-basis: 230px;
-  height: 94.4vh;
+  height: 93.7vh;
   background: #373D49;
   position: relative;
   overflow-y: auto;
