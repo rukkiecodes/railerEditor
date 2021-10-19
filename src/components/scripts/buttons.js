@@ -1,7 +1,7 @@
 export default [
   {
     id: "visibility",
-    active: false, // active by default
+    active: true, // active by default
     className: "btn-toggle-borders",
     label: `<span class="mdi mdi-border-all-variant"></span>`,
     command: "sw-visibility", // Built-in command

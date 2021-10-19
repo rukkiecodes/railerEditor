@@ -41,12 +41,12 @@ export default (editor) => {
   })
   editor.Commands.add("undo", {
     run: (editor) => {
-      console.log(editor)
+      editor.UndoManager.undo(1)
     },
   })
   editor.Commands.add("redo", {
     run: (editor) => {
-      console.log(editor)
+      editor.UndoManager.redo(1)
     },
   })
   editor.Commands.add("fullscreen", {
