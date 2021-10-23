@@ -28,15 +28,13 @@
         </div>
       </div>
       <div class="editor-row">
-        <div class="panel__left">
-          <div class="blocks-container" id="blocks"></div>
-        </div>
         <div class="editor-canvas">
           <div id="gjs"></div>
         </div>
         <div class="panel__right">
           <div class="traits-container"></div>
           <div class="styles-container"></div>
+          <div class="blocks-container" id="blocks"></div>
         </div>
       </div>
     </v-sheet>

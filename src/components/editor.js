@@ -11,6 +11,7 @@ import canvas from "./scripts/canvas"
 
 // IMPORT BLOCKS
 import container from "./blocks/container"
+import containerFluid from "./blocks/containerFluid"
 import oneColumn from "./blocks/oneColumn"
 import twoColumns from "./blocks/twoColumns"
 import tripleColumns from "./blocks/tripleColumns"
@@ -71,6 +72,7 @@ export default () => {
 
   // IMPORT BLOCKS
   bm.add("container", container)
+  bm.add("containerFluid", containerFluid)
   bm.add("one-column", oneColumn)
   bm.add("two-columns", twoColumns)
   bm.add("three-columns", tripleColumns)

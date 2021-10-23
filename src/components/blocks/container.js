@@ -4,7 +4,7 @@ import container from "../images/container.svg"
 export default {
   category: "Layer",
   label: `<div class="styleBlock"><img style="width: 80%" src="${container}"><span>Container</span></div>`,
-  attributes: { title: "Container" },
+  attributes: { title: "Fluid container" },
   content: `
       <div class="container"></div>
       <style>

@@ -67,17 +67,16 @@
   -ms-flex-preferred-size: 230px;
       flex-basis: 230px;
   height: 93.7vh;
-  background: #373D49;
+  background: #1c1e31;
   position: relative;
   overflow-y: auto;
-  display: none;
 }
 
 .panel__left {
   -ms-flex-preferred-size: 230px;
       flex-basis: 230px;
   height: 93.7vh;
-  background: #373D49;
+  background: #1c1e31;
   position: relative;
   overflow-y: auto;
 }
@@ -115,7 +114,7 @@
 /* Theming */
 /* Primary color for the background */
 .gjs-one-bg {
-  background-color: #373D49;
+  background-color: #1c1e31;
 }
 
 /* Secondary color for the text color */
@@ -125,7 +124,7 @@
 
 /* Tertiary color for the background */
 .gjs-three-bg {
-  background-color: #373D49;
+  background-color: #1c1e31;
   color: white;
 }
 
@@ -140,12 +139,79 @@
   border-radius: .3em;
 }
 
+.gjs-block {
+  background: inherit;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.panel-buttons {
+  margin-right: .5em;
+}
+
+.gjs-fields {
+  border-radius: .5em;
+}
+
+.gjs-field {
+  border-radius: .5em;
+}
+
+.gjs-clm-tags-btn {
+  border-radius: .3em !important;
+  width: 25px;
+}
+
+.gjs-fields .gjs-field-color {
+  border-radius: .5em;
+}
+
+.gjs-fields .gjs-field-color .gjs-input-holder {
+  border-radius: .5em;
+}
+
+.gjs-fields .gjs-field-color .gjs-input-holder input {
+  border-radius: .5em;
+}
+
+.gjs-fields .gjs-field-color .gjs-field-colorp {
+  width: 30px;
+  border-radius: .5em;
+  padding: 0;
+  border: none;
+}
+
+.gjs-fields .gjs-field-color .gjs-field-colorp .gjs-field-colorp-c {
+  border-radius: .5em;
+}
+
+.gjs-fields .gjs-field-color .gjs-field-colorp .gjs-checker-bg {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: .5em;
+}
+
+.gjs-fields .gjs-field-color .gjs-field-colorp .gjs-field-color-picker {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: .5em;
+}
+
+.CodeMirror {
+  background: inherit !important;
+}
+
+.CodeMirror-gutters {
+  background: inherit !important;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #373D49;
+  background: #1c1e31;
 }
 
 ::-webkit-scrollbar-thumb {
