@@ -77,7 +77,7 @@ export default [
   {
     id: "clear-canvas",
     className: "btn-clear-canvas",
-    label: `<span class="mdi mdi-trash-can"></span>`,
+    label: `<span class="mdi mdi-trash-can-outline"></span>`,
     context: "clear-canvas",
     command: "clear-canvas",
     attributes: {

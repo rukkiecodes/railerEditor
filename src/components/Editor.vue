@@ -38,17 +38,22 @@
         </div>
       </div>
     </v-sheet>
+    <CodeEditor />
   </v-container>
 </template>
 
 <script>
 // @ts-nocheck
 import emailEditor from "./editor"
+import CodeEditor from "./CodeEditor.vue"
 export default {
   data: () => ({
     gjsHeight: 600,
     gjsWidth: 600,
   }),
+  components: {
+    CodeEditor,
+  },
   mounted() {
     this.$nextTick(() => {
       const editorSheet = document.querySelector(".editorSheet")

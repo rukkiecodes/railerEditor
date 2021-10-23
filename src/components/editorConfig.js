@@ -63,6 +63,11 @@ export default (editor) => {
       }
     },
   })
+  editor.Commands.add("open-code", {
+    run: (editor) => {
+      store.state.editor.dialog = true
+    },
+  })
   editor.Commands.add("clear-canvas", {
     run: (editor) => {
       const verify = confirm(
