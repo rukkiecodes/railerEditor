@@ -70,6 +70,7 @@
   background: #373D49;
   position: relative;
   overflow-y: auto;
+  display: none;
 }
 
 .panel__left {

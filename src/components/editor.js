@@ -10,6 +10,7 @@ import deviceManager from "./scripts/deviceManager"
 import canvas from "./scripts/canvas"
 
 // IMPORT BLOCKS
+import container from "./blocks/container"
 import oneColumn from "./blocks/oneColumn"
 import twoColumns from "./blocks/twoColumns"
 import tripleColumns from "./blocks/tripleColumns"
@@ -69,6 +70,7 @@ export default () => {
   const bm = editor.BlockManager
 
   // IMPORT BLOCKS
+  bm.add("container", container)
   bm.add("one-column", oneColumn)
   bm.add("two-columns", twoColumns)
   bm.add("three-columns", tripleColumns)
