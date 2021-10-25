@@ -59,7 +59,6 @@ export default () => {
       appendTo: ".styles-container",
     },
 
-
     traitManager: {
       appendTo: ".traits-container",
     },

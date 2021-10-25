@@ -16,6 +16,7 @@
                 height: editorHeight + 'px',
               }"
               id="aceHtml"
+              v-model="editor.htmlCode"
             ></div>
           </v-sheet>
         </v-col>
@@ -27,6 +28,7 @@
                 height: editorHeight + 'px',
               }"
               id="aceCss"
+              v-model="editor.cssCode"
             ></div>
           </v-sheet>
         </v-col>

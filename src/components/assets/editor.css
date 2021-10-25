@@ -70,6 +70,7 @@
   background: #1c1e31;
   position: relative;
   overflow-y: auto;
+  display: none;
 }
 
 .panel__left {
@@ -83,7 +84,6 @@
 
 .panel__switcher {
   position: initial;
-  width: 17%;
 }
 
 .panel__devices {

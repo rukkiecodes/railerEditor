@@ -86,4 +86,44 @@ export default (editor) => {
       router.push("/preview")
     },
   })
+  editor.Commands.add("show-styles", {
+    getRowEl(editor) {
+      return editor.getContainer().closest(".editor-row")
+    },
+    getStyleEl(row) {
+      return row.querySelector(".styles-container")
+    },
+
+    run(editor, sender) {
+      const smEl = this.getStyleEl(this.getRowEl(editor))
+      smEl.style.display = ""
+    },
+    stop(editor, sender) {
+      const smEl = this.getStyleEl(this.getRowEl(editor))
+      smEl.style.display = "none"
+    },
+  })
+  editor.Commands.add("show-traits", {
+    getTraitsEl(editor) {
+      const row = editor.getContainer().closest(".editor-row")
+      return row.querySelector(".traits-container")
+    },
+    run(editor, sender) {
+      this.getTraitsEl(editor).style.display = ""
+    },
+    stop(editor, sender) {
+      this.getTraitsEl(editor).style.display = "none"
+    },
+  })
+
+  editor.on("component:selected", () => {
+    const panel__right = document.querySelector(".panel__right")
+    const styleButton = document.querySelector(".style-button")
+    panel__right.style.display = "initial"
+    styleButton.click()
+  })
+  editor.on("component:deselected", () => {
+    const panel__right = document.querySelector(".panel__right")
+    panel__right.style.display = "none"
+  })
 }

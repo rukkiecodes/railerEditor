@@ -28,13 +28,16 @@
         </div>
       </div>
       <div class="editor-row">
+        <div class="panel__left">
+          <div class="blocks-container" id="blocks"></div>
+        </div>
         <div class="editor-canvas">
           <div id="gjs"></div>
         </div>
         <div class="panel__right">
-          <div class="traits-container"></div>
+          <v-btn @click="closeRightPanel" block dark small depressed>Close</v-btn>
           <div class="styles-container"></div>
-          <div class="blocks-container" id="blocks"></div>
+          <div class="traits-container"></div>
         </div>
       </div>
     </v-sheet>
@@ -65,8 +68,24 @@ export default {
       // Hide Scrollbar
       let elHtml = document.getElementsByTagName("html")[0]
       elHtml.style.overflowY = "hidden"
+
+      const styleButton = document.querySelector(".style-button")
+      setTimeout(() => {
+        if (styleButton) {
+          styleButton.click()
+        }
+      }, 2000)
     })
   },
+  methods: {
+    closeRightPanel() {
+      const panel__right = document.querySelector(".panel__right")
+      panel__right.style = {
+        display: "none"
+      }
+    }
+  },
+
   destroyed() {
     let elHtml = document.getElementsByTagName("html")[0]
     elHtml.style.overflowY = null

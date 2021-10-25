@@ -85,4 +85,21 @@ export default [
       class: "panel-buttons",
     },
   },
+  {
+    id: "show-style",
+    active: true,
+    label: "Styles",
+    command: "show-styles",
+    togglable: false,
+    attributes: {
+      class: "style-button"
+    }
+  },
+  {
+    id: "show-traits",
+    active: false,
+    label: "Traits",
+    command: "show-traits",
+    togglable: false,
+  },
 ]

@@ -54,7 +54,7 @@
   background: rgb(28, 30, 49);
   position: relative;
   overflow-y: auto;
-  // display: none;
+  display: none;
 }
 
 .panel__left {
@@ -67,7 +67,7 @@
 
 .panel__switcher {
   position: initial;
-  width: 17%;
+  // width: 17%;
 }
 
 .panel__devices {
