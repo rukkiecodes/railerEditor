@@ -15,10 +15,11 @@
         >
         <v-card-actions>
           <v-btn
-            depressed
+            dark
             large
-            to="/dashboard/template"
+            depressed
             class="mx-auto"
+            to="/dashboard/template"
             color="deep-purple accent-4"
             >Get me out of here!</v-btn
           >
