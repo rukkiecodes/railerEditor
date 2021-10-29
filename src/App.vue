@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-main>
+      <Aleart />
       <router-view />
     </v-main>
   </v-app>
@@ -9,7 +10,10 @@
 <script>
 export default {
   name: "App",
-};
+  components: {
+    Aleart: () => import("./components/appComponents/Aleart.vue"),
+  },
+}
 </script>
 
 <style>
