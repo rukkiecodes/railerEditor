@@ -41,7 +41,6 @@
         </div>
       </div>
     </v-sheet>
-    <CodeEditor />
   </v-container>
 </template>
 
@@ -55,7 +54,11 @@ export default {
     gjsWidth: 600,
   }),
   components: {
+<<<<<<< Updated upstream:src/components/Editor.vue
     CodeEditor,
+=======
+    CodeEditor: () => import("./CodeEditor.vue")
+>>>>>>> Stashed changes:src/components/editor/Editor.vue
   },
   mounted() {
     this.$nextTick(() => {
@@ -77,6 +80,7 @@ export default {
       }, 2000)
     })
   },
+<<<<<<< Updated upstream:src/components/Editor.vue
   methods: {
     closeRightPanel() {
       const panel__right = document.querySelector(".panel__right")
@@ -85,6 +89,8 @@ export default {
       }
     }
   },
+=======
+>>>>>>> Stashed changes:src/components/editor/Editor.vue
 
   destroyed() {
     let elHtml = document.getElementsByTagName("html")[0]

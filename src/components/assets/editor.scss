@@ -67,7 +67,23 @@
 
 .panel__switcher {
   position: initial;
+<<<<<<< Updated upstream:src/components/assets/editor.scss
   // width: 17%;
+=======
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  .gjs-pn-buttons {
+    width: 100%;
+    height: 100%;
+
+    .gjs-pn-btn {
+      border-radius: 0;
+      width: 33.3%
+    }
+  }
+>>>>>>> Stashed changes:src/components/editor/assets/editor.scss
 }
 
 .panel__devices {

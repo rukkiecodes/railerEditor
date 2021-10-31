@@ -18,7 +18,7 @@ export default {
         vueCookie.set("railer token", response.data.token)
         vueCookie.set("railer email", response.data.user.email)
         vueCookie.set("railer id", response.data.user._id)
-        router.push("/editor")
+        router.push("/designs")
       } else {
         state.loading = false
         router.push("/")
