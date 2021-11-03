@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <Aleart />
+      <Snack />
       <router-view />
     </v-main>
   </v-app>
@@ -11,7 +11,7 @@
 export default {
   name: "App",
   components: {
-    Aleart: () => import("./components/appComponents/Aleart.vue"),
+    Snack: () => import("./components/app/Snack.vue"),
   },
 }
 </script>

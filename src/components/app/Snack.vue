@@ -1,17 +1,12 @@
 <template>
-  <v-snackbar
-    left
-    bottom
-    :color="snackbar.color"
-    v-model="snackbar.snack"
-  >
+  <v-snackbar bottom left :color="snackbar.color" v-model="snackbar.snack">
     {{ snackbar.text }}
 
     <template v-slot:action="{ attrs }">
       <v-btn
-        :color="snackbar.buttonColor"
         icon
         v-bind="attrs"
+        :color="snackbar.buttonColor"
         @click="snackbar.snack = false"
       >
         <v-icon>mdi-close</v-icon>
@@ -21,13 +16,11 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from "vuex"
+
 export default {
-  data: () => ({
-    text: `Hello, I'm a snackbar`,
-  }),
   computed: {
-    ...mapState(["snackbar"])
+    ...mapState(["snackbar"]),
   },
-};
+}
 </script>
