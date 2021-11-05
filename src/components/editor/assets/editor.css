@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Lobster&display=swap");
+/* Reset some default styling */
+/* Theming */
+/* Primary color for the background */
+/* Secondary color for the text color */
+/* Tertiary color for the background */
+/* Quaternary color for the text color */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1e31;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667085;
+}
+/*# sourceMappingURL=editor.css.map */

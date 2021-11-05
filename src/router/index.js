@@ -15,6 +15,11 @@ const routes = [
     component: () => import("../views/auth/Login.vue"),
   },
   {
+    path: "/editor",
+    name: "Editor",
+    component: () => import("../views/Editor.vue"),
+  },
+  {
     path: "*",
     name: "PageNotFound",
     component: () => import("../views/pageNotFound.vue"),
