@@ -1,31 +1,37 @@
 import grapesjs from "grapesjs"
 import "./assets/grapes.css"
-import "grapesjs-preset-webpage"
 
 import editorConfig from "./editorConfig"
-
-import restobar from "./blocks/restobar"
-import corporate from "./blocks/corporate"
+import {
+  blockManager,
+  layerManager,
+  panels,
+  selectorManager,
+  styleManager,
+  traitManager,
+  deviceManager,
+  mediaCondition,
+} from "./managers"
 
 export default () => {
   const editor = grapesjs.init({
     container: "#gjs",
     fromElement: true,
-    height: "100%",
+    height: "300px",
     width: "auto",
+    storageManager: false,
+    panels: { defaults: [] },
 
-    plugins: ["gjs-preset-webpage"],
-    pluginsOpts: {
-      "gjs-preset-webpage": {
-        // options
-      },
-    },
+    blockManager,
+    layerManager,
+    // @ts-ignore
+    panels,
+    selectorManager,
+    styleManager,
+    traitManager,
+    deviceManager,
+    mediaCondition,
   })
-
-  const bm = editor.BlockManager
-
-  bm.add("template-restobar", restobar)
-  bm.add("template-corporate", corporate)
 
   editorConfig(editor)
 }
