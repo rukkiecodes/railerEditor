@@ -1,3 +1,12 @@
+const swv = "sw-visibility"
+const expt = "export-template"
+const osm = "open-sm"
+const otm = "open-tm"
+const ola = "open-layers"
+const obl = "open-blocks"
+const ful = "fullscreen"
+const prv = "preview"
+
 const blockManager = {
   appendTo: ".blocks-container",
   blocks: [
@@ -42,7 +51,7 @@ const traitManager = {
   appendTo: ".traits-container",
 }
 
-const mediaCondition = 'min-width'
+const mediaCondition = "min-width"
 
 const deviceManager = {
   devices: [
@@ -181,6 +190,59 @@ const panels = {
           id: "device-mobile",
           command: "set-device-mobile",
           className: "fa fa-mobile",
+        },
+      ],
+    },
+    {
+      id: "basic-actions",
+      el: ".panel__basic-actions",
+      buttons: [
+        {
+          id: swv,
+          command: swv,
+          context: swv,
+          className: "fa fa-square-o",
+        },
+        {
+          id: prv,
+          context: prv,
+          command: (e) => e.runCommand(prv),
+          className: "fa fa-eye",
+        },
+        {
+          id: ful,
+          command: ful,
+          context: ful,
+          className: "fa fa-arrows-alt",
+        },
+        {
+          id: expt,
+          className: "fa fa-code",
+          command: (e) => e.runCommand(expt),
+        },
+        {
+          id: "undo",
+          className: "fa fa-undo",
+          command: (e) => e.runCommand("core:undo"),
+        },
+        {
+          id: "redo",
+          className: "fa fa-repeat",
+          command: (e) => e.runCommand("core:redo"),
+        },
+        {
+          attributes: {
+            title: "Open Code",
+          },
+          className: "fa fa-file-code-o",
+          command: "core:open-code",
+          togglable: false,
+          id: "open-code",
+        },
+        {
+          id: "canvas-clear",
+          className: "fa fa-trash",
+          command: (e) => e.runCommand("core:canvas-clear"),
         },
       ],
     },
