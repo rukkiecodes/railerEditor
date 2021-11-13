@@ -57,14 +57,35 @@
 }
 
 .panel__right {
-  -ms-flex-preferred-size: 230px;
-      flex-basis: 230px;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
   position: relative;
   overflow-y: auto;
 }
 
 .panel__switcher {
   position: initial;
+  width: 300px;
+  padding: 0;
+}
+
+.panel__switcher .gjs-pn-buttons {
+  height: 100%;
+}
+
+.panel__switcher .gjs-pn-buttons .gjs-pn-btn {
+  width: 25%;
+  min-height: 100%;
+  margin-right: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .panel__devices {

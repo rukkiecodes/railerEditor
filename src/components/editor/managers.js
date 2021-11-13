@@ -52,9 +52,14 @@ const deviceManager = {
       widthMedia: "1024",
     },
     {
+      name: "Tab",
+      width: "600",
+      widthMedia: "600",
+    },
+    {
       name: "Mobile",
       width: "320",
-      widthMedia: "",
+      widthMedia: "320",
     },
   ],
 }
@@ -109,16 +114,6 @@ const panels = {
     {
       id: "layers",
       el: ".panel__right",
-      // Make the panel resizable
-      resizable: {
-        maxDim: 450,
-        minDim: 300,
-        tc: 0,
-        cl: 1,
-        cr: 0,
-        bc: 0,
-        keyWidth: "flex-basis",
-      },
     },
     {
       id: "panel-switcher",
@@ -127,34 +122,43 @@ const panels = {
         {
           id: "show-layers",
           active: true,
-          label: "Layers",
-          command: "show-layers",
-          // Once activated disable the possibility to turn it off
           togglable: false,
+          command: "show-layers",
+          className: "fa fa-bars",
+          attributes: {
+            title: "Component layers",
+          },
         },
         {
           id: "show-style",
           active: true,
-          label: "Styles",
-          command: "show-styles",
           togglable: false,
+          command: "show-styles",
+          className: "fa fa-paint-brush",
+          attributes: {
+            title: "Component style",
+          },
         },
         {
           id: "show-traits",
           active: true,
-          label: "Traits",
-          command: "show-traits",
           togglable: false,
+          className: "fa fa-cog",
+          command: "show-traits",
+          attributes: {
+            title: "Component traits",
+          },
         },
         {
           id: "show-blocks",
           active: true,
-          label: "Blocks",
-          command: "show-blocks",
           togglable: false,
+          command: "show-blocks",
+          className: "fa fa-th-large",
           attributes: {
-            class: "block-button"
-          }
+            class: "block-button",
+            title: "Component blocks",
+          },
         },
       ],
     },
@@ -163,17 +167,20 @@ const panels = {
       el: ".panel__devices",
       buttons: [
         {
+          active: 1,
           id: "device-desktop",
-          label: "D",
           command: "set-device-desktop",
-          active: true,
-          togglable: false,
+          className: "fa fa-desktop",
+        },
+        {
+          id: "device-tab",
+          command: "set-device-tab",
+          className: "fa fa-tablet",
         },
         {
           id: "device-mobile",
-          label: "M",
           command: "set-device-mobile",
-          togglable: false,
+          className: "fa fa-mobile",
         },
       ],
     },

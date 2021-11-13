@@ -42,13 +42,28 @@
 }
 
 .panel__right {
-  flex-basis: 230px;
+  flex-basis: 300px;
   position: relative;
   overflow-y: auto;
 }
 
 .panel__switcher {
   position: initial;
+  width: 300px;
+  padding: 0;
+
+  .gjs-pn-buttons {
+    height: 100%;
+
+    .gjs-pn-btn {
+      width: 25%;
+      min-height: 100%;
+      margin-right: 0 !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .panel__devices {

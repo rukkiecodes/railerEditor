@@ -3,7 +3,6 @@ import store from "../../store"
 import router from "../../router"
 
 export default (editor) => {
-  editor.setDevice("Desktop")
   editor.Panels.addPanel({
     id: "panel-top",
     el: ".panel__top",
@@ -110,6 +109,9 @@ export default (editor) => {
   })
   editor.Commands.add("set-device-desktop", {
     run: (editor) => editor.setDevice("Desktop"),
+  })
+  editor.Commands.add("set-device-tab", {
+    run: (editor) => editor.setDevice("Tab"),
   })
   editor.Commands.add("set-device-mobile", {
     run: (editor) => editor.setDevice("Mobile"),
