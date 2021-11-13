@@ -47,7 +47,7 @@
           align-items: stretch;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  height: 300px;
+  height: 100%;
 }
 
 .editor-canvas {

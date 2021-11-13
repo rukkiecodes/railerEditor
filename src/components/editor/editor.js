@@ -17,14 +17,12 @@ export default () => {
   const editor = grapesjs.init({
     container: "#gjs",
     fromElement: true,
-    height: "300px",
+    height: "94.1vh",
     width: "auto",
     storageManager: false,
-    panels: { defaults: [] },
 
     blockManager,
     layerManager,
-    // @ts-ignore
     panels,
     selectorManager,
     styleManager,

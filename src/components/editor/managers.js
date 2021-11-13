@@ -111,14 +111,12 @@ const panels = {
       el: ".panel__right",
       // Make the panel resizable
       resizable: {
-        maxDim: 350,
-        minDim: 200,
-        tc: 0, // Top handler
-        cl: 1, // Left handler
-        cr: 0, // Right handler
-        bc: 0, // Bottom handler
-        // Being a flex child we need to change `flex-basis` property
-        // instead of the `width` (default)
+        maxDim: 450,
+        minDim: 300,
+        tc: 0,
+        cl: 1,
+        cr: 0,
+        bc: 0,
         keyWidth: "flex-basis",
       },
     },
@@ -154,6 +152,9 @@ const panels = {
           label: "Blocks",
           command: "show-blocks",
           togglable: false,
+          attributes: {
+            class: "block-button"
+          }
         },
       ],
     },
