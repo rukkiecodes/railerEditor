@@ -8,6 +8,9 @@ import {
   sectionThreeThreeThree,
   sectionTwoTwoFive,
   sectionTwoFiveTwo,
+  sectionFiveTwoTwo,
+  sectionTwoTwoTwoTwo,
+  sectionOneOneOneOne,
 } from "./svgs"
 
 export default (editor) => {
@@ -172,6 +175,74 @@ export default (editor) => {
           <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
           </td>
           <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    `,
+  })
+
+  bm.add("sectionFiveTwoTwo", {
+    category: "Layers",
+    label: `${sectionFiveTwoTwo}`,
+    attributes: { class: "layerBlocks" },
+    content: `
+    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
+      <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    `,
+  })
+
+  bm.add("sectionTwoTwoTwoTwo", {
+    category: "Layers",
+    label: `${sectionTwoTwoTwoTwo}`,
+    attributes: { class: "layerBlocks" },
+    content: `
+    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
+      <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width=25%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    `,
+  })
+
+  bm.add("sectionOneOneOneOne", {
+    category: "Layers",
+    label: `${sectionOneOneOneOne}`,
+    attributes: { class: "layerBlocks" },
+    content: `
+    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
+      <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width=16.666666666%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
           </td>
         </tr>
       </tbody>
