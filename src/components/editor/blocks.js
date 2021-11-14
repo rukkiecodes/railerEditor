@@ -1,4 +1,9 @@
-import { sectionOne, sectionTwoEight, sectionThreeSeven } from "./svgs"
+import {
+  sectionOne,
+  sectionTwoEight,
+  sectionThreeSeven,
+  sectionFiveFive,
+} from "./svgs"
 
 export default (editor) => {
   const bm = editor.BlockManager
@@ -48,6 +53,24 @@ export default (editor) => {
           <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 30%;" width="30%" valign="top">
           </td>
           <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 70%;" width="70%" valign="top">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    `,
+  })
+
+  bm.add("sectionFiveFive", {
+    category: "Layers",
+    label: `${sectionFiveFive}`,
+    attributes: { class: "layerBlocks" },
+    content: `
+    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
+      <tbody style="box-sizing: border-box;">
+        <tr style="box-sizing: border-box;">
+          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
+          </td>
+          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
           </td>
         </tr>
       </tbody>
