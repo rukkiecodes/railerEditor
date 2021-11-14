@@ -3265,9 +3265,9 @@ div.gjs-com-hover-move {
 }
 
 .gjs-blocks-c {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start
+  justify-content: flex-start */
 }
 
 .gjs-block-categories {

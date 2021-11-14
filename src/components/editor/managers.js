@@ -1,42 +1,5 @@
-const swv = "sw-visibility"
-const expt = "export-template"
-const osm = "open-sm"
-const otm = "open-tm"
-const ola = "open-layers"
-const obl = "open-blocks"
-const ful = "fullscreen"
-const prv = "preview"
-
 const blockManager = {
   appendTo: ".blocks-container",
-  blocks: [
-    {
-      id: "section", // id is mandatory
-      label: "<b>Section</b>", // You can use HTML/SVG inside labels
-      attributes: { class: "gjs-block-section" },
-      content: `<section>
-          <h1>This is a simple title</h1>
-          <div>This is just a Lorem text: Lorem ipsum dolor sit amet</div>
-        </section>`,
-    },
-    {
-      id: "text",
-      label: "Text",
-      content: '<div data-gjs-type="text">Insert your text here</div>',
-    },
-    {
-      id: "image",
-      label: "Image",
-      // Select the component once it's dropped
-      select: true,
-      // You can pass components as a JSON instead of a simple HTML string,
-      // in this case we also use a defined component type `image`
-      content: { type: "image" },
-      // This triggers `active` event on dropped components and the `image`
-      // reacts by opening the AssetManager
-      activate: true,
-    },
-  ],
 }
 
 const layerManager = {
@@ -59,11 +22,6 @@ const deviceManager = {
       name: "Desktop",
       width: "",
       widthMedia: "1024",
-    },
-    {
-      name: "Tab",
-      width: "600",
-      widthMedia: "600",
     },
     {
       name: "Mobile",
@@ -129,13 +87,14 @@ const panels = {
       el: ".panel__switcher",
       buttons: [
         {
-          id: "show-layers",
+          id: "show-blocks",
           active: true,
           togglable: false,
-          command: "show-layers",
-          className: "fa fa-bars",
+          command: "show-blocks",
+          className: "fa fa-th-large",
           attributes: {
-            title: "Component layers",
+            class: "block-button",
+            title: "Component blocks",
           },
         },
         {
@@ -149,6 +108,16 @@ const panels = {
           },
         },
         {
+          id: "show-layers",
+          active: true,
+          togglable: false,
+          command: "show-layers",
+          className: "fa fa-bars",
+          attributes: {
+            title: "Component layers",
+          },
+        },
+        {
           id: "show-traits",
           active: true,
           togglable: false,
@@ -158,17 +127,6 @@ const panels = {
             title: "Component traits",
           },
         },
-        {
-          id: "show-blocks",
-          active: true,
-          togglable: false,
-          command: "show-blocks",
-          className: "fa fa-th-large",
-          attributes: {
-            class: "block-button",
-            title: "Component blocks",
-          },
-        },
       ],
     },
     {
@@ -176,15 +134,10 @@ const panels = {
       el: ".panel__devices",
       buttons: [
         {
-          active: 1,
+          active: true,
           id: "device-desktop",
           command: "set-device-desktop",
           className: "fa fa-desktop",
-        },
-        {
-          id: "device-tab",
-          command: "set-device-tab",
-          className: "fa fa-tablet",
         },
         {
           id: "device-mobile",
@@ -198,27 +151,23 @@ const panels = {
       el: ".panel__basic-actions",
       buttons: [
         {
-          id: swv,
-          command: swv,
-          context: swv,
+          id: "sw-visibility",
+          active: true,
+          command: "sw-visibility",
+          context: "sw-visibility",
           className: "fa fa-square-o",
         },
         {
-          id: prv,
-          context: prv,
-          command: (e) => e.runCommand(prv),
+          id: "preview",
+          context: "preview",
+          command: (e) => e.runCommand("preview"),
           className: "fa fa-eye",
         },
         {
-          id: ful,
-          command: ful,
-          context: ful,
+          id: "fullscreen",
+          command: "fullscreen",
+          context: "fullscreen",
           className: "fa fa-arrows-alt",
-        },
-        {
-          id: expt,
-          className: "fa fa-code",
-          command: (e) => e.runCommand(expt),
         },
         {
           id: "undo",
@@ -231,18 +180,12 @@ const panels = {
           command: (e) => e.runCommand("core:redo"),
         },
         {
-          attributes: {
-            title: "Open Code",
-          },
-          className: "fa fa-file-code-o",
-          command: "core:open-code",
-          togglable: false,
-          id: "open-code",
-        },
-        {
           id: "canvas-clear",
           className: "fa fa-trash",
-          command: (e) => e.runCommand("core:canvas-clear"),
+          command: (e) => {
+            const confirmDelete = confirm("Are you sure to clean the canvas?")
+            if (confirmDelete) e.runCommand("core:canvas-clear")
+          },
         },
       ],
     },
