@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="pa-0 editorContainer">
-    <v-sheet class="editorSheet ma-0 pa-0 red" height="100vh">
+    <v-sheet class="editorSheet ma-0 pa-0" height="100vh">
       <div class="panel__top">
         <div class="panel_left">
           <Logo />
@@ -48,12 +48,20 @@
         <div class="editor-canvas">
           <div id="gjs"></div>
         </div>
-        <div class="panel__right">
+        <div class="panel_right_container">
           <div class="panel__switcher"></div>
-          <div class="blocks-container"></div>
-          <div class="styles-container"></div>
-          <div class="layers-container"></div>
-          <div class="traits-container"></div>
+          <v-sheet
+            height="91.9472913616vh"
+            color="blue"
+            class="overflow-y-auto panel_right_sheet"
+          >
+            <div class="panel__right">
+              <div class="blocks-container"></div>
+              <div class="styles-container"></div>
+              <div class="layers-container"></div>
+              <div class="traits-container"></div>
+            </div>
+          </v-sheet>
         </div>
       </div>
     </v-sheet>

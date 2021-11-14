@@ -1,6 +1,6 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 /* Let's highlight canvas boundaries */
@@ -84,8 +84,8 @@
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 100%;
 }
 
@@ -95,34 +95,26 @@
           flex-grow: 1;
 }
 
-.panel__right {
-  background-color: #f9f9f9;
-  -ms-flex-preferred-size: 411px;
-      flex-basis: 411px;
+.panel_right_container {
+  width: 411px;
+  height: 91.9472913616vh;
   position: relative;
-  overflow-y: auto;
-  padding: 0;
-  border-left: 1px solid #51616756;
 }
 
-.panel__right .gjs-blocks-cs,
-.panel__right .gjs-layer {
-  background-color: #f9f9f9;
-}
-
-.panel__switcher {
-  position: initial;
+.panel_right_container .panel__switcher {
+  position: absolute;
+  z-index: 4;
   background-color: #d6d9dc;
   width: 100%;
   height: 7vh;
   padding: 0;
 }
 
-.panel__switcher .gjs-pn-buttons {
+.panel_right_container .panel__switcher .gjs-pn-buttons {
   height: 100%;
 }
 
-.panel__switcher .gjs-pn-buttons .gjs-pn-btn {
+.panel_right_container .panel__switcher .gjs-pn-buttons .gjs-pn-btn {
   height: 100%;
   width: 25%;
   display: -webkit-box;
@@ -139,9 +131,30 @@
   color: #777;
 }
 
-.panel__switcher .gjs-pn-buttons .gjs-pn-btn.gjs-pn-active {
+.panel_right_container .panel__switcher .gjs-pn-buttons .gjs-pn-btn.gjs-pn-active {
   background-color: #f9f9f9;
   color: #516167;
+}
+
+.panel_right_container .panel_right_sheet {
+  height: auto;
+  overflow-y: scroll;
+}
+
+.panel_right_container .panel_right_sheet .panel__right {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: calc(91.9472913616vh - 7vh);
+  overflow-y: scroll;
+  padding: 0;
+  border-left: 1px solid #51616756;
+  position: absolute;
+  top: 7vh;
+}
+
+.panel_right_container .panel_right_sheet .panel__right .gjs-blocks-cs,
+.panel_right_container .panel_right_sheet .panel__right .gjs-layer {
+  background-color: #f9f9f9;
 }
 
 .gjs-blocks-c {

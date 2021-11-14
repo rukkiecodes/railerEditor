@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 /* Let's highlight canvas boundaries */
@@ -66,7 +66,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   height: 100%;
 }
 
@@ -74,46 +74,61 @@
   flex-grow: 1;
 }
 
-.panel__right {
-  background-color: #f9f9f9;
-  flex-basis: 411px;
+.panel_right_container {
+  width: 411px;
+  height: 91.9472913616vh;
   position: relative;
-  overflow-y: auto;
-  padding: 0;
-  border-left: 1px solid #51616756;
 
-  .gjs-blocks-cs,
-  .gjs-layer {
-    background-color: #f9f9f9;
-  }
-}
+  .panel__switcher {
+    position: absolute;
+    z-index: 4;
+    background-color: #d6d9dc;
+    width: 100%;
+    height: 7vh;
+    padding: 0;
 
-.panel__switcher {
-  position: initial;
-  background-color: #d6d9dc;
-  width: 100%;
-  height: 7vh;
-  padding: 0;
-
-  .gjs-pn-buttons {
-    height: 100%;
-
-    .gjs-pn-btn {
+    .gjs-pn-buttons {
       height: 100%;
-      width: 25%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: none;
-      color: #777;
-    }
 
-    .gjs-pn-btn.gjs-pn-active {
+      .gjs-pn-btn {
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+        color: #777;
+      }
+
+      .gjs-pn-btn.gjs-pn-active {
+        background-color: #f9f9f9;
+        color: #516167;
+      }
+    }
+  }
+
+  .panel_right_sheet {
+    height: auto;
+    overflow-y: scroll;
+
+    .panel__right {
       background-color: #f9f9f9;
-      color: #516167;
+      width: 100%;
+      height: calc(91.9472913616vh - 7vh);
+      overflow-y: scroll;
+      padding: 0;
+      border-left: 1px solid #51616756;
+      position: absolute;
+      top: 7vh;
+
+      .gjs-blocks-cs,
+      .gjs-layer {
+        background-color: #f9f9f9;
+      }
     }
   }
 }
+
 
 
 .gjs-blocks-c {
