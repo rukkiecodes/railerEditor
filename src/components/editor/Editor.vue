@@ -48,7 +48,27 @@
         <div class="editor-canvas">
           <div id="gjs"></div>
         </div>
-        <div class="panel_right_container">
+        <div
+          class="panel_right_container"
+          :style="{ width: panelWidth + 'px' }"
+          @mouseenter="buttonVisibility = true"
+          @mouseleave="buttonVisibility = false"
+        >
+          <v-fab-transition>
+            <v-btn
+              class="floading__button"
+              color="#4CB9EA"
+              fab
+              dark
+              x-small
+              absolute
+              @click="togglePanel"
+              v-show="buttonVisibility || panelWidth == 15"
+            >
+              <v-icon v-show="panelWidth == 411">mdi-chevron-right</v-icon>
+              <v-icon v-show="panelWidth == 15">mdi-chevron-left</v-icon>
+            </v-btn>
+          </v-fab-transition>
           <div class="panel__switcher"></div>
           <v-sheet
             height="91.9472913616vh"
@@ -72,6 +92,11 @@
 // @ts-nocheck
 import emailEditor from "./editor"
 export default {
+  data: () => ({
+    panelWidth: 411,
+    panel: true,
+    buttonVisibility: false,
+  }),
   components: {
     Logo: () => import("./components/Logo.vue"),
   },
@@ -87,6 +112,20 @@ export default {
       let elHtml = document.getElementsByTagName("html")[0]
       elHtml.style.overflowY = "hidden"
     })
+  },
+
+  methods: {
+    togglePanel() {
+      const panel__right = document.querySelector(".panel__right")
+      if (this.panelWidth == 411) {
+        this.panelWidth = 15
+
+        panel__right.classList.add("remove_scrollbar")
+      } else if (this.panelWidth == 15) {
+        this.panelWidth = 411
+        panel__right.classList.remove("remove_scrollbar")
+      }
+    },
   },
 
   destroyed() {

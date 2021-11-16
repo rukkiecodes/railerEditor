@@ -79,7 +79,7 @@ const styleManager = {
 const panels = {
   defaults: [
     {
-      id: "layers",
+      id: "panel-right",
       el: ".panel__right",
     },
     {
@@ -178,6 +178,15 @@ const panels = {
           id: "redo",
           className: "fa fa-repeat",
           command: (e) => e.runCommand("core:redo"),
+        },
+        {
+          attributes: {
+            title: "Open Code",
+          },
+          className: "fa fa-file-code-o",
+          command: "open-code",
+          togglable: true,
+          id: "open-code",
         },
         {
           id: "canvas-clear",

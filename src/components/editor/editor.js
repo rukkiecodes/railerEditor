@@ -17,7 +17,9 @@ import {
 export default () => {
   const editor = grapesjs.init({
     container: "#gjs",
+    showOffsets: true,
     fromElement: true,
+    noticeOnUnload: false,
     height: "91.9472913616vh",
     width: "auto",
     storageManager: false,

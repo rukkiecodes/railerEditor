@@ -75,9 +75,15 @@
 }
 
 .panel_right_container {
-  width: 411px;
+  // width: 411px;
   height: 91.9472913616vh;
   position: relative;
+
+  .floading__button {
+    z-index: 10;
+    top: 1em;
+    left: -1.7em;
+  }
 
   .panel__switcher {
     position: absolute;
@@ -129,6 +135,10 @@
   }
 }
 
+
+.remove_scrollbar::-webkit-scrollbar {
+  width: 0
+}
 
 
 .gjs-blocks-c {
@@ -198,7 +208,10 @@
 .layerBlocks {
   width: 100% !important;
   min-height: 70px !important;
-  // padding: 0 2em !important;
+}
+
+.gjs-pn-views-container {
+  transition: .3s width ease-in-out;
 }
 
 ::-webkit-scrollbar {
