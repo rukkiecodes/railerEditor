@@ -180,15 +180,6 @@ const panels = {
           command: (e) => e.runCommand("core:redo"),
         },
         {
-          attributes: {
-            title: "Open Code",
-          },
-          className: "fa fa-file-code-o",
-          command: "open-code",
-          togglable: true,
-          id: "open-code",
-        },
-        {
           id: "canvas-clear",
           className: "fa fa-trash",
           command: (e) => {
