@@ -15,6 +15,7 @@
     "grapesjs": "^0.17.25",
     "grapesjs-blocks-bootstrap4": "^0.2.3",
     "grapesjs-component-code-editor": "^1.0.17",
+    "grapesjs-plugin-export": "^1.0.7",
     "grapesjs-preset-newsletter": "^0.2.21",
     "grapesjs-preset-webpage": "^0.1.11",
     "gsap": "^3.7.1",

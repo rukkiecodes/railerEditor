@@ -42,6 +42,7 @@
         <div class="panel__devices"></div>
         <div class="panel_right">
           <div class="panel__basic-actions"></div>
+          <v-btn color="#4CB9EA" class="text-capitalize exportButton" dark>Export</v-btn>
         </div>
       </div>
       <div class="editor-row">

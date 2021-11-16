@@ -187,6 +187,11 @@ const panels = {
             if (confirmDelete) e.runCommand("core:canvas-clear")
           },
         },
+        // {
+        //   id: "gjs-export-zip",
+        //   className: "fa fa-code",
+        //   command: "gjs-export-zip",
+        // },
       ],
     },
   ],

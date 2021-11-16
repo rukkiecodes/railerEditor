@@ -7,10 +7,11 @@ import formPlug from "./blocks/form"
 import gjsnavbar from "./blocks/navbar"
 import gjscomponentcountdown from "./blocks/countdown"
 import typedPlugin from "./blocks/typed"
-import grapesjsloryslider from './blocks/slider'
+import grapesjsloryslider from "./blocks/slider"
 import grapesjscustomcode from "./blocks/costomCode"
 import grapesjsTabs from "./blocks/tabs"
 import grapesjstooltip from "./blocks/tooltip"
+import grapesjspluginexport from "grapesjs-plugin-export"
 
 import editorConfig from "./editorConfig"
 import blocks from "./blocks"
@@ -46,6 +47,7 @@ export default () => {
       grapesjscustomcode,
       grapesjsTabs,
       grapesjstooltip,
+      grapesjspluginexport,
     ],
     pluginsOpts: {
       blocksPlugin: {},
@@ -57,6 +59,7 @@ export default () => {
       grapesjscustomcode: {},
       grapesjsTabs: {},
       grapesjstooltip: {},
+      grapesjspluginexport: {},
     },
 
     blockManager,
@@ -67,6 +70,12 @@ export default () => {
     traitManager,
     deviceManager,
     mediaCondition,
+  })
+
+  const exportButton = document.querySelector(".exportButton")
+
+  exportButton.addEventListener("click", () => {
+    editor.runCommand("gjs-export-zip")
   })
 
   editorConfig(editor)
