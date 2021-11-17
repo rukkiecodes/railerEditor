@@ -4815,6 +4815,11 @@ grapesjs-rte-extensions@^1.0.7:
   resolved "https://registry.yarnpkg.com/grapesjs-rte-extensions/-/grapesjs-rte-extensions-1.0.7.tgz#e2c91fe3cc6361f91853db60cdab1743a7b79bed"
   integrity sha512-F5umpus/lrqSD5zkVm9B6t+MAujurdLDfpZDKdzCowoqLb6onoHRD/SYrq+CMTZwmknDMETUMGeHsT4JffJHCg==
 
+grapesjs-rulers@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/grapesjs-rulers/-/grapesjs-rulers-1.0.8.tgz#1c4dd9a8bcb20a89d4f08f653456441324ec7d2b"
+  integrity sha512-FBCdeXqE9lFYiMoYduoPKm+6KCpSdtsLLxSR0TPS+ZLUzCW/SUvwxXWJOeADzFeEepz4YGVjtPVq6aG1T+t7ag==
+
 grapesjs@^0.17.25:
   version "0.17.25"
   resolved "https://registry.yarnpkg.com/grapesjs/-/grapesjs-0.17.25.tgz#dbefaf545e617ec59920572d023946572c955b67"

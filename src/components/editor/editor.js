@@ -15,6 +15,9 @@ import grapesjspluginexport from "grapesjs-plugin-export"
 import grapesjsrteextensions from "grapesjs-rte-extensions"
 import "grapesjs-rte-extensions/dist/grapesjs-rte-extensions.min.css"
 
+import grapesjsrulers from "grapesjs-rulers"
+import "grapesjs-rulers/dist/grapesjs-rulers.min.css"
+
 import editorConfig from "./editorConfig"
 import blocks from "./blocks"
 
@@ -57,6 +60,7 @@ export default () => {
       grapesjstooltip,
       grapesjspluginexport,
       grapesjsrteextensions,
+      grapesjsrulers,
     ],
     pluginsOpts: {
       blocksPlugin: {},
@@ -69,39 +73,8 @@ export default () => {
       grapesjsTabs: {},
       grapesjstooltip: {},
       grapesjspluginexport: {},
-      grapesjsrteextensions: {
-        fonts: {
-          fontColor: ["#fff"],
-          hilite: ["#fff"],
-          fontSize: true,
-        },
-        format: {
-          heading1: true,
-          heading2: true,
-          heading3: true,
-          heading4: true,
-          heading5: true,
-          heading6: true,
-          paragraph: true,
-          quote: true,
-          clearFormatting: true,
-        },
-
-        subscriptSuperscript: true,
-        indentOutdent: true,
-        list: true,
-        align: true,
-        actions: {
-          copy: true,
-          cut: true,
-          paste: true,
-          delete: true,
-        },
-        undoredo: true,
-        extra: true,
-        darkColorPicker: true,
-        maxWidth: "600px",
-      },
+      grapesjsrteextensions: {},
+      grapesjsrulers: {},
     },
 
     blockManager,
