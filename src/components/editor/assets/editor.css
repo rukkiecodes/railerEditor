@@ -287,10 +287,6 @@
   border-bottom: 0;
 }
 
-.remove_scrollbar::-webkit-scrollbar {
-  width: 0;
-}
-
 .gjs-blocks-c {
   width: 100%;
   display: -webkit-box;
@@ -383,6 +379,10 @@
 
 .gjs-field-colorp {
   width: 30px;
+}
+
+.remove_scrollbar::-webkit-scrollbar {
+  width: 0;
 }
 
 ::-webkit-scrollbar {

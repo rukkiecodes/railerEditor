@@ -11,7 +11,6 @@ import grapesjstooltip from "./blocks/tooltip"
 import grapesjspluginexport from "grapesjs-plugin-export"
 import grapesjsrteextensions from "grapesjs-rte-extensions"
 import "grapesjs-rte-extensions/dist/grapesjs-rte-extensions.min.css"
-import grapesjsrulers from "grapesjs-rulers"
 import "grapesjs-rulers/dist/grapesjs-rulers.min.css"
 import grapesjsstylegradient from "grapesjs-style-gradient"
 import styleFilter from "grapesjs-style-filter"
@@ -33,24 +32,23 @@ import {
   styleManager,
   traitManager,
   deviceManager,
-  mediaCondition,
 } from "./managers"
 
 export default () => {
   const editor = grapesjs.init({
     container: "#gjs",
-    showOffsets: true,
     fromElement: true,
-    noticeOnUnload: false,
     height: "91.9472913616vh",
     width: "auto",
-    storageManager: {
-      id: "gjs-",
-      type: "local",
-      autosave: true,
-      autoload: true,
-      stepsBeforeSave: 1,
-    },
+    storageManager: false,
+
+    blockManager,
+    layerManager,
+    panels,
+    traitManager,
+    selectorManager,
+    styleManager,
+    deviceManager,
 
     canvas: {
       styles: [
@@ -71,37 +69,16 @@ export default () => {
       grapesjstooltip,
       grapesjspluginexport,
       grapesjsrteextensions,
-      grapesjsrulers,
       grapesjsstylegradient,
       styleFilter,
       grapesjsstylebg,
       grapesjsTouch,
-      grapesjsparserpostcss,
-      grapesjsplugintoolbox,
     ],
     pluginsOpts: {
-      blocksPlugin: {},
-      gjscomponentcountdown: {},
-      typedPlugin: {},
-      grapesjscustomcode: {},
-      grapesjsTabs: {},
-      grapesjstooltip: {},
-      grapesjspluginexport: {},
-      grapesjsrteextensions: {},
-      grapesjsrulers: {},
       grapesjsstylegradient: {},
       styleFilter: {},
       grapesjsstylebg: {},
     },
-
-    blockManager,
-    layerManager,
-    panels,
-    selectorManager,
-    styleManager,
-    traitManager,
-    deviceManager,
-    mediaCondition,
   })
 
   const exportButton = document.querySelector(".exportButton")

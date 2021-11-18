@@ -47,7 +47,9 @@
       </div>
       <div class="editor-row">
         <div class="editor-canvas">
-          <div id="gjs"></div>
+          <div id="gjs">
+            <h1>Hello</h1>
+          </div>
         </div>
         <div
           class="panel_right_container"

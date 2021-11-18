@@ -8,7 +8,43 @@ export default (editor) => {
     el: ".panel__top",
   })
 
+  editor.Panels.addPanel({
+    id: "basic-actions",
+    el: ".panel__basic-actions",
+    buttons: [
+      {
+        id: "visibility",
+        active: true, // active by default
+        className: "btn-toggle-borders",
+        label: "<u>B</u>",
+        command: "sw-visibility", // Built-in command
+      },
+      {
+        id: "export",
+        className: "btn-open-export",
+        label: "Exp",
+        command: "export-template",
+        context: "export-template", // For grouping context of buttons from the same panel
+      },
+      {
+        id: "show-json",
+        className: "btn-show-json",
+        label: "JSON",
+        context: "show-json",
+        command(editor) {
+          editor.Modal.setTitle("Components JSON")
+            .setContent(
+              `<textarea style="width:100%; height: 250px;">
+            ${JSON.stringify(editor.getComponents())}
+          </textarea>`
+            )
+            .open()
+        },
+      },
+    ],
+  })
 
+  // Define commands
   editor.Commands.add("show-layers", {
     getRowEl(editor) {
       return editor.getContainer().closest(".editor-row")
@@ -43,7 +79,7 @@ export default (editor) => {
       smEl.style.display = "none"
     },
   })
-  
+
   editor.Commands.add("show-traits", {
     getTraitsEl(editor) {
       const row = editor.getContainer().closest(".editor-row")
@@ -56,7 +92,7 @@ export default (editor) => {
       this.getTraitsEl(editor).style.display = "none"
     },
   })
-  
+
   editor.Commands.add("show-blocks", {
     getRowEl(editor) {
       return editor.getContainer().closest(".editor-row")
@@ -74,6 +110,7 @@ export default (editor) => {
       lmEl.style.display = "none"
     },
   })
+
   editor.Commands.add("set-device-desktop", {
     run: (editor) => editor.setDevice("Desktop"),
   })

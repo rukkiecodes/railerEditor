@@ -2,6 +2,7 @@
   box-sizing: border-box !important;
 }
 
+
 /* Let's highlight canvas boundaries */
 #gjs {
   border: none;
@@ -250,10 +251,6 @@
   border-bottom: 0;
 }
 
-.remove_scrollbar::-webkit-scrollbar {
-  width: 0
-}
-
 .gjs-blocks-c {
   width: 100%;
   display: flex;
@@ -329,6 +326,10 @@
 
 .gjs-field-colorp {
   width: 30px
+}
+
+.remove_scrollbar::-webkit-scrollbar {
+  width: 0
 }
 
 ::-webkit-scrollbar {
