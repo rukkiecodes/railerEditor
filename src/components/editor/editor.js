@@ -3,20 +3,24 @@ import "./assets/grapes.css"
 
 // IMPORT PLUGINGS
 import blocksPlugin from "./blocks/basic"
-import formPlug from "./blocks/form"
-import gjsnavbar from "./blocks/navbar"
 import gjscomponentcountdown from "./blocks/countdown"
 import typedPlugin from "./blocks/typed"
-import grapesjsloryslider from "./blocks/slider"
 import grapesjscustomcode from "./blocks/costomCode"
 import grapesjsTabs from "./blocks/tabs"
 import grapesjstooltip from "./blocks/tooltip"
 import grapesjspluginexport from "grapesjs-plugin-export"
 import grapesjsrteextensions from "grapesjs-rte-extensions"
 import "grapesjs-rte-extensions/dist/grapesjs-rte-extensions.min.css"
-
 import grapesjsrulers from "grapesjs-rulers"
 import "grapesjs-rulers/dist/grapesjs-rulers.min.css"
+import grapesjsstylegradient from "grapesjs-style-gradient"
+import styleFilter from "grapesjs-style-filter"
+import grapesjsstylebg from "grapesjs-style-bg"
+import "grapick/dist/grapick.min.css"
+import grapesjsTouch from "grapesjs-touch"
+import grapesjsparserpostcss from "grapesjs-parser-postcss"
+import grapesjsplugintoolbox from "grapesjs-plugin-toolbox"
+import "./grapesjs-plugin-toolbox.css"
 
 import editorConfig from "./editorConfig"
 import blocks from "./blocks"
@@ -48,33 +52,46 @@ export default () => {
       stepsBeforeSave: 1,
     },
 
+    canvas: {
+      styles: [
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
+      ],
+      scripts: [
+        "https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js",
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js",
+      ],
+    },
+
     plugins: [
       blocksPlugin,
-      formPlug,
-      gjsnavbar,
       gjscomponentcountdown,
       typedPlugin,
-      grapesjsloryslider,
       grapesjscustomcode,
       grapesjsTabs,
       grapesjstooltip,
       grapesjspluginexport,
       grapesjsrteextensions,
       grapesjsrulers,
+      grapesjsstylegradient,
+      styleFilter,
+      grapesjsstylebg,
+      grapesjsTouch,
+      grapesjsparserpostcss,
+      grapesjsplugintoolbox,
     ],
     pluginsOpts: {
       blocksPlugin: {},
-      formPlug: {},
-      gjsnavbar: {},
       gjscomponentcountdown: {},
       typedPlugin: {},
-      grapesjsloryslider: {},
       grapesjscustomcode: {},
       grapesjsTabs: {},
       grapesjstooltip: {},
       grapesjspluginexport: {},
       grapesjsrteextensions: {},
       grapesjsrulers: {},
+      grapesjsstylegradient: {},
+      styleFilter: {},
+      grapesjsstylebg: {},
     },
 
     blockManager,
@@ -90,7 +107,7 @@ export default () => {
   const exportButton = document.querySelector(".exportButton")
 
   exportButton.addEventListener("click", () => {
-    editor.runCommand("gjs-export-zip")
+    editor.runCommand("export-template")
   })
 
   const rteEl = editor.RichTextEditor.getToolbarEl()

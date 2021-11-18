@@ -11,24 +11,243 @@ import {
   sectionFiveTwoTwo,
   sectionTwoTwoTwoTwo,
   sectionOneOneOneOne,
+  navbarBlock,
+  sliderblock,
+  formBLock,
+  inputBlock,
+  textareaBlock,
+  selectBlock,
+  buttonBlock,
 } from "./svgs"
 
 export default (editor) => {
   const bm = editor.BlockManager
+
+  bm.add("quote", {
+    label: "Quote",
+    category: "Basic",
+    attributes: { class: "fa fa-quote-right" },
+    content: `<blockquote class="quote">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit
+      </blockquote>`,
+  })
+
+  bm.add("text-basic", {
+    category: "Basic",
+    label: "Text section",
+    attributes: { class: "gjs-fonts gjs-f-h1p" },
+    content: `<section class="bdg-sect">
+      <h1 class="heading">Insert title here</h1>
+      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      </section>`,
+  })
+
+  bm.add("divider", {
+    label: "Divider",
+    category: "Basic",
+    content: `<table style="width: 100%; margin-top: 10px; margin-bottom: 10px;">
+        <tr>
+          <td class="divider"></td>
+        </tr>
+      </table>
+      <style>
+      .divider {
+        background-color: rgba(0, 0, 0, 0.1);
+        height: 10px;
+        width: 100%;
+      }
+      </style>`,
+    attributes: { class: "gjs-fonts gjs-f-divider" },
+  })
+
+  let gridItem = `<table class="grid-item-card">
+        <tr>
+          <td class="grid-item-card-cell">
+            <img class="grid-item-image" src="http://placehold.it/250x150/78c5d6/fff/" alt="Image"/>
+            <table class="grid-item-card-body">
+              <tr>
+                <td class="grid-item-card-content">
+                  <h1 class="card-title">Title here</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>`
+  bm.add("grid-items", {
+    label: "Grid item",
+    category: "Basic",
+    content: `<table class="grid-item-row">
+        <tr>
+          <td class="grid-item-cell2-l">${gridItem}</td>
+          <td class="grid-item-cell2-r">${gridItem}</td>
+        </tr>
+      </table>`,
+    attributes: { class: "fa fa-th" },
+  })
+
+  let listItem = `<table class="list-item">
+        <tr>
+          <td class="list-item-cell">
+            <table class="list-item-content">
+              <tr class="list-item-row">
+                <td class="list-cell-left">
+                  <img class="list-item-image" src="http://placehold.it/150x150/78c5d6/fff/" alt="Image"/>
+                </td>
+                <td class="list-cell-right">
+                  <h1 class="card-title">Title here</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>`
+  bm.add("list-items", {
+    label: "List item",
+    category: "Basic",
+    content: listItem + listItem,
+    attributes: { class: "fa fa-th-list" },
+  })
+
+  bm.add("form", {
+    category: "Form",
+    media: formBLock,
+    label: "Form",
+    attributes: { title: "Form" },
+    content: `
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    `,
+  })
+
+  bm.add("input", {
+    category: "Form",
+    media: inputBlock,
+    label: "Input",
+    attributes: { title: "Input" },
+    content: `
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Label</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="placeholder">
+    </div>
+    `,
+  })
+
+  bm.add("textarea", {
+    category: "Form",
+    media: textareaBlock,
+    label: "Textarea",
+    attributes: { title: "Textarea" },
+    content: `
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    `,
+  })
+
+  bm.add("select", {
+    category: "Form",
+    media: selectBlock,
+    label: "Select",
+    attributes: { title: "Select" },
+    content: `
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    `,
+  })
+
+  bm.add("button", {
+    category: "Form",
+    media: buttonBlock,
+    label: "Button",
+    attributes: { title: "Button" },
+    content: `
+      <button type="button" class="btn btn-primary">Primary</button>
+    `,
+  })
+
+  bm.add("checkbox", {
+    category: "Form",
+    label: "Checkbox",
+    attributes: { title: "Checkbox", class: "fa fa-check-square" },
+    content: `
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox
+        </label>
+      </div>
+    `,
+  })
+
+  bm.add("radio", {
+    category: "Form",
+    label: "Radio",
+    attributes: { title: "Radio", class: "fa fa-dot-circle-o" },
+    content: `
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Default radio
+        </label>
+      </div>
+    `,
+  })
 
   bm.add("sectionOne", {
     category: "Rows",
     label: `${sectionOne}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i22f" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="i6t1" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0;" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -37,16 +256,42 @@ export default (editor) => {
     label: `${sectionTwoEight}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 20%;" width="20%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 80%;" width="80%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:20%;
+      }
+      #two{
+        width:80%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -55,16 +300,42 @@ export default (editor) => {
     label: `${sectionThreeSeven}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 30%;" width="30%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 70%;" width="70%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:30%;
+      }
+      #two{
+        width:70%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -73,16 +344,36 @@ export default (editor) => {
     label: `${sectionFiveFive}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell">
+      </div>
+      <div class="gjs-cell">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -91,16 +382,42 @@ export default (editor) => {
     label: `${sectionSevenThree}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 70%;" width="70%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 30%;" width="30%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:70%;
+      }
+      #two{
+        width:30%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -109,16 +426,42 @@ export default (editor) => {
     label: `${sectionEightTwo}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 80%;" width="80%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 20%;" width="20%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:80%;
+      }
+      #two{
+        width:20%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -127,18 +470,38 @@ export default (editor) => {
     label: `${sectionThreeThreeThree}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 33%;" width="33%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 33%;" width="33%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 33%;" width="33%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell">
+      </div>
+      <div class="gjs-cell">
+      </div>
+      <div class="gjs-cell">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -147,18 +510,47 @@ export default (editor) => {
     label: `${sectionTwoTwoFive}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+      <div class="gjs-cell" id="three">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:25%;
+      }
+      #two{
+        width:25%;
+      }
+      #three{
+        width:500%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -167,18 +559,47 @@ export default (editor) => {
     label: `${sectionTwoFiveTwo}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+      <div class="gjs-cell" id="three">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:25%;
+      }
+      #two{
+        width:50%;
+      }
+      #three{
+        width:25%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -187,18 +608,47 @@ export default (editor) => {
     label: `${sectionFiveTwoTwo}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 50%;" width="50%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+      <div class="gjs-cell" id="three">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:50%;
+      }
+      #two{
+        width:25%;
+      }
+      #three{
+        width:25%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -207,20 +657,52 @@ export default (editor) => {
     label: `${sectionTwoTwoTwoTwo}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width=25%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 25%;" width="25%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+      <div class="gjs-cell" id="three">
+      </div>
+      <div class="gjs-cell" id="four">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:25%;
+      }
+      #two{
+        width:25%;
+      }
+      #three{
+        width:25%;
+      }
+      #four{
+        width:25%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
     `,
   })
 
@@ -229,24 +711,152 @@ export default (editor) => {
     label: `${sectionOneOneOneOne}`,
     attributes: { class: "layerBlocks" },
     content: `
-    <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
-      <tbody style="box-sizing: border-box;">
-        <tr style="box-sizing: border-box;">
-          <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width=16.666666666%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
-          </td>
-          <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gjs-row">
+      <div class="gjs-cell" id="one">
+      </div>
+      <div class="gjs-cell" id="two">
+      </div>
+      <div class="gjs-cell" id="three">
+      </div>
+      <div class="gjs-cell" id="four">
+      </div>
+      <div class="gjs-cell" id="five">
+      </div>
+      <div class="gjs-cell" id="six">
+      </div>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .gjs-row{
+        display:table;
+        padding:10px;
+        width:100%;
+      }
+      .gjs-cell{
+        width:8%;
+        display:table-cell;
+        height:75px;
+      }
+      #one{
+        width:16.666666666%;
+      }
+      #two{
+        width:16.666666666%;
+      }
+      #three{
+        width:16.666666666%;
+      }
+      #four{
+        width:16.666666666%;
+      }
+      #five{
+        width:16.666666666%;
+      }
+      #six{
+        width:16.666666666%;
+      }
+      @media (max-width: 768px){
+        .gjs-cell{
+          width:100%;
+          display:block;
+        }
+      }
+    </style>
+    `,
+    // content: `
+    // <table id="i12j" style="box-sizing: border-box; height: 150px; margin: 0 auto 10px auto; padding: 5px 5px 5px 5px; width: 100%;" width="100%" height="150">
+    //   <tbody style="box-sizing: border-box;">
+    //     <tr style="box-sizing: border-box;">
+    //       <td id="ir56" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width=16.666666666%" valign="top">
+    //       </td>
+    //       <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+    //       </td>
+    //       <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+    //       </td>
+    //       <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+    //       </td>
+    //       <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+    //       </td>
+    //       <td id="irx7" style="box-sizing: border-box; font-size: 12px; font-weight: 300; vertical-align: top; color: rgb(111, 119, 125); margin: 0; padding: 0; width: 16.666666666%;" width="16.666666666%" valign="top">
+    //       </td>
+    //     </tr>
+    //   </tbody>
+    // </table>
+    // `,
+  })
+
+  bm.add("navbar", {
+    category: "Extra",
+    media: navbarBlock,
+    label: "Navbar",
+    attributes: { title: "Navbar" },
+    content: `
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    `,
+  })
+
+  bm.add("slider", {
+    category: "Extra",
+    media: sliderblock,
+    label: "Slider",
+    attributes: { title: "Slider" },
+    content: `
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
     `,
   })
 }

@@ -8,7 +8,6 @@ export default (editor) => {
     el: ".panel__top",
   })
 
-  // editor.Panels.addPanel()
 
   editor.Commands.add("show-layers", {
     getRowEl(editor) {
@@ -44,6 +43,7 @@ export default (editor) => {
       smEl.style.display = "none"
     },
   })
+  
   editor.Commands.add("show-traits", {
     getTraitsEl(editor) {
       const row = editor.getContainer().closest(".editor-row")
@@ -56,6 +56,7 @@ export default (editor) => {
       this.getTraitsEl(editor).style.display = "none"
     },
   })
+  
   editor.Commands.add("show-blocks", {
     getRowEl(editor) {
       return editor.getContainer().closest(".editor-row")

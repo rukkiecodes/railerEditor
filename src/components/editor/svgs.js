@@ -22,6 +22,47 @@ const sectionTwoTwoTwoTwo = `<svg id="Layer_1" data-name="Layer 1" viewBox="0 0 
 
 const sectionOneOneOneOne = `<svg viewBox="0 0 321 55" fill="none"><g><path d="M46.726 0H0V55H46.726V0Z" class="icon--color-light" style="fill: rgb(224, 224, 224);"></path><path d="M29 13H18V42H29V13Z" class="icon--color-base icon--color-stroke" style="fill: rgb(211, 211, 211); stroke: rgb(189, 189, 189); stroke-linejoin: round; stroke-dasharray: 2;"></path><path d="M101.726 0H55V55H101.726V0Z" class="icon--color-light" style="fill: rgb(224, 224, 224);"></path><path d="M84 13H73V42H84V13Z" class="icon--color-base icon--color-stroke" style="fill: rgb(211, 211, 211); stroke: rgb(189, 189, 189); stroke-linejoin: round; stroke-dasharray: 2;"></path><path d="M156.726 0H110V55H156.726V0Z" class="icon--color-light" style="fill: rgb(224, 224, 224);"></path><path d="M139 13H128V42H139V13Z" class="icon--color-base icon--color-stroke" style="fill: rgb(211, 211, 211); stroke: rgb(189, 189, 189); stroke-linejoin: round; stroke-dasharray: 2;"></path><path d="M211.726 0H165V55H211.726V0Z" class="icon--color-light" style="fill: rgb(224, 224, 224);"></path><path d="M194 13H183V42H194V13Z" class="icon--color-base icon--color-stroke" style="fill: rgb(211, 211, 211); stroke: rgb(189, 189, 189); stroke-linejoin: round; stroke-dasharray: 2;"></path><path d="M266.726 0H220V55H266.726V0Z" class="icon--color-light" style="fill: rgb(224, 224, 224);"></path><path d="M249 13H238V42H249V13Z" class="icon--color-base icon--color-stroke" style="fill: rgb(211, 211, 211); stroke: rgb(189, 189, 189); stroke-linejoin: round; stroke-dasharray: 2;"></path><path d="M321.726 0H275V55H321.726V0Z" class="icon--color-light" style="fill: rgb(224, 224, 224);"></path><path d="M304 13H293V42H304V13Z" class="icon--color-base icon--color-stroke" style="fill: rgb(211, 211, 211); stroke: rgb(189, 189, 189); stroke-linejoin: round; stroke-dasharray: 2;"></path></g></svg>`
 
+const navbarBlock = `<svg class="gjs-block-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path class="gjs-block-svg-path" d="M22,9 C22,8.4 21.5,8 20.75,8 L3.25,8 C2.5,8 2,8.4 2,9 L2,15 C2,15.6 2.5,16 3.25,16 L20.75,16 C21.5,16 22,15.6 22,15 L22,9 Z M21,15 L3,15 L3,9 L21,9 L21,15 Z" fill-rule="nonzero"></path>
+          <rect class="gjs-block-svg-path" x="15" y="10" width="5" height="1"></rect>
+          <rect class="gjs-block-svg-path" x="15" y="13" width="5" height="1"></rect>
+          <rect class="gjs-block-svg-path" x="15" y="11.5" width="5" height="1"></rect>
+        </svg>`
+
+const sliderblock = `<svg class="gjs-block-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 7.6c0-1-.5-1.6-1.3-1.6H3.4C2.5 6 2 6.7 2 7.6v9.8c0 1 .5 1.6 1.3 1.6h17.4c.8 0 1.3-.6 1.3-1.6V7.6zM21 18H3V7h18v11z" fill-rule="nonzero"/><path d="M4 12.5L6 14v-3zM20 12.5L18 14v-3z"/>
+      </svg>`
+
+const formBLock = `<svg class="gjs-block-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path class="gjs-block-svg-path" d="M22,5.5 C22,5.2 21.5,5 20.75,5 L3.25,5 C2.5,5 2,5.2 2,5.5 L2,8.5 C2,8.8 2.5,9 3.25,9 L20.75,9 C21.5,9 22,8.8 22,8.5 L22,5.5 Z M21,8 L3,8 L3,6 L21,6 L21,8 Z" fill-rule="nonzero"></path>
+        <path class="gjs-block-svg-path" d="M22,10.5 C22,10.2 21.5,10 20.75,10 L3.25,10 C2.5,10 2,10.2 2,10.5 L2,13.5 C2,13.8 2.5,14 3.25,14 L20.75,14 C21.5,14 22,13.8 22,13.5 L22,10.5 Z M21,13 L3,13 L3,11 L21,11 L21,13 Z" fill-rule="nonzero"></path>
+        <rect class="gjs-block-svg-path" x="2" y="15" width="10" height="3" rx="0.5"></rect>
+      </svg>`
+
+const inputBlock = `<svg class="gjs-block-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path class="gjs-block-svg-path" d="M22,9 C22,8.4 21.5,8 20.75,8 L3.25,8 C2.5,8 2,8.4 2,9 L2,15 C2,15.6 2.5,16 3.25,16 L20.75,16 C21.5,16 22,15.6 22,15 L22,9 Z M21,15 L3,15 L3,9 L21,9 L21,15 Z"></path>
+        <polygon class="gjs-block-svg-path" points="4 10 5 10 5 14 4 14"></polygon>
+      </svg>`
+
+const textareaBlock = `<svg class="gjs-block-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path class="gjs-block-svg-path" d="M22,7.5 C22,6.6 21.5,6 20.75,6 L3.25,6 C2.5,6 2,6.6 2,7.5 L2,16.5 C2,17.4 2.5,18 3.25,18 L20.75,18 C21.5,18 22,17.4 22,16.5 L22,7.5 Z M21,17 L3,17 L3,7 L21,7 L21,17 Z"></path>
+        <polygon class="gjs-block-svg-path" points="4 8 5 8 5 12 4 12"></polygon>
+        <polygon class="gjs-block-svg-path" points="19 7 20 7 20 17 19 17"></polygon>
+        <polygon class="gjs-block-svg-path" points="20 8 21 8 21 9 20 9"></polygon>
+        <polygon class="gjs-block-svg-path" points="20 15 21 15 21 16 20 16"></polygon>
+      </svg>`
+
+const selectBlock = `<svg class="gjs-block-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path class="gjs-block-svg-path" d="M22,9 C22,8.4 21.5,8 20.75,8 L3.25,8 C2.5,8 2,8.4 2,9 L2,15 C2,15.6 2.5,16 3.25,16 L20.75,16 C21.5,16 22,15.6 22,15 L22,9 Z M21,15 L3,15 L3,9 L21,9 L21,15 Z" fill-rule="nonzero"></path>
+        <polygon class="gjs-block-svg-path" transform="translate(18.500000, 12.000000) scale(1, -1) translate(-18.500000, -12.000000) " points="18.5 11 20 13 17 13"></polygon>
+        <rect class="gjs-block-svg-path" x="4" y="11.5" width="11" height="1"></rect>
+      </svg>`
+
+const buttonBlock = `<svg class="gjs-block-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path class="gjs-block-svg-path" d="M22,9 C22,8.4 21.5,8 20.75,8 L3.25,8 C2.5,8 2,8.4 2,9 L2,15 C2,15.6 2.5,16 3.25,16 L20.75,16 C21.5,16 22,15.6 22,15 L22,9 Z M21,15 L3,15 L3,9 L21,9 L21,15 Z" fill-rule="nonzero"></path>
+        <rect class="gjs-block-svg-path" x="4" y="11.5" width="16" height="1"></rect>
+      </svg>`
+
 module.exports = {
   sectionOne,
   sectionTwoEight,
@@ -35,4 +76,11 @@ module.exports = {
   sectionFiveTwoTwo,
   sectionTwoTwoTwoTwo,
   sectionOneOneOneOne,
+  navbarBlock,
+  sliderblock,
+  formBLock,
+  inputBlock,
+  textareaBlock,
+  selectBlock,
+  buttonBlock,
 }
