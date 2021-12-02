@@ -10,10 +10,6 @@ const selectorManager = {
   appendTo: ".styles-container",
 }
 
-const traitManager = {
-  appendTo: ".traits-container",
-}
-
 const deviceManager = {
   devices: [
     {
@@ -85,6 +81,7 @@ const panels = {
           togglable: false,
           command: "show-blocks",
           className: "fa fa-th-large",
+          label: `<span>Blocks</span>`,
           attributes: {
             class: "block-button",
             title: "Component blocks",
@@ -96,6 +93,7 @@ const panels = {
           togglable: false,
           command: "show-styles",
           className: "fa fa-paint-brush",
+          label: `<span>Style</span>`,
           attributes: {
             title: "Component style",
           },
@@ -106,18 +104,9 @@ const panels = {
           togglable: false,
           command: "show-layers",
           className: "fa fa-bars",
+          label: `<span>Layers</span>`,
           attributes: {
             title: "Component layers",
-          },
-        },
-        {
-          id: "show-traits",
-          active: true,
-          togglable: false,
-          className: "fa fa-cog",
-          command: "show-traits",
-          attributes: {
-            title: "Component traits",
           },
         },
       ],
@@ -131,11 +120,13 @@ const panels = {
           id: "device-desktop",
           command: "set-device-desktop",
           className: "fa fa-desktop",
+          attributes: { title: "Desktop" },
         },
         {
           id: "device-mobile",
           command: "set-device-mobile",
           className: "fa fa-mobile",
+          attributes: { title: "Mobile" },
         },
       ],
     },
@@ -149,12 +140,6 @@ const panels = {
           command: "sw-visibility",
           context: "sw-visibility",
           className: "fa fa-square-o",
-        },
-        {
-          id: "preview",
-          context: "preview",
-          command: (e) => e.runCommand("preview"),
-          className: "fa fa-eye",
         },
         {
           id: "fullscreen",
@@ -191,6 +176,5 @@ module.exports = {
   panels,
   selectorManager,
   styleManager,
-  traitManager,
   deviceManager,
 }

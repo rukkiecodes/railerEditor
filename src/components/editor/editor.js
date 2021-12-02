@@ -17,9 +17,6 @@ import styleFilter from "grapesjs-style-filter"
 import grapesjsstylebg from "grapesjs-style-bg"
 import "grapick/dist/grapick.min.css"
 import grapesjsTouch from "grapesjs-touch"
-import grapesjsparserpostcss from "grapesjs-parser-postcss"
-import grapesjsplugintoolbox from "grapesjs-plugin-toolbox"
-import "./grapesjs-plugin-toolbox.css"
 
 import editorConfig from "./editorConfig"
 import blocks from "./blocks"
@@ -30,7 +27,6 @@ import {
   panels,
   selectorManager,
   styleManager,
-  traitManager,
   deviceManager,
 } from "./managers"
 
@@ -45,7 +41,6 @@ export default () => {
     blockManager,
     layerManager,
     panels,
-    traitManager,
     selectorManager,
     styleManager,
     deviceManager,
@@ -80,18 +75,6 @@ export default () => {
       grapesjsstylebg: {},
     },
   })
-
-  const exportButton = document.querySelector(".exportButton")
-
-  exportButton.addEventListener("click", () => {
-    editor.runCommand("export-template")
-  })
-
-  const rteEl = editor.RichTextEditor.getToolbarEl()
-  const order = [0, 1, 2, 3, 4, 14, 15, 9, 10, 11, 12, 13, 5, 6, 7, 8]
-  rteEl.firstChild.childNodes.forEach(
-    (child, idx) => (child.style.order = order[idx])
-  )
 
   editorConfig(editor)
   blocks(editor)

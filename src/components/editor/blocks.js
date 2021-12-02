@@ -290,6 +290,12 @@ export default (editor) => {
           width:100%;
           display:block;
         }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
+        }
       }
     </style>
     `,
@@ -333,6 +339,12 @@ export default (editor) => {
         .gjs-cell{
           width:100%;
           display:block;
+        }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
         }
       }
     </style>
@@ -416,6 +428,12 @@ export default (editor) => {
           width:100%;
           display:block;
         }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
+        }
       }
     </style>
     `,
@@ -459,6 +477,12 @@ export default (editor) => {
         .gjs-cell{
           width:100%;
           display:block;
+        }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
         }
       }
     </style>
@@ -549,6 +573,15 @@ export default (editor) => {
           width:100%;
           display:block;
         }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
+        }
+        #three{
+          width:100%;
+        }
       }
     </style>
     `,
@@ -598,6 +631,15 @@ export default (editor) => {
           width:100%;
           display:block;
         }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
+        }
+        #three{
+          width:100%;
+        }
       }
     </style>
     `,
@@ -646,6 +688,15 @@ export default (editor) => {
         .gjs-cell{
           width:100%;
           display:block;
+        }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
+        }
+        #three{
+          width:100%;
         }
       }
     </style>
@@ -700,6 +751,18 @@ export default (editor) => {
         .gjs-cell{
           width:100%;
           display:block;
+        }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
+        }
+        #three{
+          width:100%;
+        }
+        #four{
+          width:100%;
         }
       }
     </style>
@@ -764,6 +827,24 @@ export default (editor) => {
         .gjs-cell{
           width:100%;
           display:block;
+        }
+        #one{
+          width:100%;
+        }
+        #two{
+          width:100%;
+        }
+        #three{
+          width:100%;
+        }
+        #four{
+          width:100%;
+        }
+        #five{
+          width:100%;
+        }
+        #six{
+          width:100%;
         }
       }
     </style>

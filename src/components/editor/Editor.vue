@@ -6,16 +6,8 @@
           <Logo />
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                class="ml-8"
-                color="white"
-                v-bind="attrs"
-                v-on="on"
-                dark
-                plain
-                icon
-              >
-                <v-icon>mdi-text-box-multiple-outline</v-icon>
+              <v-btn class="ml-8" v-bind="attrs" v-on="on" dark plain icon>
+                <v-img max-width="20" src="./images/templates.svg"></v-img>
               </v-btn>
             </template>
             <span>Template cataloge</span>
@@ -23,8 +15,15 @@
           <v-divider class="mx-3" dark vertical />
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
-              <v-btn color="white" v-bind="attrs" v-on="on" dark plain icon>
-                <v-icon>mdi-magnify</v-icon>
+              <v-btn
+                class="previewButton"
+                v-bind="attrs"
+                v-on="on"
+                dark
+                plain
+                icon
+              >
+                <v-img max-width="20" src="./images/preview.svg"></v-img>
               </v-btn>
             </template>
             <span>Preview</span>
@@ -32,57 +31,79 @@
           <v-divider class="mx-3" dark vertical />
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
-              <v-btn color="white" v-bind="attrs" v-on="on" dark plain icon>
-                <v-icon>mdi-send mdi-rotate-315</v-icon>
+              <v-btn v-bind="attrs" v-on="on" dark plain icon>
+                <v-img max-width="20" src="./images/send-test.svg"></v-img>
               </v-btn>
             </template>
             <span>quick send</span>
           </v-tooltip>
+
+          <v-divider class="mx-3" dark vertical />
+
+          <div class="panel__basic-actions"></div>
         </div>
         <div class="panel__devices"></div>
         <div class="panel_right">
-          <div class="panel__basic-actions"></div>
-          <v-btn color="#4CB9EA" class="text-capitalize exportButton" dark>Export</v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                class="text-capitalize exportButton"
+                color="#4CB9EA"
+                v-bind="attrs"
+                v-on="on"
+                depressed
+                dark
+                >Export</v-btn
+              >
+            </template>
+            <span>Export template</span>
+          </v-tooltip>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                x-small
+                dark
+                depressed
+                class="ml-3 togglePanelButton"
+                width="30"
+                height="35"
+                color="#4CB9EA"
+                @click="togglePanel"
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-icon v-show="panelWidth == 411"
+                  >mdi-chevron-double-right</v-icon
+                >
+                <v-icon v-show="panelWidth == 0"
+                  >mdi-chevron-double-left</v-icon
+                >
+              </v-btn>
+            </template>
+            <span v-show="panelWidth == 411">Close panel</span>
+            <span v-show="panelWidth == 0">Open panel</span>
+          </v-tooltip>
         </div>
       </div>
+      <!-- <div class="panel__devices"></div> -->
       <div class="editor-row">
         <div class="editor-canvas">
-          <div id="gjs">
-            <h1>Hello</h1>
-          </div>
+          <div id="gjs"></div>
         </div>
         <div
           class="panel_right_container"
           :style="{ width: panelWidth + 'px' }"
-          @mouseenter="buttonVisibility = true"
-          @mouseleave="buttonVisibility = false"
         >
-          <v-fab-transition>
-            <v-btn
-              class="floading__button"
-              color="#4CB9EA"
-              fab
-              dark
-              x-small
-              absolute
-              @click="togglePanel"
-              v-show="buttonVisibility || panelWidth == 15"
-            >
-              <v-icon v-show="panelWidth == 411">mdi-chevron-right</v-icon>
-              <v-icon v-show="panelWidth == 15">mdi-chevron-left</v-icon>
-            </v-btn>
-          </v-fab-transition>
-          <div class="panel__switcher"></div>
+          <div :style="{ display: panelDisplay }" class="panel__switcher"></div>
           <v-sheet
+            :style="{ display: panelDisplay }"
             height="91.9472913616vh"
-            color="blue"
             class="overflow-y-auto panel_right_sheet"
           >
             <div class="panel__right">
               <div class="blocks-container"></div>
               <div class="styles-container"></div>
               <div class="layers-container"></div>
-              <div class="traits-container"></div>
             </div>
           </v-sheet>
         </div>
@@ -98,11 +119,12 @@ export default {
   data: () => ({
     panelWidth: 411,
     panel: true,
-    buttonVisibility: false,
+    panelDisplay: "",
   }),
   components: {
     Logo: () => import("./components/Logo.vue"),
   },
+
   mounted() {
     emailEditor()
     this.$nextTick(() => {
@@ -121,11 +143,13 @@ export default {
     togglePanel() {
       const panel__right = document.querySelector(".panel__right")
       if (this.panelWidth == 411) {
-        this.panelWidth = 15
+        this.panelWidth = 0
+        this.panelDisplay = "none"
 
         panel__right.classList.add("remove_scrollbar")
-      } else if (this.panelWidth == 15) {
+      } else if (this.panelWidth == 0) {
         this.panelWidth = 411
+        this.panelDisplay = ""
         panel__right.classList.remove("remove_scrollbar")
       }
     },

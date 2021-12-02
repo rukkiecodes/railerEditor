@@ -3,6 +3,7 @@ export default {
     html: `<h1>Hello</h1>`,
     htmlCode: ``,
     cssCode: ``,
-    dialog: false
+    dialog: false,
+    togglePanelButton: false
   }
 }
