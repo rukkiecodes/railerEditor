@@ -4,6 +4,7 @@ export default {
     htmlCode: ``,
     cssCode: ``,
     dialog: false,
-    togglePanelButton: false
+    togglePanelButton: false,
+    sendDialog: false
   }
 }

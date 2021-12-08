@@ -14,9 +14,8 @@ export default (editor) => {
     buttons: [
       {
         id: "visibility",
-        active: true,
+        active: false,
         className: "btn-toggle-borders",
-        label: "<u>B</u>",
         command: "sw-visibility",
       },
       {
@@ -43,60 +42,6 @@ export default (editor) => {
     ],
   })
 
-  // Define commands
-  editor.Commands.add("show-layers", {
-    getRowEl(editor) {
-      return editor.getContainer().closest(".editor-row")
-    },
-    getLayersEl(row) {
-      return row.querySelector(".layers-container")
-    },
-
-    run(editor, sender) {
-      const lmEl = this.getLayersEl(this.getRowEl(editor))
-      lmEl.style.display = ""
-    },
-    stop(editor, sender) {
-      const lmEl = this.getLayersEl(this.getRowEl(editor))
-      lmEl.style.display = "none"
-    },
-  })
-  editor.Commands.add("show-styles", {
-    getRowEl(editor) {
-      return editor.getContainer().closest(".editor-row")
-    },
-    getStyleEl(row) {
-      return row.querySelector(".styles-container")
-    },
-
-    run(editor, sender) {
-      const smEl = this.getStyleEl(this.getRowEl(editor))
-      smEl.style.display = ""
-    },
-    stop(editor, sender) {
-      const smEl = this.getStyleEl(this.getRowEl(editor))
-      smEl.style.display = "none"
-    },
-  })
-
-  editor.Commands.add("show-blocks", {
-    getRowEl(editor) {
-      return editor.getContainer().closest(".editor-row")
-    },
-    getLayersEl(row) {
-      return row.querySelector(".blocks-container")
-    },
-
-    run(editor, sender) {
-      const lmEl = this.getLayersEl(this.getRowEl(editor))
-      lmEl.style.display = ""
-    },
-    stop(editor, sender) {
-      const lmEl = this.getLayersEl(this.getRowEl(editor))
-      lmEl.style.display = "none"
-    },
-  })
-
   editor.Commands.add("set-device-desktop", {
     run: (editor) => editor.setDevice("Desktop"),
   })
@@ -111,9 +56,7 @@ export default (editor) => {
   })
 
   const previewButton = document.querySelector(".previewButton")
-  const togglePanelButton = store.state.editor.togglePanelButton
   previewButton.addEventListener("click", () => {
-    document.querySelector(".togglePanelButton").click()
     editor.runCommand("preview")
   })
 
@@ -163,9 +106,4 @@ export default (editor) => {
       mobile.style.transition = ".3s ease-in-out"
     }
   })
-
-  const panel__switcher = document.querySelector(
-    ".panel__switcher .gjs-pn-buttons"
-  )
-  console.log(panel__switcher)
 }

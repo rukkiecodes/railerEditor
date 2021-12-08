@@ -21,6 +21,9 @@ import grapesjsTouch from "grapesjs-touch"
 import editorConfig from "./editorConfig"
 import blocks from "./blocks"
 
+// IMPORT PLACEHOLDER
+import placeholder from "./placeholder"
+
 import {
   blockManager,
   layerManager,
@@ -34,7 +37,7 @@ export default () => {
   const editor = grapesjs.init({
     container: "#gjs",
     fromElement: true,
-    height: "91.9472913616vh",
+    height: "94vh",
     width: "auto",
     storageManager: false,
 
@@ -75,6 +78,10 @@ export default () => {
       grapesjsstylebg: {},
     },
   })
+
+  editor.addComponents(placeholder)
+
+  // console.log(editor.Canvas.getDocument().querySelector("html"))
 
   editorConfig(editor)
   blocks(editor)

@@ -3,7 +3,7 @@ const blockManager = {
 }
 
 const layerManager = {
-  appendTo: ".layers-container",
+  // appendTo: ".layers-container",
 }
 
 const selectorManager = {
@@ -29,9 +29,88 @@ const styleManager = {
   appendTo: ".styles-container",
   sectors: [
     {
+      name: "Box model",
+      open: true,
+      buildProps: [
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+      ],
+      properties: [
+        {
+          type: "integer",
+          property: "margin-top",
+          units: ["px", "%", "em", "rem", "mm", "cm"],
+          defaults: "0",
+          min: 0,
+        },
+        {
+          type: "integer",
+          property: "margin-right",
+          units: ["px", "%", "em", "rem", "mm", "cm"],
+          defaults: "0",
+          min: 0,
+        },
+        {
+          type: "integer",
+          property: "margin-bottom",
+          units: ["px", "%", "em", "rem", "mm", "cm"],
+          defaults: "0",
+          min: 0,
+        },
+        {
+          type: "integer",
+          property: "margin-left",
+          units: ["px", "%", "em", "rem", "mm", "cm"],
+          defaults: "0",
+          min: 0,
+        },
+        {
+          type: "integer",
+          property: "padding-top",
+          units: ["px", "%", "em", "rem", "mm", "cm"],
+          defaults: "0",
+          min: 0,
+        },
+        {
+          type: "integer",
+          property: "padding-right",
+          units: ["px", "%", "em", "rem", "mm", "cm"],
+          defaults: "0",
+          min: 0,
+        },
+        {
+          type: "integer",
+          property: "padding-bottom",
+          units: ["px", "%", "em", "rem", "mm", "cm"],
+          defaults: "0",
+          min: 0,
+        },
+        {
+          type: "integer",
+          property: "padding-left",
+          units: ["px", "%", "em", "rem", "mm", "cm"],
+          defaults: "0",
+          min: 0,
+        },
+      ],
+    },
+    {
       name: "Dimension",
       open: true,
-      buildProps: ["width", "min-width", "max-width", "height", "min-height", "max-height", "padding", "margin"],
+      buildProps: [
+        "width",
+        "min-width",
+        "max-width",
+        "height",
+        "min-height",
+        "max-height",
+      ],
       properties: [
         {
           type: "integer",
@@ -39,23 +118,23 @@ const styleManager = {
           property: "width",
           units: ["px", "%", "vw", "mm", "cm"],
           defaults: "auto",
-          min: 10,
+          min: 0,
         },
         {
           type: "integer",
-          name: "Min Width",
+          name: "Min width",
           property: "min-width",
           units: ["px", "%", "vw", "mm", "cm"],
           defaults: "auto",
-          min: 10,
+          min: 0,
         },
         {
           type: "integer",
-          name: "Max Width",
+          name: "Max width",
           property: "max-width",
           units: ["px", "%", "vw", "mm", "cm"],
           defaults: "auto",
-          min: 10,
+          min: 0,
         },
         {
           type: "integer",
@@ -63,7 +142,7 @@ const styleManager = {
           property: "height",
           units: ["px", "%", "vh", "mm", "cm"],
           defaults: "auto",
-          min: 10,
+          min: 0,
         },
         {
           type: "integer",
@@ -71,7 +150,7 @@ const styleManager = {
           property: "min-height",
           units: ["px", "%", "vh", "mm", "cm"],
           defaults: "auto",
-          min: 10,
+          min: 0,
         },
         {
           type: "integer",
@@ -79,44 +158,25 @@ const styleManager = {
           property: "max-height",
           units: ["px", "%", "vh", "mm", "cm"],
           defaults: "auto",
-          min: 10,
-        },
-        {
-          type: "integer",
-          name: "Padding",
-          property: "padding",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "auto",
-          min: 10,
-        },
-        {
-          type: "integer",
-          name: "Margin",
-          property: "margin",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "auto",
-          min: 10,
+          min: 0,
         },
       ],
     },
     {
-      name: "Extra",
+      name: "Typography",
       open: true,
-      buildProps: ["background-color", "color", "box-shadow", "custom-prop"],
-      properties: [
-        {
-          id: "custom-prop",
-          name: "Custom Label",
-          property: "font-size",
-          type: "select",
-          defaults: "32px",
-          options: [
-            { value: "12px", name: "Tiny" },
-            { value: "18px", name: "Medium" },
-            { value: "32px", name: "Big" },
-          ],
-        },
+      buildProps: [
+        "font-family",
+        "font-size",
+        "font-weight",
+        "text-align",
+        "text-shadow",
       ],
+    },
+    {
+      name: "Coloring",
+      open: true,
+      buildProps: ["background-color", "color", "background"],
     },
   ],
 }
@@ -127,46 +187,46 @@ const panels = {
       id: "panel-right",
       el: ".panel__right",
     },
-    {
-      id: "panel-switcher",
-      el: ".panel__switcher",
-      buttons: [
-        {
-          id: "show-blocks",
-          active: true,
-          togglable: false,
-          command: "show-blocks",
-          className: "fa fa-th-large",
-          label: `<span>Blocks</span>`,
-          attributes: {
-            class: "block-button",
-            title: "Component blocks",
-          },
-        },
-        {
-          id: "show-style",
-          active: true,
-          togglable: false,
-          command: "show-styles",
-          className: "fa fa-paint-brush",
-          label: `<span>Style</span>`,
-          attributes: {
-            title: "Component style",
-          },
-        },
-        {
-          id: "show-layers",
-          active: true,
-          togglable: false,
-          command: "show-layers",
-          className: "fa fa-bars",
-          label: `<span>Layers</span>`,
-          attributes: {
-            title: "Component layers",
-          },
-        },
-      ],
-    },
+    // {
+    //   id: "panel-switcher",
+    //   el: ".panel__switcher",
+    //   buttons: [
+    //     // {
+    //     //   id: "show-blocks",
+    //     //   active: true,
+    //     //   togglable: false,
+    //     //   command: "show-blocks",
+    //     //   className: "fa fa-th-large",
+    //     //   label: `<span>Blocks</span>`,
+    //     //   attributes: {
+    //     //     class: "block-button",
+    //     //     title: "Component blocks",
+    //     //   },
+    //     // },
+    //     // {
+    //     //   id: "show-style",
+    //     //   active: true,
+    //     //   togglable: false,
+    //     //   command: "show-styles",
+    //     //   className: "fa fa-paint-brush",
+    //     //   label: `<span>Style</span>`,
+    //     //   attributes: {
+    //     //     title: "Component style",
+    //     //   },
+    //     // },
+    //     // {
+    //     //   id: "show-layers",
+    //     //   active: true,
+    //     //   togglable: false,
+    //     //   command: "show-layers",
+    //     //   className: "fa fa-bars",
+    //     //   label: `<span>Layers</span>`,
+    //     //   attributes: {
+    //     //     title: "Component layers",
+    //     //   },
+    //     // },
+    //   ],
+    // },
     {
       id: "panel-devices",
       el: ".panel__devices",
@@ -192,7 +252,7 @@ const panels = {
       buttons: [
         {
           id: "sw-visibility",
-          active: true,
+          active: false,
           command: "sw-visibility",
           context: "sw-visibility",
           className: "fa fa-square-o",
