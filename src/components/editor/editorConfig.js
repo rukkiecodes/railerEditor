@@ -74,21 +74,22 @@ export default (editor) => {
     ".panel__devices .gjs-pn-buttons .fa-mobile"
   )
 
-  desktop.style.backgroundColor = "#4CB9EA"
-  desktop.style.color = "#fff"
-  desktop.style.borderRadius = ".3em 0 0 .3em"
+  desktop.style.backgroundColor = "#DBDBFD"
+  desktop.style.color = "#3D3DF4"
+  mobile.style.color = "#999999"
+  desktop.style.borderRadius = ".3em"
 
   editor.on("change:device", () => {
     if (editor.getDevice() == "Desktop") {
       // DESKTOP
-      desktop.style.backgroundColor = "#4CB9EA"
-      desktop.style.color = "#fff"
-      desktop.style.borderRadius = ".3em 0 0 .3em"
+      desktop.style.backgroundColor = "#DBDBFD"
+      desktop.style.color = "#3D3DF4"
+      desktop.style.borderRadius = ".3em"
       desktop.style.transition = ".3s ease-in-out"
 
       // MOBILE
       mobile.style.backgroundColor = ""
-      mobile.style.color = ""
+      mobile.style.color = "#999999"
       mobile.style.borderRadius = ""
       mobile.style.transition = ""
     }
@@ -96,13 +97,13 @@ export default (editor) => {
     if (editor.getDevice() == "Mobile") {
       // DESKTOP
       desktop.style.backgroundColor = ""
-      desktop.style.color = ""
+      desktop.style.color = "#999999"
       desktop.style.borderRadius = ""
 
       // Mobile
-      mobile.style.backgroundColor = "#4CB9EA"
-      mobile.style.color = "#fff"
-      mobile.style.borderRadius = "0 .3em .3em 0"
+      mobile.style.backgroundColor = "#DBDBFD"
+      mobile.style.color = "#3D3DF4"
+      mobile.style.borderRadius = ".3em"
       mobile.style.transition = ".3s ease-in-out"
     }
   })

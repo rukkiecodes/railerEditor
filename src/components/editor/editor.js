@@ -17,6 +17,7 @@ import styleFilter from "grapesjs-style-filter"
 import grapesjsstylebg from "grapesjs-style-bg"
 import "grapick/dist/grapick.min.css"
 import grapesjsTouch from "grapesjs-touch"
+import tUIImageEditor from "grapesjs-tui-image-editor"
 
 import editorConfig from "./editorConfig"
 import blocks from "./blocks"
@@ -71,11 +72,25 @@ export default () => {
       styleFilter,
       grapesjsstylebg,
       grapesjsTouch,
+      tUIImageEditor,
     ],
     pluginsOpts: {
       grapesjsstylegradient: {},
       styleFilter: {},
       grapesjsstylebg: {},
+    },
+  })
+
+  editor.I18n.addMessages({
+    en: {
+      styleManager: {
+        properties: {
+          "background-repeat": "Repeat",
+          "background-position": "Position",
+          "background-attachment": "Attachment",
+          "background-size": "Size",
+        },
+      },
     },
   })
 

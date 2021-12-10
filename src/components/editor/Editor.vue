@@ -4,39 +4,43 @@
       <div class="panel__top">
         <div class="panel_left">
           <Logo />
+        </div>
+        <div class="panel__devices"></div>
+        <div class="panel_right">
+          <div class="panel__basic-actions"></div>
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
-              <v-btn class="ml-8" v-bind="attrs" v-on="on" dark plain icon>
+              <v-btn v-bind="attrs" v-on="on" plain dark icon>
                 <v-img max-width="20" src="./images/templates.svg"></v-img>
               </v-btn>
             </template>
             <span>Template cataloge</span>
           </v-tooltip>
-          <v-divider class="mx-3" dark vertical />
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn
-                class="previewButton"
+                class="previewButton ml-3"
+                color="#1d1d1d"
                 v-bind="attrs"
                 v-on="on"
-                dark
                 plain
+                dark
                 icon
               >
-                <v-img max-width="20" src="./images/preview.svg"></v-img>
+                <v-icon>mdi-eye-outline</v-icon>
               </v-btn>
             </template>
             <span>Preview</span>
           </v-tooltip>
-          <v-divider class="mx-3" dark vertical />
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                 @click="openSendDialog"
+                class="ml-3"
                 v-bind="attrs"
                 v-on="on"
-                dark
                 plain
+                dark
                 icon
               >
                 <v-img max-width="20" src="./images/send-test.svg"></v-img>
@@ -44,18 +48,14 @@
             </template>
             <span>quick send</span>
           </v-tooltip>
-        </div>
-        <div class="panel__devices"></div>
-        <div class="panel_right">
-          <div class="panel__basic-actions"></div>
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn
-                class="text-capitalize exportButton"
-                color="#4CB9EA"
+                class="text-capitalize exportButton ml-3"
+                color="#1d1d1d"
                 v-bind="attrs"
                 v-on="on"
-                depressed
+                plain
                 icon
                 dark
               >
@@ -66,12 +66,8 @@
           </v-tooltip>
         </div>
       </div>
-      <!-- <div class="panel__devices"></div> -->
       <div class="editor-row">
-        <div
-          class="panel_left_container"
-          :style="{ width: panelWidth + 'px' }"
-        >
+        <div class="panel_left_container" :style="{ width: panelWidth + 'px' }">
           <div class="blocks-container"></div>
         </div>
         <div class="editor-canvas">
@@ -81,16 +77,13 @@
           class="panel_right_container"
           :style="{ width: panelWidth + 'px' }"
         >
-          <!-- <div :style="{ display: panelDisplay }" class="panel__switcher"></div> -->
           <v-sheet
             :style="{ display: panelDisplay }"
             height="94vh"
             class="overflow-y-auto panel_right_sheet"
           >
             <div class="panel__right">
-              <!-- <div class="blocks-container"></div> -->
               <div class="styles-container"></div>
-              <!-- <div class="layers-container"></div> -->
             </div>
           </v-sheet>
         </div>

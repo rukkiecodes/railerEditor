@@ -29,76 +29,10 @@ const styleManager = {
   appendTo: ".styles-container",
   sectors: [
     {
-      name: "Box model",
+      name: "General",
       open: true,
-      buildProps: [
-        "margin-top",
-        "margin-right",
-        "margin-bottom",
-        "margin-left",
-        "padding-top",
-        "padding-right",
-        "padding-bottom",
-        "padding-left",
-      ],
-      properties: [
-        {
-          type: "integer",
-          property: "margin-top",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "0",
-          min: 0,
-        },
-        {
-          type: "integer",
-          property: "margin-right",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "0",
-          min: 0,
-        },
-        {
-          type: "integer",
-          property: "margin-bottom",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "0",
-          min: 0,
-        },
-        {
-          type: "integer",
-          property: "margin-left",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "0",
-          min: 0,
-        },
-        {
-          type: "integer",
-          property: "padding-top",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "0",
-          min: 0,
-        },
-        {
-          type: "integer",
-          property: "padding-right",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "0",
-          min: 0,
-        },
-        {
-          type: "integer",
-          property: "padding-bottom",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "0",
-          min: 0,
-        },
-        {
-          type: "integer",
-          property: "padding-left",
-          units: ["px", "%", "em", "rem", "mm", "cm"],
-          defaults: "0",
-          min: 0,
-        },
-      ],
+      buildProps: ["display", "position", "top", "right", "left", "bottom"],
+      properties: [{ property: "position", type: "select" }],
     },
     {
       name: "Dimension",
@@ -110,6 +44,8 @@ const styleManager = {
         "height",
         "min-height",
         "max-height",
+        "margin",
+        "padding",
       ],
       properties: [
         {
@@ -169,14 +105,330 @@ const styleManager = {
         "font-family",
         "font-size",
         "font-weight",
+        "letter-spacing",
+        "color",
+        "line-height",
+        "float",
         "text-align",
+        "text-decoration",
         "text-shadow",
+      ],
+      properties: [
+        {
+          property: "text-align",
+          list: [
+            { value: "left", className: "fa fa-align-left" },
+            { value: "center", className: "fa fa-align-center" },
+            { value: "right", className: "fa fa-align-right" },
+            { value: "justify", className: "fa fa-align-justify" },
+          ],
+        },
+
+        {
+          name: "Alignment",
+          property: "float",
+          type: "radio",
+          defaults: "none",
+          list: [
+            { value: "none", className: "fa fa-times" },
+            { value: "left", className: "fa fa-align-left" },
+            { value: "right", className: "fa fa-align-right" },
+          ],
+        },
+
+        {
+          property: "text-decoration",
+          type: "radio",
+          defaults: "none",
+          list: [
+            { value: "none", name: "None", className: "fa fa-times" },
+            {
+              value: "underline",
+              name: "underline",
+              className: "fa fa-underline",
+            },
+            {
+              value: "line-through",
+              name: "Line-through",
+              className: "fa fa-strikethrough",
+            },
+          ],
+        },
+
+        {
+          property: "text-shadow",
+          properties: [
+            { name: "X position", property: "text-shadow-h" },
+            { name: "Y position", property: "text-shadow-v" },
+            { name: "Blur", property: "text-shadow-blur" },
+            { name: "Color", property: "text-shadow-color" },
+          ],
+        },
       ],
     },
     {
-      name: "Coloring",
+      name: "Decorations",
       open: true,
-      buildProps: ["background-color", "color", "background"],
+      buildProps: [
+        "opacity",
+        "border-radius",
+        "border",
+        "box-shadow",
+        "background-bg",
+      ],
+      properties: [
+        {
+          type: "slider",
+          property: "opacity",
+          defaults: 1,
+          step: 0.01,
+          max: 1,
+          min: 0,
+        },
+        {
+          property: "border-radius",
+          properties: [
+            { name: "Top", property: "border-top-left-radius" },
+            { name: "Right", property: "border-top-right-radius" },
+            { name: "Bottom", property: "border-bottom-left-radius" },
+            { name: "Left", property: "border-bottom-right-radius" },
+          ],
+        },
+        {
+          property: "box-shadow",
+          properties: [
+            { name: "X position", property: "box-shadow-h" },
+            { name: "Y position", property: "box-shadow-v" },
+            { name: "Blur", property: "box-shadow-blur" },
+            { name: "Spread", property: "box-shadow-spread" },
+            { name: "Color", property: "box-shadow-color" },
+            { name: "Shadow type", property: "box-shadow-type" },
+          ],
+        },
+        {
+          id: "background-bg",
+          property: "background",
+          type: "bg",
+        },
+      ],
+    },
+    {
+      name: "Extra",
+      open: true,
+      buildProps: ["transition", "perspective", "transform"],
+      properties: [
+        {
+          property: "transition",
+          properties: [
+            { name: "Property", property: "transition-property" },
+            { name: "Duration", property: "transition-duration" },
+            { name: "Easing", property: "transition-timing-function" },
+          ],
+        },
+        {
+          property: "transform",
+          properties: [
+            { name: "Rotate X", property: "transform-rotate-x" },
+            { name: "Rotate Y", property: "transform-rotate-y" },
+            { name: "Rotate Z", property: "transform-rotate-z" },
+            { name: "Scale X", property: "transform-scale-x" },
+            { name: "Scale Y", property: "transform-scale-y" },
+            { name: "Scale Z", property: "transform-scale-z" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Flex",
+      open: true,
+      properties: [
+        {
+          name: "Flex Container",
+          property: "display",
+          type: "select",
+          defaults: "block",
+          list: [
+            { value: "block", name: "Disable" },
+            { value: "flex", name: "Enable" },
+          ],
+        },
+        {
+          name: "Flex Parent",
+          property: "label-parent-flex",
+          type: "integer",
+        },
+
+        {
+          name: "Direction",
+          property: "flex-direction",
+          type: "radio",
+          defaults: "row",
+          list: [
+            {
+              value: "row",
+              name: "Row",
+              className: "icons-flex icon-dir-row",
+              title: "Row",
+            },
+            {
+              value: "row-reverse",
+              name: "Row reverse",
+              className: "icons-flex icon-dir-row-rev",
+              title: "Row reverse",
+            },
+            {
+              value: "column",
+              name: "Column",
+              title: "Column",
+              className: "icons-flex icon-dir-col",
+            },
+            {
+              value: "column-reverse",
+              name: "Column reverse",
+              title: "Column reverse",
+              className: "icons-flex icon-dir-col-rev",
+            },
+          ],
+        },
+
+        {
+          name: "Justify",
+          property: "justify-content",
+          type: "radio",
+          defaults: "flex-start",
+          list: [
+            {
+              value: "flex-start",
+              className: "icons-flex icon-just-start",
+              title: "Start",
+            },
+            {
+              value: "flex-end",
+              title: "End",
+              className: "icons-flex icon-just-end",
+            },
+            {
+              value: "space-between",
+              title: "Space between",
+              className: "icons-flex icon-just-sp-bet",
+            },
+            {
+              value: "space-around",
+              title: "Space around",
+              className: "icons-flex icon-just-sp-ar",
+            },
+            {
+              value: "center",
+              title: "Center",
+              className: "icons-flex icon-just-sp-cent",
+            },
+          ],
+        },
+
+        {
+          name: "Align",
+          property: "align-items",
+          type: "radio",
+          defaults: "center",
+          list: [
+            {
+              value: "flex-start",
+              title: "Start",
+              className: "icons-flex icon-al-start",
+            },
+            {
+              value: "flex-end",
+              title: "End",
+              className: "icons-flex icon-al-end",
+            },
+            {
+              value: "stretch",
+              title: "Stretch",
+              className: "icons-flex icon-al-str",
+            },
+            {
+              value: "center",
+              title: "Center",
+              className: "icons-flex icon-al-center",
+            },
+          ],
+        },
+        {
+          name: "Flex Children",
+          property: "label-parent-flex",
+          type: "integer",
+        },
+
+        {
+          name: "Order",
+          property: "order",
+          type: "integer",
+          defaults: 0,
+          min: 0,
+        },
+        {
+          name: "Flex",
+          property: "flex",
+          type: "composite",
+          properties: [
+            {
+              name: "Grow",
+              property: "flex-grow",
+              type: "integer",
+              defaults: 0,
+              min: 0,
+            },
+            {
+              name: "Shrink",
+              property: "flex-shrink",
+              type: "integer",
+              defaults: 0,
+              min: 0,
+            },
+            {
+              name: "Basis",
+              property: "flex-basis",
+              type: "integer",
+              units: ["px", "%", ""],
+              unit: "",
+              defaults: "auto",
+            },
+          ],
+        },
+
+        {
+          name: "Align",
+          property: "align-self",
+          type: "radio",
+          defaults: "auto",
+          list: [
+            {
+              value: "auto",
+              name: "Auto",
+            },
+            {
+              value: "flex-start",
+              title: "Start",
+              className: "icons-flex icon-al-start",
+            },
+            {
+              value: "flex-end",
+              title: "End",
+              className: "icons-flex icon-al-end",
+            },
+            {
+              value: "stretch",
+              title: "Stretch",
+              className: "icons-flex icon-al-str",
+            },
+            {
+              value: "center",
+              title: "Center",
+              className: "icons-flex icon-al-center",
+            },
+          ],
+        },
+      ],
     },
   ],
 }
@@ -187,46 +439,6 @@ const panels = {
       id: "panel-right",
       el: ".panel__right",
     },
-    // {
-    //   id: "panel-switcher",
-    //   el: ".panel__switcher",
-    //   buttons: [
-    //     // {
-    //     //   id: "show-blocks",
-    //     //   active: true,
-    //     //   togglable: false,
-    //     //   command: "show-blocks",
-    //     //   className: "fa fa-th-large",
-    //     //   label: `<span>Blocks</span>`,
-    //     //   attributes: {
-    //     //     class: "block-button",
-    //     //     title: "Component blocks",
-    //     //   },
-    //     // },
-    //     // {
-    //     //   id: "show-style",
-    //     //   active: true,
-    //     //   togglable: false,
-    //     //   command: "show-styles",
-    //     //   className: "fa fa-paint-brush",
-    //     //   label: `<span>Style</span>`,
-    //     //   attributes: {
-    //     //     title: "Component style",
-    //     //   },
-    //     // },
-    //     // {
-    //     //   id: "show-layers",
-    //     //   active: true,
-    //     //   togglable: false,
-    //     //   command: "show-layers",
-    //     //   className: "fa fa-bars",
-    //     //   label: `<span>Layers</span>`,
-    //     //   attributes: {
-    //     //     title: "Component layers",
-    //     //   },
-    //     // },
-    //   ],
-    // },
     {
       id: "panel-devices",
       el: ".panel__devices",
@@ -256,22 +468,6 @@ const panels = {
           command: "sw-visibility",
           context: "sw-visibility",
           className: "fa fa-square-o",
-        },
-        {
-          id: "fullscreen",
-          command: "fullscreen",
-          context: "fullscreen",
-          className: "fa fa-arrows-alt",
-        },
-        {
-          id: "undo",
-          className: "fa fa-undo",
-          command: (e) => e.runCommand("core:undo"),
-        },
-        {
-          id: "redo",
-          className: "fa fa-repeat",
-          command: (e) => e.runCommand("core:redo"),
         },
         {
           id: "canvas-clear",
