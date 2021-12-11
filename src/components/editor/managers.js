@@ -100,7 +100,7 @@ const styleManager = {
     },
     {
       name: "Typography",
-      open: true,
+      open: false,
       buildProps: [
         "font-family",
         "font-size",
@@ -168,7 +168,7 @@ const styleManager = {
     },
     {
       name: "Decorations",
-      open: true,
+      open: false,
       buildProps: [
         "opacity",
         "border-radius",
@@ -214,7 +214,7 @@ const styleManager = {
     },
     {
       name: "Extra",
-      open: true,
+      open: false,
       buildProps: ["transition", "perspective", "transform"],
       properties: [
         {
@@ -240,7 +240,7 @@ const styleManager = {
     },
     {
       name: "Flex",
-      open: true,
+      open: false,
       properties: [
         {
           name: "Flex Container",
@@ -265,28 +265,24 @@ const styleManager = {
           defaults: "row",
           list: [
             {
-              value: "row",
               name: "Row",
-              className: "icons-flex icon-dir-row",
+              value: "row",
               title: "Row",
             },
             {
+              name: "Row rev",
               value: "row-reverse",
-              name: "Row reverse",
-              className: "icons-flex icon-dir-row-rev",
               title: "Row reverse",
             },
             {
-              value: "column",
               name: "Column",
+              value: "column",
               title: "Column",
-              className: "icons-flex icon-dir-col",
             },
             {
+              name: "Column rev",
               value: "column-reverse",
-              name: "Column reverse",
               title: "Column reverse",
-              className: "icons-flex icon-dir-col-rev",
             },
           ],
         },
@@ -298,29 +294,29 @@ const styleManager = {
           defaults: "flex-start",
           list: [
             {
+              name: "Start",
               value: "flex-start",
-              className: "icons-flex icon-just-start",
               title: "Start",
             },
             {
+              name: "End",
               value: "flex-end",
               title: "End",
-              className: "icons-flex icon-just-end",
             },
             {
+              name: "Between",
               value: "space-between",
               title: "Space between",
-              className: "icons-flex icon-just-sp-bet",
             },
             {
+              name: "Around",
               value: "space-around",
               title: "Space around",
-              className: "icons-flex icon-just-sp-ar",
             },
             {
+              name: "Center",
               value: "center",
               title: "Center",
-              className: "icons-flex icon-just-sp-cent",
             },
           ],
         },
@@ -332,24 +328,24 @@ const styleManager = {
           defaults: "center",
           list: [
             {
+              name: "Start",
               value: "flex-start",
               title: "Start",
-              className: "icons-flex icon-al-start",
             },
             {
+              name: "End",
               value: "flex-end",
               title: "End",
-              className: "icons-flex icon-al-end",
             },
             {
+              name: "Stretch",
               value: "stretch",
               title: "Stretch",
-              className: "icons-flex icon-al-str",
             },
             {
+              name: "Center",
               value: "center",
               title: "Center",
-              className: "icons-flex icon-al-center",
             },
           ],
         },
@@ -407,24 +403,24 @@ const styleManager = {
               name: "Auto",
             },
             {
+              name: "Start",
               value: "flex-start",
               title: "Start",
-              className: "icons-flex icon-al-start",
             },
             {
+              name: "End",
               value: "flex-end",
               title: "End",
-              className: "icons-flex icon-al-end",
             },
             {
+              name: "Stretch",
               value: "stretch",
               title: "Stretch",
-              className: "icons-flex icon-al-str",
             },
             {
               value: "center",
               title: "Center",
-              className: "icons-flex icon-al-center",
+              name: "Center",
             },
           ],
         },
