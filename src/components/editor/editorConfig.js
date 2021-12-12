@@ -107,4 +107,10 @@ export default (editor) => {
       mobile.style.transition = ".3s ease-in-out"
     }
   })
+
+  editor.on("load", () => {
+    const blocksEl = document.querySelectorAll(".gjs-block-category")
+    document.querySelector(".componentContainer").appendChild(blocksEl[4])
+    document.querySelector(".rowContainer").appendChild(blocksEl[3])
+  })
 }

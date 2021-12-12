@@ -68,36 +68,22 @@
       </div>
       <div class="editor-row">
         <div class="panel_left_container" :style="{ width: panelWidth + 'px' }">
-          <!-- <div class="blocks-container"></div> -->
-          <v-card>
-            <v-tabs
-              v-model="tab"
-              background-color="transparent"
-              color="basil"
-              grow
-            >
-              <v-tab>
+          <v-toolbar dense flat>
+            <v-toolbar-items class="mx-auto">
+              <v-btn @click="handleBlocksContainer" icon>
                 <v-icon>mdi-shape-plus</v-icon>
-              </v-tab>
-              
-              <v-tab>
+              </v-btn>
+              <v-btn @click="handleComponentsContainer" class="mx-3" icon>
                 <v-icon>mdi-rocket-launch</v-icon>
-              </v-tab>
-            </v-tabs>
-
-            <v-tabs-items v-model="tab">
-              <v-tab-item>
-                <v-card color="white" flat>
-                  <div class="blocks-container"></div>
-                </v-card>
-              </v-tab-item>
-              <v-tab-item>
-                <v-card color="white" flat>
-                  <v-card-text>{{ text }}</v-card-text>
-                </v-card>
-              </v-tab-item>
-            </v-tabs-items>
-          </v-card>
+              </v-btn>
+              <v-btn @click="handleRowsContainer" icon>
+                <v-icon>mdi-view-column-outline</v-icon>
+              </v-btn>
+            </v-toolbar-items>
+          </v-toolbar>
+          <div v-show="showComponents" class="componentContainer"></div>
+          <div v-show="showBlocks" class="blocks-container"></div>
+          <div v-show="showRows" class="rowContainer"></div>
         </div>
         <div class="editor-canvas">
           <div id="gjs"></div>
@@ -130,13 +116,13 @@ import SendDialog from "./SendDialog.vue"
 import { mapState } from "vuex"
 export default {
   data: () => ({
-    panelWidth: 250,
+    panelWidth: 230,
     panel: true,
     panelDisplay: "",
     tab: null,
-    items: ["mdi-shape-plus", "mdi-rocket-launch"],
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    showBlocks: true,
+    showComponents: false,
+    showRows: false,
   }),
 
   components: {
@@ -175,6 +161,30 @@ export default {
 
     openSendDialog() {
       this.editor.sendDialog = true
+    },
+
+    handleBlocksContainer() {
+      if (this.showComponents == true || this.showRows == true) {
+        this.showBlocks = true
+        this.showComponents = false
+        this.showRows = false
+      }
+    },
+
+    handleComponentsContainer() {
+      if (this.showBlocks == true || this.showRows == true) {
+        this.showComponents = true
+        this.showRows = false
+        this.showBlocks = false
+      }
+    },
+
+    handleRowsContainer() {
+      if (this.showComponents == true || this.showBlocks == true) {
+        this.showRows = true
+        this.showComponents = false
+        this.showBlocks = false
+      }
     },
   },
 
