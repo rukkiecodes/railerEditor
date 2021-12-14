@@ -69,17 +69,38 @@
       <div class="editor-row">
         <div class="panel_left_container" :style="{ width: panelWidth + 'px' }">
           <v-toolbar dense flat>
-            <v-toolbar-items class="mx-auto">
-              <v-btn @click="handleBlocksContainer" icon>
-                <v-icon>mdi-shape-plus</v-icon>
-              </v-btn>
-              <v-btn @click="handleComponentsContainer" class="mx-3" icon>
-                <v-icon>mdi-rocket-launch</v-icon>
-              </v-btn>
-              <v-btn @click="handleRowsContainer" icon>
-                <v-icon>mdi-view-column-outline</v-icon>
-              </v-btn>
-            </v-toolbar-items>
+            <v-btn
+              @click="handleBlocksContainer"
+              :color="blocks.color"
+              class="rounded-lg"
+              height="40"
+              x-small
+              depressed
+            >
+              <v-icon :color="blocks.icon">mdi-shape-plus</v-icon>
+            </v-btn>
+            <v-spacer />
+            <v-btn
+              @click="handleComponentsContainer"
+              class="rounded-lg"
+              :color="components.color"
+              height="40"
+              x-small
+              depressed
+            >
+              <v-icon :color="components.icon">mdi-rocket-launch</v-icon>
+            </v-btn>
+            <v-spacer />
+            <v-btn
+              @click="handleRowsContainer"
+              class="rounded-lg"
+              height="40"
+              :color="rows.color"
+              x-small
+              depressed
+            >
+              <v-icon :color="rows.icon">mdi-view-column-outline</v-icon>
+            </v-btn>
           </v-toolbar>
           <div v-show="showComponents" class="componentContainer"></div>
           <div v-show="showBlocks" class="blocks-container"></div>
@@ -123,6 +144,18 @@ export default {
     showBlocks: true,
     showComponents: false,
     showRows: false,
+    blocks: {
+      color: "#DBDBFD",
+      icon: "#3D3DF4",
+    },
+    components: {
+      color: "",
+      icon: "",
+    },
+    rows: {
+      color: "",
+      icon: "",
+    },
   }),
 
   components: {
@@ -168,6 +201,19 @@ export default {
         this.showBlocks = true
         this.showComponents = false
         this.showRows = false
+
+        this.blocks = {
+          color: "#DBDBFD",
+          icon: "#3D3DF4",
+        }
+        this.components = {
+          color: "",
+          icon: "",
+        }
+        this.rows = {
+          color: "",
+          icon: "",
+        }
       }
     },
 
@@ -176,6 +222,19 @@ export default {
         this.showComponents = true
         this.showRows = false
         this.showBlocks = false
+
+        this.blocks = {
+          color: "",
+          icon: "",
+        }
+        this.components = {
+          color: "#DBDBFD",
+          icon: "#3D3DF4",
+        }
+        this.rows = {
+          color: "",
+          icon: "",
+        }
       }
     },
 
@@ -184,6 +243,19 @@ export default {
         this.showRows = true
         this.showComponents = false
         this.showBlocks = false
+
+        this.blocks = {
+          color: "",
+          icon: "",
+        }
+        this.components = {
+          color: "",
+          icon: "",
+        }
+        this.rows = {
+          color: "#DBDBFD",
+          icon: "#3D3DF4",
+        }
       }
     },
   },
