@@ -63,6 +63,78 @@ const buttonBlock = `<svg class="gjs-block-svg" viewBox="0 0 24 24" xmlns="http:
         <rect class="gjs-block-svg-path" x="4" y="11.5" width="16" height="1"></rect>
       </svg>`
 
+const preHeader1 = `<svg
+   width="100%"
+   height="100%"
+   viewBox="0 0 16 2.7000001"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   sodipodi:docname="preHeader1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="29.966076"
+     inkscape:cx="6.4239309"
+     inkscape:cy="6.2904467"
+     inkscape:window-width="1366"
+     inkscape:window-height="731"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g16"
+       transform="matrix(0.1336413,0,0,0.12733376,-0.01474981,-5.2143317)">
+      <rect
+         style="fill:#f1f1f1;fill-opacity:1;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.988235;paint-order:markers fill stroke"
+         id="rect31"
+         width="120.05872"
+         height="20.605095"
+         x="0.063694268"
+         y="41.075836" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:2.30136;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.988235;paint-order:markers fill stroke"
+         id="rect31-3"
+         width="81.104759"
+         height="20.605095"
+         x="19.540686"
+         y="41.075836" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:2.84524px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.533483"
+         x="28.872421"
+         y="51.501366"
+         id="text2449"><tspan
+           sodipodi:role="line"
+           id="tspan2447"
+           x="28.872421"
+           y="51.501366"
+           style="font-size:2.84524px;stroke-width:0.533483">You can’t see this email? <tspan
+   style="font-weight:bold"
+   id="tspan6315">View in your browser</tspan></tspan></text>
+    </g>
+  </g>
+</svg>
+`
+
 module.exports = {
   sectionOne,
   sectionTwoEight,
@@ -83,4 +155,5 @@ module.exports = {
   textareaBlock,
   selectBlock,
   buttonBlock,
+  preHeader1,
 }

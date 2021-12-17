@@ -110,7 +110,10 @@ export default (editor) => {
 
   editor.on("load", () => {
     const blocksEl = document.querySelectorAll(".gjs-block-category")
-    document.querySelector(".componentContainer").appendChild(blocksEl[4])
     document.querySelector(".rowContainer").appendChild(blocksEl[3])
+    document.querySelector(".componentContainer").appendChild(blocksEl[4])
+    document.querySelector(".componentContainer").appendChild(blocksEl[5])
+    document.querySelector(".componentContainer").appendChild(blocksEl[6])
+    document.querySelector(".componentContainer").appendChild(blocksEl[7])
   })
 }

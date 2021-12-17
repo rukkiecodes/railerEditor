@@ -359,7 +359,7 @@ const placeholder = `
         <!-- BEGIN BODY -->
         <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
           <tr>
-            <td valign="top" class="bg_white" style="padding: 1em 2.5em 0 2.5em;">
+            <td valign="top" class="bg_white" style="padding: 2em;">
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
                   <td class="logo" style="text-align: center;">
