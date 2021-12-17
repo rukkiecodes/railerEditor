@@ -56,10 +56,9 @@ export default () => {
         "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css",
       ],
       scripts: [
-        "https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js",
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
         "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js",
-        "https://code.jquery.com/jquery-3.3.1.slim.min.js",
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js",
+        "https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js",
       ],
     },
 

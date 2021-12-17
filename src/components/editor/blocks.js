@@ -29,7 +29,7 @@ const head1 = require("./images/head1.png")
 const head2 = require("./images/head2.png")
 const head3 = require("./images/head3.png")
 const button1 = require("./images/button1.png")
-const button3 = require("./images/button3.png")
+const button2 = require("./images/button2.png")
 
 export default (editor) => {
   const bm = editor.BlockManager
@@ -1697,210 +1697,102 @@ export default (editor) => {
               </div>`,
   })
 
-  bm.add("buttonThree", {
+  bm.add("buttonTwo", {
     category: "Buttons",
-    label: `<img src="${button3}" style="width: 150px" />`,
+    label: `<img src="${button2}" style="width: 150px" />`,
     attributes: { class: "componentsBlocks" },
     content: `<style>
-                  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+                @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
 
-                  body {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-pack: center;
-                    -ms-flex-pack: center;
-                    justify-content: center;
-                    -webkit-box-align: center;
-                    -ms-flex-align: center;
-                    align-items: center;
-                    height: 100vh;
-                    background: #f1f1f1;
+                #button2 {
+                  text-align: center;
+                  background: #ffffff;
+                  padding: 2em;
+                }
+
+                #button2 #button2button {
+                  background-color: #E00734;
+                  color: #ffffff;
+                  border: none;
+                  display: inline-block;
+                  padding: 16px 20px;
+                  font-size: 1rem;
+                  min-width: 200px;
+                  cursor: pointer;
+                  position: relative;
+                  overflow: hidden;
+                  -webkit-transform-origin: center center;
+                  transform-origin: center center;
+                  font-family: 'Montserrat', sans-serif;
+                  line-height: 1.4;
+                  border-radius: 8px;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  outline: none;
+                }
+
+                #button2 #button2button:focus,
+                #button2 #button2button:active {
+                  outline: 0;
+                  -webkit-box-shadow: none;
+                  box-shadow: none;
+                }
+
+                #button2 #button2button .ripple {
+                  border-radius: 50%;
+                  background-color: rgba(255, 255, 255, 0.7);
+                  position: absolute;
+                  -webkit-transform: scale(0);
+                  transform: scale(0);
+                  -webkit-animation: ripple 0.6s linear;
+                  animation: ripple 0.6s linear;
+                }
+
+                @-webkit-keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                @keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                /*# sourceMappingURL=style.css.map */
+              </style>
+              
+              <div id="button2">
+                <button id="button2button">Click Me</button>
+              </div>
+
+
+              <script>
+                var button2button = document.querySelector('#button2button');
+
+                button2button.addEventListener('click', createRipple);
+
+                function createRipple(e) {
+                  if (this.getElementsByClassName('ripple').length > 0) {
+                    this.removeChild(this.childNodes[1]);
                   }
 
-                  .button2 {
-                    position: relative;
-                    display: inline-block;
-                    padding: 30px 61px;
-                    border-radius: 4px;
-                    color: #777;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    overflow: hidden;
-                    margin: 25px;
-                    font-family: "Roboto", sans-serif;
-                    -webkit-filter: hue-rotate(0deg);
-                    filter: hue-rotate(0deg);
-                    border: 2px solid #777;
-                    -webkit-transition: all 0.1s linear;
-                    transition: all 0.1s linear;
-                  }
+                  var circle = document.createElement('div');
+                  this.appendChild(circle);
 
-                  .button2:hover {
-                    border: 1px solid transparent;
-                  }
+                  var d = Math.max(this.clientWidth, this.clientHeight);
+                  circle.style.width = circle.style.height = d + 'px';
 
-                  .button2:hover span {
-                    position: absolute;
-                    display: block;
-                  }
+                  circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
+                  circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
 
-                  .button2:hover span:nth-child(1) {
-                    -webkit-filter: hue-rotate(0deg);
-                    filter: hue-rotate(0deg);
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 3px;
-                    background: -webkit-gradient(linear, left top, right top, from(transparent), to(#3a86ff));
-                    background: linear-gradient(90deg, transparent, #3a86ff);
-                    -webkit-animation: animate1 1s linear infinite;
-                    animation: animate1 1s linear infinite;
-                  }
-
-                  @-webkit-keyframes animate1 {
-                    0% {
-                      left: -100%;
-                    }
-
-                    50%,
-                    100% {
-                      left: 100%;
-                    }
-                  }
-
-                  @keyframes animate1 {
-                    0% {
-                      left: -100%;
-                    }
-
-                    50%,
-                    100% {
-                      left: 100%;
-                    }
-                  }
-
-                  .button2:hover span:nth-child(2) {
-                    -webkit-filter: hue-rotate(60deg);
-                    filter: hue-rotate(60deg);
-                    top: -100%;
-                    right: 0;
-                    width: 3px;
-                    height: 100%;
-                    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#3a86ff));
-                    background: linear-gradient(180deg, transparent, #3a86ff);
-                    -webkit-animation: animate2 1s linear infinite;
-                    animation: animate2 1s linear infinite;
-                    -webkit-animation-delay: 0.25s;
-                    animation-delay: 0.25s;
-                  }
-
-                  @-webkit-keyframes animate2 {
-                    0% {
-                      top: -100%;
-                    }
-
-                    50%,
-                    100% {
-                      top: 100%;
-                    }
-                  }
-
-                  @keyframes animate2 {
-                    0% {
-                      top: -100%;
-                    }
-
-                    50%,
-                    100% {
-                      top: 100%;
-                    }
-                  }
-
-                  .button2:hover span:nth-child(3) {
-                    -webkit-filter: hue-rotate(120deg);
-                    filter: hue-rotate(120deg);
-                    bottom: 0;
-                    right: 0;
-                    width: 100%;
-                    background: -webkit-gradient(linear, right top, left top, from(transparent), to(#3a86ff));
-                    background: linear-gradient(270deg, transparent, #3a86ff);
-                    -webkit-animation: animate3 1s linear infinite;
-                    animation: animate3 1s linear infinite;
-                    -webkit-animation-delay: 0.5s;
-                    animation-delay: 0.5s;
-                  }
-
-                  @-webkit-keyframes animate3 {
-                    0% {
-                      right: -100%;
-                      height: 3px;
-                    }
-
-                    50%,
-                    100% {
-                      height: 2px;
-                      right: 100%;
-                    }
-                  }
-
-                  @keyframes animate3 {
-                    0% {
-                      right: -100%;
-                      height: 3px;
-                    }
-
-                    50%,
-                    100% {
-                      height: 2px;
-                      right: 100%;
-                    }
-                  }
-
-                  .button2:hover span:nth-child(4) {
-                    -webkit-filter: hue-rotate(300deg);
-                    filter: hue-rotate(300deg);
-                    bottom: -100%;
-                    left: 0;
-                    width: 3px;
-                    height: 100%;
-                    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#3a86ff));
-                    background: linear-gradient(360deg, transparent, #3a86ff);
-                    -webkit-animation: animate4 1s linear infinite;
-                    animation: animate4 1s linear infinite;
-                    -webkit-animation-delay: 0.75s;
-                    animation-delay: 0.75s;
-                  }
-
-                  @-webkit-keyframes animate4 {
-                    0% {
-                      bottom: -100%;
-                    }
-
-                    50%,
-                    100% {
-                      bottom: 100%;
-                    }
-                  }
-
-                  @keyframes animate4 {
-                    0% {
-                      bottom: -100%;
-                    }
-
-                    50%,
-                    100% {
-                      bottom: 100%;
-                    }
-                  }
-                </style>
-                
-                <div class="button2">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  HOVER ME
-                </div>`,
+                  circle.classList.add('ripple');
+                }
+              </script>`,
   })
 }
