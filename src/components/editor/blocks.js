@@ -30,6 +30,11 @@ const head2 = require("./images/head2.png")
 const head3 = require("./images/head3.png")
 const button1 = require("./images/button1.png")
 const button2 = require("./images/button2.png")
+const button3 = require("./images/button3.png")
+const button4 = require("./images/button4.png")
+const button5 = require("./images/button5.png")
+const button6 = require("./images/button6.png")
+const button7 = require("./images/button7.png")
 
 export default (editor) => {
   const bm = editor.BlockManager
@@ -1535,7 +1540,7 @@ export default (editor) => {
 
   bm.add("buttonOne", {
     category: "Buttons",
-    label: `<img src="${button1}" style="width: 150px" />`,
+    label: `<img src="${button1}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">Social Button</p>`,
     attributes: { class: "componentsBlocks" },
     content: `<style>
                 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -1699,7 +1704,7 @@ export default (editor) => {
 
   bm.add("buttonTwo", {
     category: "Buttons",
-    label: `<img src="${button2}" style="width: 150px" />`,
+    label: `<img src="${button2}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">button rounded corners</p>`,
     attributes: { class: "componentsBlocks" },
     content: `<style>
                 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
@@ -1776,6 +1781,501 @@ export default (editor) => {
                 var button2button = document.querySelector('#button2button');
 
                 button2button.addEventListener('click', createRipple);
+
+                function createRipple(e) {
+                  if (this.getElementsByClassName('ripple').length > 0) {
+                    this.removeChild(this.childNodes[1]);
+                  }
+
+                  var circle = document.createElement('div');
+                  this.appendChild(circle);
+
+                  var d = Math.max(this.clientWidth, this.clientHeight);
+                  circle.style.width = circle.style.height = d + 'px';
+
+                  circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
+                  circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
+
+                  circle.classList.add('ripple');
+                }
+              </script>`,
+  })
+
+  bm.add("buttonThree", {
+    category: "Buttons",
+    label: `<img src="${button3}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">button sharp corners</p>`,
+    attributes: { class: "componentsBlocks" },
+    content: `<style>
+                @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+                #button3 {
+                  text-align: center;
+                  background: #ffffff;
+                  padding: 2em;
+                }
+
+                #button3 #button3button {
+                  background-color: #E00734;
+                  color: #ffffff;
+                  border: none;
+                  display: inline-block;
+                  padding: 16px 20px;
+                  font-size: 1rem;
+                  min-width: 200px;
+                  cursor: pointer;
+                  position: relative;
+                  overflow: hidden;
+                  -webkit-transform-origin: center center;
+                  transform-origin: center center;
+                  font-family: 'Montserrat', sans-serif;
+                  line-height: 1.4;
+                  border-radius: 0px;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  outline: none;
+                }
+
+                #button3 #button3button:focus,
+                #button3 #button3button:active {
+                  outline: 0;
+                  -webkit-box-shadow: none;
+                  box-shadow: none;
+                }
+
+                #button3 #button3button .ripple {
+                  border-radius: 50%;
+                  background-color: rgba(255, 255, 255, 0.7);
+                  position: absolute;
+                  -webkit-transform: scale(0);
+                  transform: scale(0);
+                  -webkit-animation: ripple 0.6s linear;
+                  animation: ripple 0.6s linear;
+                }
+
+                @-webkit-keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                @keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                /*# sourceMappingURL=style.css.map */
+              </style>
+              
+              <div id="button3">
+                <button id="button3button">Click Me</button>
+              </div>
+
+
+              <script>
+                var button3button = document.querySelector('#button3button');
+
+                button3button.addEventListener('click', createRipple);
+
+                function createRipple(e) {
+                  if (this.getElementsByClassName('ripple').length > 0) {
+                    this.removeChild(this.childNodes[1]);
+                  }
+
+                  var circle = document.createElement('div');
+                  this.appendChild(circle);
+
+                  var d = Math.max(this.clientWidth, this.clientHeight);
+                  circle.style.width = circle.style.height = d + 'px';
+
+                  circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
+                  circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
+
+                  circle.classList.add('ripple');
+                }
+              </script>`,
+  })
+
+  bm.add("buttonFour", {
+    category: "Buttons",
+    label: `<img src="${button4}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">button round corners</p>`,
+    attributes: { class: "componentsBlocks" },
+    content: `<style>
+                @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+                #button4 {
+                  text-align: center;
+                  background: #ffffff;
+                  padding: 2em;
+                }
+
+                #button4 #button4button {
+                  background-color: #E00734;
+                  color: #ffffff;
+                  border: none;
+                  display: inline-block;
+                  padding: 16px 20px;
+                  font-size: 1rem;
+                  min-width: 200px;
+                  cursor: pointer;
+                  position: relative;
+                  overflow: hidden;
+                  -webkit-transform-origin: center center;
+                  transform-origin: center center;
+                  font-family: 'Montserrat', sans-serif;
+                  line-height: 1.4;
+                  border-radius: 50px;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  outline: none;
+                }
+
+                #button4 #button4button:focus,
+                #button4 #button4button:active {
+                  outline: 0;
+                  -webkit-box-shadow: none;
+                  box-shadow: none;
+                }
+
+                #button4 #button4button .ripple {
+                  border-radius: 50%;
+                  background-color: rgba(255, 255, 255, 0.7);
+                  position: absolute;
+                  -webkit-transform: scale(0);
+                  transform: scale(0);
+                  -webkit-animation: ripple 0.6s linear;
+                  animation: ripple 0.6s linear;
+                }
+
+                @-webkit-keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                @keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                /*# sourceMappingURL=style.css.map */
+              </style>
+              
+              <div id="button4">
+                <button id="button4button">Click Me</button>
+              </div>
+
+
+              <script>
+                var button4button = document.querySelector('#button4button');
+
+                button4button.addEventListener('click', createRipple);
+
+                function createRipple(e) {
+                  if (this.getElementsByClassName('ripple').length > 0) {
+                    this.removeChild(this.childNodes[1]);
+                  }
+
+                  var circle = document.createElement('div');
+                  this.appendChild(circle);
+
+                  var d = Math.max(this.clientWidth, this.clientHeight);
+                  circle.style.width = circle.style.height = d + 'px';
+
+                  circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
+                  circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
+
+                  circle.classList.add('ripple');
+                }
+              </script>`,
+  })
+
+  bm.add("buttonFive", {
+    category: "Buttons",
+    label: `<img src="${button5}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">full button rounded corners</p>`,
+    attributes: { class: "componentsBlocks" },
+    content: `<style>
+                @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+                #button5 {
+                  text-align: center;
+                  background: #ffffff;
+                  padding: 2em;
+                }
+
+                #button5 #button5button {
+                  background-color: #E00734;
+                  color: #ffffff;
+                  border: none;
+                  display: inline-block;
+                  padding: 16px 20px;
+                  font-size: 1rem;
+                  min-width: 500px;
+                  cursor: pointer;
+                  position: relative;
+                  overflow: hidden;
+                  -webkit-transform-origin: center center;
+                  transform-origin: center center;
+                  font-family: 'Montserrat', sans-serif;
+                  line-height: 1.4;
+                  border-radius: 8px;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  outline: none;
+                }
+
+                #button5 #button5button:focus,
+                #button5 #button5button:active {
+                  outline: 0;
+                  -webkit-box-shadow: none;
+                  box-shadow: none;
+                }
+
+                #button5 #button5button .ripple {
+                  border-radius: 50%;
+                  background-color: rgba(255, 255, 255, 0.7);
+                  position: absolute;
+                  -webkit-transform: scale(0);
+                  transform: scale(0);
+                  -webkit-animation: ripple 0.6s linear;
+                  animation: ripple 0.6s linear;
+                }
+
+                @-webkit-keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                @keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                /*# sourceMappingURL=style.css.map */
+              </style>
+              
+              <div id="button5">
+                <button id="button5button">Click Me</button>
+              </div>
+
+
+              <script>
+                var button5button = document.querySelector('#button5button');
+
+                button5button.addEventListener('click', createRipple);
+
+                function createRipple(e) {
+                  if (this.getElementsByClassName('ripple').length > 0) {
+                    this.removeChild(this.childNodes[1]);
+                  }
+
+                  var circle = document.createElement('div');
+                  this.appendChild(circle);
+
+                  var d = Math.max(this.clientWidth, this.clientHeight);
+                  circle.style.width = circle.style.height = d + 'px';
+
+                  circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
+                  circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
+
+                  circle.classList.add('ripple');
+                }
+              </script>`,
+  })
+
+  bm.add("buttonSix", {
+    category: "Buttons",
+    label: `<img src="${button6}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">full button sharp corners</p>`,
+    attributes: { class: "componentsBlocks" },
+    content: `<style>
+                @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+                #button6 {
+                  text-align: center;
+                  background: #ffffff;
+                  padding: 2em;
+                }
+
+                #button6 #button6button {
+                  background-color: #E00734;
+                  color: #ffffff;
+                  border: none;
+                  display: inline-block;
+                  padding: 16px 20px;
+                  font-size: 1rem;
+                  min-width: 500px;
+                  cursor: pointer;
+                  position: relative;
+                  overflow: hidden;
+                  -webkit-transform-origin: center center;
+                  transform-origin: center center;
+                  font-family: 'Montserrat', sans-serif;
+                  line-height: 1.4;
+                  border-radius: 0px;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  outline: none;
+                }
+
+                #button6 #button6button:focus,
+                #button6 #button6button:active {
+                  outline: 0;
+                  -webkit-box-shadow: none;
+                  box-shadow: none;
+                }
+
+                #button6 #button6button .ripple {
+                  border-radius: 50%;
+                  background-color: rgba(255, 255, 255, 0.7);
+                  position: absolute;
+                  -webkit-transform: scale(0);
+                  transform: scale(0);
+                  -webkit-animation: ripple 0.6s linear;
+                  animation: ripple 0.6s linear;
+                }
+
+                @-webkit-keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                @keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                /*# sourceMappingURL=style.css.map */
+              </style>
+              
+              <div id="button6">
+                <button id="button6button">Click Me</button>
+              </div>
+
+
+              <script>
+                var button6button = document.querySelector('#button6button');
+              
+                button6button.addEventListener('click', createRipple);
+
+                function createRipple(e) {
+                  if (this.getElementsByClassName('ripple').length > 0) {
+                    this.removeChild(this.childNodes[1]);
+                  }
+
+                  var circle = document.createElement('div');
+                  this.appendChild(circle);
+
+                  var d = Math.max(this.clientWidth, this.clientHeight);
+                  circle.style.width = circle.style.height = d + 'px';
+
+                  circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
+                  circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
+
+                  circle.classList.add('ripple');
+                }
+              </script>`,
+  })
+
+  bm.add("buttonSeven", {
+    category: "Buttons",
+    label: `<img src="${button7}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">full button round corners</p>`,
+    attributes: { class: "componentsBlocks" },
+    content: `<style>
+                @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+                #button7 {
+                  text-align: center;
+                  background: #ffffff;
+                  padding: 2em;
+                }
+
+                #button7 #button7button {
+                  background-color: #E00734;
+                  color: #ffffff;
+                  border: none;
+                  display: inline-block;
+                  padding: 16px 20px;
+                  font-size: 1rem;
+                  min-width: 500px;
+                  cursor: pointer;
+                  position: relative;
+                  overflow: hidden;
+                  -webkit-transform-origin: center center;
+                  transform-origin: center center;
+                  font-family: 'Montserrat', sans-serif;
+                  line-height: 1.4;
+                  border-radius: 50px;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  outline: none;
+                }
+
+                #button7 #button7button:focus,
+                #button7 #button7button:active {
+                  outline: 0;
+                  -webkit-box-shadow: none;
+                  box-shadow: none;
+                }
+
+                #button7 #button7button .ripple {
+                  border-radius: 50%;
+                  background-color: rgba(255, 255, 255, 0.7);
+                  position: absolute;
+                  -webkit-transform: scale(0);
+                  transform: scale(0);
+                  -webkit-animation: ripple 0.6s linear;
+                  animation: ripple 0.6s linear;
+                }
+
+                @-webkit-keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                @keyframes ripple {
+                  to {
+                    -webkit-transform: scale(2.5);
+                    transform: scale(2.5);
+                    opacity: 0;
+                  }
+                }
+
+                /*# sourceMappingURL=style.css.map */
+              </style>
+              
+              <div id="button7">
+                <button id="button7button">Click Me</button>
+              </div>
+
+
+              <script>
+                var button7button = document.querySelector('#button7button');
+
+                button7button.addEventListener('click', createRipple);
 
                 function createRipple(e) {
                   if (this.getElementsByClassName('ripple').length > 0) {

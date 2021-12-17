@@ -1367,7 +1367,7 @@ span.CodeMirror-selectedtext {
 }
 
 .gjs-drag-helper {
-  background-color: #4CB9EA !important;
+  background-color: #3D3DF4 !important;
   pointer-events: none !important;
   position: absolute !important;
   z-index: 10 !important;
@@ -1726,7 +1726,7 @@ span.CodeMirror-selectedtext {
 .gjs-cv-canvas .gjs-highlighter,
 .gjs-cv-canvas .gjs-highlighter-sel {
   position: absolute;
-  outline: 1px solid #4CB9EA;
+  outline: 1px solid #3D3DF4;
   outline-offset: -1px;
   pointer-events: none;
   width: 100%;
@@ -1738,7 +1738,7 @@ span.CodeMirror-selectedtext {
 }
 
 .gjs-cv-canvas .gjs-highlighter-sel {
-  outline: 2px solid #4CB9EA;
+  outline: 2px solid #3D3DF4;
   outline-offset: -2px
 }
 
@@ -1774,7 +1774,7 @@ span.CodeMirror-selectedtext {
 
 .gjs-toolbar {
   position: absolute;
-  background-color: #4CB9EA;
+  background-color: #3D3DF4;
   white-space: nowrap;
   color: #fff;
   z-index: 10;
@@ -1829,7 +1829,7 @@ span.CodeMirror-selectedtext {
 .gjs-resizer-h {
   pointer-events: all;
   position: absolute;
-  border: 3px solid #4CB9EA;
+  border: 3px solid #3D3DF4;
   width: 10px;
   height: 10px;
   background-color: #fff;
@@ -1982,12 +1982,12 @@ span.CodeMirror-selectedtext {
 }
 
 .gjs-cv-canvas .gjs-comp-selected {
-  outline: 3px solid #4CB9EA !important
+  outline: 3px solid #3D3DF4 !important
 }
 
 *.gjs-com-hover,
 div.gjs-com-hover {
-  outline: 1px solid #4CB9EA
+  outline: 1px solid #3D3DF4
 }
 
 *.gjs-com-hover-delete,
@@ -2006,7 +2006,7 @@ div.gjs-com-hover-move {
 .gjs-com-badge-red,
 .gjs-badge {
   pointer-events: none;
-  background-color: #4CB9EA;
+  background-color: #3D3DF4;
   color: #fff;
   padding: 2px 5px;
   position: absolute;
