@@ -2,12 +2,10 @@ const blockManager = {
   appendTo: ".blocks-container",
 }
 
-const layerManager = {
-  // appendTo: ".layers-container",
-}
+const layerManager = {}
 
 const selectorManager = {
-  appendTo: ".styles-container",
+  appendTo: ".class-container",
 }
 
 const deviceManager = {
@@ -23,6 +21,10 @@ const deviceManager = {
       widthMedia: "320",
     },
   ],
+}
+
+const traitsManager = {
+  appendTo: ".traits-container",
 }
 
 const styleManager = {
@@ -485,4 +487,5 @@ module.exports = {
   selectorManager,
   styleManager,
   deviceManager,
+  traitsManager,
 }

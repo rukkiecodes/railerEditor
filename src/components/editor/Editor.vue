@@ -109,6 +109,31 @@
         <div class="editor-canvas">
           <div id="gjs"></div>
         </div>
+        <div class="configurationPanel pa-1">
+          <v-btn
+            :color="styleConfigurationButton.color"
+            height="40"
+            depressed
+            x-small
+            @click="toggleStyleMagager"
+          >
+            <v-icon :color="styleConfigurationButton.icon"
+              >mdi-palette-outline</v-icon
+            >
+          </v-btn>
+          <v-btn
+            :color="traitsConfigurationButton.color"
+            class="mt-2"
+            height="40"
+            depressed
+            x-small
+            @click="toggleTraitsMagager"
+          >
+            <v-icon :color="traitsConfigurationButton.icon"
+              >mdi-cog-outline</v-icon
+            >
+          </v-btn>
+        </div>
         <div
           class="panel_right_container"
           :style="{ width: panelWidth + 'px' }"
@@ -119,7 +144,15 @@
             class="overflow-y-auto panel_right_sheet"
           >
             <div class="panel__right">
-              <div class="styles-container"></div>
+              <div v-show="showStyleManager" class="styles-container">
+                <div class="class-container"></div>
+              </div>
+              <div v-show="showTraitsManager" class="traits-container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                inventore molestias dolore est minus repellendus porro vero,
+                quo, labore aliquid maiores nulla cupiditate eum atque
+                perspiciatis. Harum magnam eaque eius.
+              </div>
             </div>
           </v-sheet>
         </div>
@@ -155,6 +188,16 @@ export default {
     rows: {
       color: "",
       icon: "",
+    },
+    showStyleManager: true,
+    showTraitsManager: false,
+    styleConfigurationButton: {
+      color: "#DBDBFD",
+      icon: "#3D3DF4",
+    },
+    traitsConfigurationButton: {
+      color: "transparent",
+      icon: "#737373",
     },
   }),
 
@@ -256,6 +299,32 @@ export default {
           color: "#DBDBFD",
           icon: "#3D3DF4",
         }
+      }
+    },
+
+    toggleStyleMagager() {
+      this.showStyleManager = true
+      this.showTraitsManager = false
+      this.styleConfigurationButton = {
+        color: "#DBDBFD",
+        icon: "#3D3DF4",
+      }
+      this.traitsConfigurationButton = {
+        color: "transparent",
+        icon: "#737373",
+      }
+    },
+
+    toggleTraitsMagager() {
+      this.showStyleManager = false
+      this.showTraitsManager = true
+      this.styleConfigurationButton = {
+        color: "transparent",
+        icon: "#737373",
+      }
+      this.traitsConfigurationButton = {
+        color: "#DBDBFD",
+        icon: "#3D3DF4",
       }
     },
   },
