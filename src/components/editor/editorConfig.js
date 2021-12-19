@@ -116,6 +116,4 @@ export default (editor) => {
     document.querySelector(".componentContainer").appendChild(blocksEl[6])
     document.querySelector(".componentContainer").appendChild(blocksEl[7])
   })
-
-  console.log(editor)
 }

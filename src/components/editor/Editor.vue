@@ -122,15 +122,15 @@
             >
           </v-btn>
           <v-btn
-            :color="traitsConfigurationButton.color"
+            :color="layersConfigurationButton.color"
             class="mt-2"
             height="40"
             depressed
             x-small
-            @click="toggleTraitsMagager"
+            @click="toggleLayersMagager"
           >
-            <v-icon :color="traitsConfigurationButton.icon"
-              >mdi-cog-outline</v-icon
+            <v-icon :color="layersConfigurationButton.icon"
+              >mdi-layers-outline</v-icon
             >
           </v-btn>
         </div>
@@ -147,12 +147,7 @@
               <div v-show="showStyleManager" class="styles-container">
                 <div class="class-container"></div>
               </div>
-              <div v-show="showTraitsManager" class="traits-container">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                inventore molestias dolore est minus repellendus porro vero,
-                quo, labore aliquid maiores nulla cupiditate eum atque
-                perspiciatis. Harum magnam eaque eius.
-              </div>
+              <div v-show="showLayersManager" class="layers-container"></div>
             </div>
           </v-sheet>
         </div>
@@ -190,12 +185,12 @@ export default {
       icon: "",
     },
     showStyleManager: true,
-    showTraitsManager: false,
+    showLayersManager: false,
     styleConfigurationButton: {
       color: "#DBDBFD",
       icon: "#3D3DF4",
     },
-    traitsConfigurationButton: {
+    layersConfigurationButton: {
       color: "transparent",
       icon: "#737373",
     },
@@ -304,25 +299,25 @@ export default {
 
     toggleStyleMagager() {
       this.showStyleManager = true
-      this.showTraitsManager = false
+      this.showLayersManager = false
       this.styleConfigurationButton = {
         color: "#DBDBFD",
         icon: "#3D3DF4",
       }
-      this.traitsConfigurationButton = {
+      this.layersConfigurationButton = {
         color: "transparent",
         icon: "#737373",
       }
     },
 
-    toggleTraitsMagager() {
+    toggleLayersMagager() {
       this.showStyleManager = false
-      this.showTraitsManager = true
+      this.showLayersManager = true
       this.styleConfigurationButton = {
         color: "transparent",
         icon: "#737373",
       }
-      this.traitsConfigurationButton = {
+      this.layersConfigurationButton = {
         color: "#DBDBFD",
         icon: "#3D3DF4",
       }
