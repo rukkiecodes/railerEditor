@@ -292,8 +292,7 @@
 .gjs-field {
   background: none;
   border: 1px solid #f1f1f1;
-  border-radius: 5px;
-  height: 28px;
+  border-radius: 7px;
 }
 
 .gjs-field-range {

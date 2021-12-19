@@ -184,8 +184,8 @@ export default {
       color: "",
       icon: "",
     },
-    showStyleManager: true,
-    showLayersManager: false,
+    showStyleManager: !true,
+    showLayersManager: !false,
     styleConfigurationButton: {
       color: "#DBDBFD",
       icon: "#3D3DF4",
