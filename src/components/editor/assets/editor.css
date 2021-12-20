@@ -511,23 +511,6 @@
   background: #fff;
 }
 
-.layers-container {
-  background: red;
-  height: 100%;
-}
-
-.layers-container .gjs-layer-title-inn {
-  height: 20px;
-}
-
-.layers-container .gjs-layer-name {
-  padding: 0 5px;
-}
-
-.layers-container .gjs-layer-vis {
-  margin-top: 8px;
-}
-
 .traits-container .gjs-label {
   color: #737373;
   font-weight: 400;
@@ -625,6 +608,100 @@
 
 .gjs-cm-editor#gjs-cm-htmlmixed {
   border: none;
+}
+
+.gjs-am-file-uploader > form {
+  border-radius: 8px;
+  border: 1px dashed #737373;
+  background-color: #fff;
+}
+
+.gjs-am-file-uploader {
+  width: 49%;
+}
+
+.gjs-am-assets-cont {
+  width: 49%;
+  height: 331px;
+  border: 1px dashed #737373;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.gjs-am-file-uploader #gjs-am-title {
+  color: #3D3DF4;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.gjs-am-add-asset .gjs-am-add-field {
+  width: 69%;
+}
+
+.gjs-am-add-asset button {
+  width: 28%;
+  padding: 0.7em 1em;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.gjs-am-asset {
+  border: none;
+}
+
+.gjs-am-asset:hover .gjs-am-close {
+  color: #3D3DF4;
+  background-color: #DBDBFD;
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.gjs-am-meta > div {
+  color: #777;
+  opacity: 1;
+}
+
+.gjs-am-name {
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.gjs-am-close {
+  color: #3D3DF4;
+  background-color: #DBDBFD;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.gjs-am-close:hover {
+  background: #c1c1e7;
 }
 
 @-webkit-keyframes rebound {

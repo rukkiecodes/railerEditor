@@ -129,6 +129,92 @@ export default (editor) => {
     attributes: { class: "fa fa-th-list" },
   })
 
+  bm.add("list", {
+    category: "Basic",
+    label: "List",
+    attributes: { title: "List", class: "fa fa-bars" },
+    content: `
+    <ul class="list-group">
+      <li class="list-group-item">List One</li>
+      <li class="list-group-item">List Two</li>
+      <li class="list-group-item">List Three</li>
+      <li class="list-group-item">List Four</li>
+    </ul>
+    `,
+  })
+
+  bm.add("list2", {
+    category: "Basic",
+    label: "List Two",
+    attributes: { title: "List two", class: "fa fa-bars" },
+    content: `
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small>3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+    </div>
+    `,
+  })
+
+  bm.add("table", {
+    category: "Basic",
+    label: "Table",
+    attributes: { title: "Table", class: "fa fa-table" },
+    content: `
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+    `,
+  })
+  
   bm.add("form", {
     category: "Form",
     media: formBLock,
