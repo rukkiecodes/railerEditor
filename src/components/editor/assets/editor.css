@@ -540,6 +540,8 @@
 
 .gjs-mdl-title {
   color: #737373;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .gjs-mdl-btn-close {
