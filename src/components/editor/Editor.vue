@@ -109,31 +109,6 @@
         <div class="editor-canvas">
           <div id="gjs"></div>
         </div>
-        <div class="configurationPanel pa-1">
-          <v-btn
-            :color="styleConfigurationButton.color"
-            height="40"
-            depressed
-            x-small
-            @click="toggleStyleMagager"
-          >
-            <v-icon :color="styleConfigurationButton.icon"
-              >mdi-palette-outline</v-icon
-            >
-          </v-btn>
-          <v-btn
-            :color="layersConfigurationButton.color"
-            class="mt-2"
-            height="40"
-            depressed
-            x-small
-            @click="toggleLayersMagager"
-          >
-            <v-icon :color="layersConfigurationButton.icon"
-              >mdi-layers-outline</v-icon
-            >
-          </v-btn>
-        </div>
         <div
           class="panel_right_container"
           :style="{ width: panelWidth + 'px' }"
@@ -144,10 +119,10 @@
             class="overflow-y-auto panel_right_sheet"
           >
             <div class="panel__right">
-              <div v-show="showStyleManager" class="styles-container">
+              <div class="styles-container">
                 <div class="class-container"></div>
+                <div class="traits-container"></div>
               </div>
-              <div v-show="showLayersManager" class="layers-container"></div>
             </div>
           </v-sheet>
         </div>
@@ -183,16 +158,6 @@ export default {
     rows: {
       color: "",
       icon: "",
-    },
-    showStyleManager: !true,
-    showLayersManager: !false,
-    styleConfigurationButton: {
-      color: "#DBDBFD",
-      icon: "#3D3DF4",
-    },
-    layersConfigurationButton: {
-      color: "transparent",
-      icon: "#737373",
     },
   }),
 
@@ -294,32 +259,6 @@ export default {
           color: "#DBDBFD",
           icon: "#3D3DF4",
         }
-      }
-    },
-
-    toggleStyleMagager() {
-      this.showStyleManager = true
-      this.showLayersManager = false
-      this.styleConfigurationButton = {
-        color: "#DBDBFD",
-        icon: "#3D3DF4",
-      }
-      this.layersConfigurationButton = {
-        color: "transparent",
-        icon: "#737373",
-      }
-    },
-
-    toggleLayersMagager() {
-      this.showStyleManager = false
-      this.showLayersManager = true
-      this.styleConfigurationButton = {
-        color: "transparent",
-        icon: "#737373",
-      }
-      this.layersConfigurationButton = {
-        color: "#DBDBFD",
-        icon: "#3D3DF4",
       }
     },
   },

@@ -461,3 +461,32 @@
   height: 94%;
   background: #fff;
 }
+
+.layers-container {
+  background: red;
+  height: 100%;
+
+  .gjs-layer-title-inn {
+    height: 20px;
+  }
+
+  .gjs-layer-name {
+    padding: 0 5px;
+  }
+
+  .gjs-layer-vis {
+    margin-top: 8px;
+  }
+}
+
+.traits-container {
+  .gjs-label {
+    color: #737373;
+    font-weight: 400;
+  }
+
+  input {
+    color: #737373;
+    font-weight: 400;
+  }
+}

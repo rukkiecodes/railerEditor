@@ -511,4 +511,31 @@
   height: 94%;
   background: #fff;
 }
+
+.layers-container {
+  background: red;
+  height: 100%;
+}
+
+.layers-container .gjs-layer-title-inn {
+  height: 20px;
+}
+
+.layers-container .gjs-layer-name {
+  padding: 0 5px;
+}
+
+.layers-container .gjs-layer-vis {
+  margin-top: 8px;
+}
+
+.traits-container .gjs-label {
+  color: #737373;
+  font-weight: 400;
+}
+
+.traits-container input {
+  color: #737373;
+  font-weight: 400;
+}
 /*# sourceMappingURL=editor.css.map */

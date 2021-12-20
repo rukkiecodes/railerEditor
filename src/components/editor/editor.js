@@ -26,11 +26,11 @@ import placeholder from "./placeholder"
 
 import {
   blockManager,
-  layerManager,
   panels,
   selectorManager,
   styleManager,
   deviceManager,
+  traitManager
 } from "./managers"
 
 export default () => {
@@ -42,11 +42,11 @@ export default () => {
     storageManager: false,
 
     blockManager,
-    layerManager,
     panels,
     selectorManager,
     styleManager,
     deviceManager,
+    traitManager,
 
     canvas: {
       styles: [
