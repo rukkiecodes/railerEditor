@@ -10,7 +10,7 @@
           <div class="panel__basic-actions"></div>
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
-              <v-btn v-bind="attrs" v-on="on" plain dark icon>
+              <v-btn class="mt-n1" v-bind="attrs" v-on="on" plain dark icon>
                 <v-img max-width="20" src="./images/templates.svg"></v-img>
               </v-btn>
             </template>
@@ -19,7 +19,7 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn
-                class="previewButton ml-3"
+                class="previewButton ml-3 mt-n1"
                 color="#1d1d1d"
                 v-bind="attrs"
                 v-on="on"
@@ -36,7 +36,7 @@
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                 @click="openSendDialog"
-                class="ml-3"
+                class="ml-3 mt-n1"
                 v-bind="attrs"
                 v-on="on"
                 plain
@@ -51,7 +51,7 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn
-                class="text-capitalize exportButton ml-3"
+                class="text-capitalize exportButton ml-3 mt-n1"
                 color="#1d1d1d"
                 v-bind="attrs"
                 v-on="on"
