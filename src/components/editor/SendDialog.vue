@@ -1,46 +1,11 @@
 <template>
-  <v-dialog v-model="editor.sendDialog" scrollable width="800px" persistent>
+  <v-dialog v-model="editor.sendDialog" width="400px" persistent>
     <v-card>
-      <v-card-title>Select Country</v-card-title>
-      <v-divider></v-divider>
-      <v-card-text style="height: 300px;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos
-        dolorem repellat? Similique aliquid adipisci ipsa dicta facere
-        temporibus, quae accusantium quam ratione eveniet quidem error non iusto
-        odit sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Tempora eos dolorem repellat? Similique aliquid adipisci ipsa dicta
-        facere temporibus, quae accusantium quam ratione eveniet quidem error
-        non iusto odit sequi? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Tempora eos dolorem repellat? Similique aliquid adipisci ipsa
-        dicta facere temporibus, quae accusantium quam ratione eveniet quidem
-        error non iusto odit sequi? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Tempora eos dolorem repellat? Similique aliquid
-        adipisci ipsa dicta facere temporibus, quae accusantium quam ratione
-        eveniet quidem error non iusto odit sequi? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Tempora eos dolorem repellat? Similique
-        aliquid adipisci ipsa dicta facere temporibus, quae accusantium quam
-        ratione eveniet quidem error non iusto odit sequi? Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Tempora eos dolorem repellat?
-        Similique aliquid adipisci ipsa dicta facere temporibus, quae
-        accusantium quam ratione eveniet quidem error non iusto odit sequi?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos
-        dolorem repellat? Similique aliquid adipisci ipsa dicta facere
-        temporibus, quae accusantium quam ratione eveniet quidem error non iusto
-        odit sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Tempora eos dolorem repellat? Similique aliquid adipisci ipsa dicta
-        facere temporibus, quae accusantium quam ratione eveniet quidem error
-        non iusto odit sequi? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Tempora eos dolorem repellat? Similique aliquid adipisci ipsa
-        dicta facere temporibus, quae accusantium quam ratione eveniet quidem
-        error non iusto odit sequi? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Tempora eos dolorem repellat? Similique aliquid
-        adipisci ipsa dicta facere temporibus, quae accusantium quam ratione
-        eveniet quidem error non iusto odit sequi? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Tempora eos dolorem repellat? Similique
-        aliquid adipisci ipsa dicta facere temporibus, quae accusantium quam
-        ratione eveniet quidem error non iusto odit sequi?
+      <v-card-title>Insert email address and subject:</v-card-title>
+      <v-card-text>
+        <v-text-field label="Email" placeholder="Enter your email" color="#3D3DF4"></v-text-field>
+        <v-text-field label="Subject" placeholder="Look at this amazing email" color="#3D3DF4"></v-text-field>
       </v-card-text>
-      <v-divider></v-divider>
       <v-card-actions>
         <v-btn color="blue darken-1" text @click="editor.sendDialog = false">
           Close
