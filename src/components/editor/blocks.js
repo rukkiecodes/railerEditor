@@ -20,11 +20,18 @@ import {
   selectBlock,
   buttonBlock,
   preHeader1,
+  appleBrand,
+  googleBrand,
+  ibmBrand,
+  nikeBrand,
+  uberBrand,
+  windowBrand,
 } from "./svgs"
 
 const header1 = require("./images/header1.png")
 const header2 = require("./images/header2.png")
 const header3 = require("./images/header3.png")
+const header4 = require("./images/header4.png")
 const head1 = require("./images/head1.png")
 const head2 = require("./images/head2.png")
 const head3 = require("./images/head3.png")
@@ -35,6 +42,8 @@ const button4 = require("./images/button4.png")
 const button5 = require("./images/button5.png")
 const button6 = require("./images/button6.png")
 const button7 = require("./images/button7.png")
+const foot1 = require("./images/foot1.png")
+const foot2 = require("./images/foot2.png")
 
 export default (editor) => {
   const bm = editor.BlockManager
@@ -214,7 +223,7 @@ export default (editor) => {
     </table>
     `,
   })
-  
+
   bm.add("form", {
     category: "Form",
     media: formBLock,
@@ -1025,6 +1034,395 @@ export default (editor) => {
     `,
   })
 
+  bm.add("section-blog", {
+    category: "Extra",
+    label: "Blog",
+    attributes: { title: "Slider", class: "fa fa-th-large" },
+    content: `
+      <section id="blog">
+        <div class="section-header container">
+          <h3 class="display-6 p-4 text-uppercase">Recent Posts</h3>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-2">
+              <div class="post bg-white shadow-sm rounded">
+                <div class="post-image" style="height:200px;">
+                  <img src="https://picsum.photos/300" alt="" style="height:100%;width:100%;object-fit:cover;">
+                </div>
+                <div class="post-content p-4">
+                  <a href="#" class="text-decoration-none text-dark text-uppercase">
+                    <h3>Post Title</h3>
+                  </a>
+                  <div class="row my-3">
+                    <div class="col-md-6"><small><span class="fas fa-user me-2"></span> John Doe</small></div>
+                    <div class="col-md-6">
+                      <small> <span class="fas fa-clock me-2"></span> 4 min read</small>
+                    </div>
+                  </div>
+                  <p class="post-content mt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio delectus assumenda, voluptatibus rem labore nesciunt magnam ab provident odio ipsam!
+      
+                  </p>
+                  <button class="btn btn-outline-primary">Continue Reading <span class="ms-2 fa fa-arrow-right"></span></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2">
+              <div class="post bg-white shadow-sm rounded">
+                <div class="post-image" style="height:200px;">
+                  <img src="https://picsum.photos/301" alt="" style="height:100%;width:100%;object-fit:cover;">
+                </div>
+                <div class="post-content p-4">
+                  <a href="#" class="text-decoration-none text-dark text-uppercase">
+                    <h3>Post Title</h3>
+                  </a>
+                  <div class="row my-3">
+                    <div class="col-md-6"><small><span class="fas fa-user me-2"></span> John Doe</small></div>
+                    <div class="col-md-6">
+                      <small> <span class="fas fa-clock me-2"></span> 4 min read</small>
+                    </div>
+                  </div>
+                  <p class="post-content mt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio delectus assumenda, voluptatibus rem labore nesciunt magnam ab provident odio ipsam!
+      
+                  </p>
+                  <button class="btn btn-outline-primary">Continue Reading <span class="ms-2 fa fa-arrow-right"></span></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2">
+              <div class="post bg-white shadow-sm rounded">
+                <div class="post-image" style="height:200px;">
+                  <img src="https://picsum.photos/302" alt="" style="height:100%;width:100%;object-fit:cover;">
+                </div>
+                <div class="post-content p-4">
+                  <a href="#" class="text-decoration-none text-dark text-uppercase">
+                    <h3>Post Title</h3>
+                  </a>
+                  <div class="row my-3">
+                    <div class="col-md-6"><small><span class="fas fa-user me-2"></span> John Doe</small></div>
+                    <div class="col-md-6">
+                      <small> <span class="fas fa-clock me-2"></span> 4 min read</small>
+                    </div>
+                  </div>
+                  <p class="post-content mt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio delectus assumenda, voluptatibus rem labore nesciunt magnam ab provident odio ipsam!
+      
+                  </p>
+                  <button class="btn btn-outline-primary">Continue Reading <span class="ms-2 fa fa-arrow-right"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `,
+  })
+
+  bm.add("section-gallery", {
+    category: "Extra",
+    label: "Gallery",
+    attributes: { title: "Slider", class: "fa fa-th" },
+    content: `
+    <style>
+      .image-wrap{
+        height:250px;
+      }
+
+      .image-wrap img{
+        transition:all ease 0.4s;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        cursor:zoom-in;
+      }
+    
+      .image-wrap img:hover{
+          transform:scale(0.99);
+      }
+    </style>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="display-4 my-4 text-uppercase">Lightbox images & videos</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="image-wrap mb-4">
+              <a href="https://picsum.photos/400" class="glightbox" data-title="My title" data-description="description here" data-desc-position="right" data-type="image" data-effect="fade"><img src="https://picsum.photos/400" alt="" class="img-fluid"></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="image-wrap mb-4">
+              <a href="https://picsum.photos/401" class="glightbox" data-title="My title" data-description="description here" data-desc-position="right" data-type="image" data-effect="fade"><img src="https://picsum.photos/401" alt="" class="img-fluid"></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="image-wrap mb-4">
+              <a href="https://biati-digital.github.io/glightbox/demo/pexels-video-1550080.mp4" class="glightbox" data-title="My title" data-description="description here" data-type="video" data-effect="fade"><img src="https://picsum.photos/402" alt="" class="img-fluid"></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="image-wrap mb-4">
+              <a href="https://picsum.photos/403" class="glightbox" data-title="My title" data-description="description here" data-desc-position="right" data-type="image" data-effect="fade"><img src="https://picsum.photos/403" alt="" class="img-fluid"></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="image-wrap mb-4">
+              <a href="https://picsum.photos/399" class="glightbox" data-title="My title" data-description="description here" data-desc-position="right" data-type="image" data-effect="fade"><img src="https://picsum.photos/399" alt="" class="img-fluid"></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="image-wrap mb-4">
+              <a href="https://www.youtube-nocookie.com/embed/pF37tPGkWio" class="glightbox" data-title="My title" data-description="description here" data-desc-position="right" data-type="video" data-effect="fade"><img src="https://picsum.photos/398" alt="" class="img-fluid"></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="image-wrap mb-4">
+              <a href="https://picsum.photos/397" class="glightbox" data-title="My title" data-description="description here" data-type="image" data-effect="fade"><img src="https://picsum.photos/397" alt="" class="img-fluid"></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="image-wrap mb-4">
+              <a href="https://picsum.photos/396" class="glightbox" data-title="My title" data-description="description here" data-desc-position="right" data-type="image" data-effect="fade"><img src="https://picsum.photos/396" alt="" class="img-fluid"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    `,
+  })
+
+  bm.add("section-contact", {
+    category: "Extra",
+    label: "Contact",
+    attributes: { title: "Slider", class: "fa fa-envelope" },
+    content: `
+    <style>
+      .address{
+        height:500px;
+      }
+      
+      .contact-form .form-group .form-control{
+        border:0;
+        padding:4px 0;
+        border-bottom:1px solid #ddd;
+        border-radius:0;
+      }
+      
+      .contact-form .form-group .form-control:focus{
+        outline:none;
+        box-shadow:none;
+        border-bottom:1px solid #0d6efd;
+      }
+      
+      .contact-form .form-group textarea{
+        min-height:120px;
+      }
+    </style>
+
+    <section id="contact" class="bg-white">
+      <div class="container shadow p-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="address p-4 rounded shadow bg-primary text-white d-flex flex-column align-items-center justify-content-center">
+                <h2 class="text-uppercase my-4">We love to hear from you</h2>
+              <div class="mb-4 border border-1 border-top border-white" style="width:100px;"></div>
+              <p>HUTCHINSON</p>
+                <p>	4663 Sunny Day Drive</p>
+              <p>714-778-6685</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-form p-4">
+              <form id="contactForm" action="#" novalidate>
+                <div class="validate-message"></div>
+                <div class="form-group is-invalid my-3">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" class="form-control" name="name" required>
+                  <div class="invalid-feedback">Name is required</div>
+                </div>
+                <div class="form-group my-3">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" class="form-control" name="email" required><div class="invalid-feedback">Email is required</div></div>
+                <div class="form-group my-3">
+                  <label for="phone">Phone <small class="text-muted">- optional</small></label>
+                  <input type="text" id="phone" class="form-control" name="phone"></div>
+                <div class="form-group my-3">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" class="form-control" required></textarea><div class="invalid-feedback">Message is required</div></div>
+                <div class="form-group my-3 d-flex justify-content-end">
+                  <button class="btn btn-primary btn-lg">
+                    <span class="fa fa-envelope me-2"></span>Send
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    `,
+  })
+
+  bm.add("section-subscribe", {
+    category: "Extra",
+    label: "Subscribe",
+    attributes: { title: "Slider", class: "fa fa-paper-plane" },
+    content: `
+    <style>
+    .subscribe-btn{
+      border-top-left-radius:0;
+      border-bottom-left-radius:0;
+    }
+    
+    #subscribe{
+      background: rgb(13,143,253);
+      background: linear-gradient(325deg, rgba(13,143,253,1) 0%, rgba(13,110,253,1) 68%, rgba(29,13,253,1) 100%);
+    }
+    #subscribe .subscribe-wrap{
+      position:relative;
+    }
+    
+    #subscribe .subscribe-wrap svg.mail-icon{
+      position:absolute;
+      top:-80px;
+      left:10px;
+      z-index:0;
+    }
+    
+    form#subscribe-form{
+      width:500px;
+    }
+    
+    @media(max-width:768px){
+      form#subscribe-form{
+        max-width:500px;
+      }
+      #subscribe .subscribe-wrap svg.mail-icon{
+        display:none;
+      }
+    }
+    </style>
+
+    <section id="subscribe" class="p-3 p-sm-5">
+      <div class="container">
+        <div class="subscribe-wrap d-flex align-items-center justify-content-center p-3 p-sm-5 shadow m-5 bg-white rounded">  
+          <form id="subscribe-form" action="#" method="POST">
+            <h2 class="display-6 text-uppercase text-center my-4">Subscribe</h2>
+            <div class="input-group">
+              <input type="text" class="form-control border-primary" placeholder="Email">
+              <div class="input-group-append">
+                <button class="subscribe-btn btn px-sm-4 btn-primary" type="button">Submit</button>
+              </div>
+            </div>
+            <p class="text-center my-4"><small>Never miss an update from us.</small></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    `,
+  })
+
+  bm.add("section-team", {
+    category: "Extra",
+    label: "Team",
+    attributes: { title: "Slider", class: "fa fa-th" },
+    content: `
+    <section id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center">OUR AMAZING TEAM</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="box p-3 shadow bg-white rounded my-3">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="https://res.cloudinary.com/dpnea22ek/image/upload/v1627660134/user1.png" alt="" width="100%">
+                </div>
+                <div class="col-md-8">
+                  <h4>Peter J. Lamy</h4>
+                  <p class="my-2"><small>Software Developer</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet.</p>
+                  <div class="social-icons">
+                    <a href="#" class="me-2"><span class="fa fa-facebook"></span></a><a href="#" class="me-2"><span
+                        class="fa fa-instagram"></span></a><a href="#" class="me-2"><span
+                        class="fa fa-twitter"></span></a><a href="#" class="me-2"><span class="fa fa-linkedin"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box p-3 shadow bg-white rounded my-3">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="https://res.cloudinary.com/dpnea22ek/image/upload/v1627660145/user4.png" alt="" width="100%">
+                </div>
+                <div class="col-md-8">
+                  <h4>June D. Smith</h4>
+                  <p class="my-2"><small>Product Manager</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet.</p>
+                  <div class="social-icons">
+                    <a href="#" class="me-2"><span class="fa fa-facebook"></span></a><a href="#" class="me-2"><span
+                        class="fa fa-instagram"></span></a><a href="#" class="me-2"><span
+                        class="fa fa-twitter"></span></a><a href="#" class="me-2"><span class="fa fa-linkedin"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box p-3 shadow bg-white rounded my-3">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="https://res.cloudinary.com/dpnea22ek/image/upload/v1627660134/user3.png" alt="" width="100%">
+                </div>
+                <div class="col-md-8">
+                  <h4>Dianna C. Avila</h4>
+                  <p class="my-2"><small>Graphic Designer</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet.</p>
+                  <div class="social-icons">
+                    <a href="#" class="me-2"><span class="fa fa-facebook"></span></a><a href="#" class="me-2"><span
+                        class="fa fa-instagram"></span></a><a href="#" class="me-2"><span
+                        class="fa fa-twitter"></span></a><a href="#" class="me-2"><span class="fa fa-linkedin"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box p-3 shadow bg-white rounded my-3">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="https://res.cloudinary.com/dpnea22ek/image/upload/v1627660147/user2.png" alt="" width="100%">
+                </div>
+                <div class="col-md-8">
+                  <h4>Robert C. Young</h4>
+                  <p class="my-2"><small>Web Designer</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet.</p>
+                  <div class="social-icons">
+                    <a href="#" class="me-2"><span class="fa fa-facebook"></span></a><a href="#" class="me-2"><span
+                        class="fa fa-instagram"></span></a><a href="#" class="me-2"><span
+                        class="fa fa-twitter"></span></a><a href="#" class="me-2"><span class="fa fa-linkedin"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    `,
+  })
+
   bm.add("preHeader", {
     category: "Pre Header",
     media: preHeader1,
@@ -1621,6 +2019,55 @@ export default (editor) => {
                     </div>
                   </div>
                 </div>
+              </section>`,
+  })
+
+  bm.add("headerFour", {
+    category: "Hero Header",
+    label: `<img src="${header4}" style="width: 150px" />`,
+    attributes: { class: "componentsBlocks" },
+    content: `<style>
+                #header4 {
+                  position: relative
+                }
+
+                #header4 .background-wave {
+                  width: 100%;
+                  height: 600px;
+                  position: absolute;
+                  top: 340px;
+                  left: 0;
+                  z-index: -1
+                }
+
+                #header4 .hero-image {
+                  max-width: 600px
+                }
+
+                #header4 .hero-image img {
+                  width: 100%
+                }
+              </style>
+
+              <section id="header4" class="d-flex flex-column align-items-center justify-content-center pt-4">
+                <h2 class="hero-title display-2 text-capitalize mt-5"><span class="text-primary">Tandom</span>mail</h2>
+                <p class="hero-subtitle display-6">Fastest way to build single HTML pages</p>
+                <div class="hero-buttons my-5">
+                  <button class="btn btn-primary me-2">
+                    <span class="fas fa-eye me-2"></span>Try now
+                  </button>
+                  <button class="btn btn-outline-primary"><span class="fas fa-book me-2"></span>Documentation</button>
+                </div>
+                <div class="hero-image p-4 bg-white shadow-sm rounded">
+                  <img src="https://res.cloudinary.com/dpnea22ek/image/upload/c_scale,q_100,w_1400/v1627100771/gramateria.jpg"
+                    alt="Tandom">
+                </div>
+                <svg class="background-wave" width="1440" height="386" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#09F" fill-rule="nonzero" fill-opacity=".2">
+                    <path
+                      d="M0 87l26.7 10.7C53.3 108 107 130 160 124.3c53.3-5.3 107-37.3 160-64C373.3 34 427 12 480 12.3 533.3 12 587 34 640 55c53.3 21 107 43 160 21.3C853.3 55 907-9 960 1.7c53.3 10.3 107 96.3 160 122.6 53.3 26.7 107-5.3 160-26.6 53.3-21.7 107-31.7 133-37.4l27-5.3v128H0V87zM0 311l26.7-5.3C53.3 300 107 290 160 311c53.3 21 107 75 160 74.701C373.3 386 427 332 480 311c53.3-21 107-11 160 10.7C693.3 343 747 375 800 359c53.3-16 107-80 160-101.3 53.3-21.7 107 .3 160 21.3 53.3 21 107 43 160 42.7 53.3.3 107-21.7 133-32l27-10.7v-96H0v128z" />
+                  </g>
+                </svg>
               </section>`,
   })
 
@@ -2380,5 +2827,149 @@ export default (editor) => {
                   circle.classList.add('ripple');
                 }
               </script>`,
+  })
+  
+  bm.add("footOne", {
+    category: "Footer",
+    label: `<img src="${foot1}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">Footer Plain</p>`,
+    attributes: { class: "componentsBlocks" },
+    content: `<style>
+                #footer1 .list-group-item {
+                  background: transparent;
+                }
+              </style>
+              
+              <section id="footer1">
+                <div class="container py-4">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3 class="text-primary">Tandom</h3>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla unde eum dolor, recusandae iusto dolorum.
+                      </p>
+                      <p>
+                        <b>Follow Us</b>
+                        <span class="fa fa-facebook me-2"></span>
+                        <span class="fa fa-instagram me-2"></span>
+                        <span class="fa fa-twitter me-2"></span>
+                        <span class="fa fa-linked-in me-2"></span>
+                      </p>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>SITE MAP</b></li>
+                            <li class="list-group-item">About</li>
+                            <li class="list-group-item">Contact</li>
+                            <li class="list-group-item">Login</li>
+                            <li class="list-group-item">Sign Up</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-uppercase"><b>HELP</b></li>
+                            <li class="list-group-item">Tutorials</li>
+                            <li class="list-group-item">Support</li>
+                            <li class="list-group-item">FAQ</li>
+                            <li class="list-group-item">Create ticket</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-uppercase"><b>TERMS</b></li>
+                            <li class="list-group-item">Terms of Service</li>
+                            <li class="list-group-item">Privacy policy</li>
+                            <li class="list-group-item">Service Agreement</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-5">
+                    <div class="col-12">
+                      <p class="text-center text-muted">
+                        <small>&copy; 2019-2021 | Tandom | All Rights Reserved.</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>`,
+  })
+
+  bm.add("footTwo", {
+    category: "Footer",
+    label: `<img src="${foot2}" style="width: 150px" /> <p style="margin-top: 1em; font-weight: 600; color: #737373; letter-spacing: 1px; text-transform: uppercase">Footer Coloured</p>`,
+    attributes: { class: "componentsBlocks" },
+    content: `<style>
+                #footer2 {
+                  background: #1e2d56;
+                  color: #85a0bd;
+                }
+
+                #footer2 .list-group-item b {
+                  color: #b9d2ec;
+                }
+
+                #footer2 .list-group-item {
+                  background: transparent;
+                  color: #85a0bd;
+                }
+              </style>
+              
+              <section id="footer2">
+                <div class="container py-4">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3 class="text-primary">Tandom</h3>
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla unde eum dolor, recusandae iusto dolorum.
+                      </p>
+                      <p>
+                        <b>Follow Us</b>
+                        <span class="fa fa-facebook me-2"></span>
+                        <span class="fa fa-instagram me-2"></span>
+                        <span class="fa fa-twitter me-2"></span>
+                        <span class="fa fa-linked-in me-2"></span>
+                      </p>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>SITE MAP</b></li>
+                            <li class="list-group-item">About</li>
+                            <li class="list-group-item">Contact</li>
+                            <li class="list-group-item">Login</li>
+                            <li class="list-group-item">Sign Up</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-uppercase"><b>HELP</b></li>
+                            <li class="list-group-item">Tutorials</li>
+                            <li class="list-group-item">Support</li>
+                            <li class="list-group-item">FAQ</li>
+                            <li class="list-group-item">Create ticket</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-uppercase"><b>TERMS</b></li>
+                            <li class="list-group-item">Terms of Service</li>
+                            <li class="list-group-item">Privacy policy</li>
+                            <li class="list-group-item">Service Agreement</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-5">
+                    <div class="col-12">
+                      <p class="text-center text-muted">
+                        <small>&copy; 2019-2021 | Tandom | All Rights Reserved.</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>`,
   })
 }

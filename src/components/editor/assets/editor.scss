@@ -471,6 +471,22 @@
     color: #737373;
     font-weight: 400;
   }
+
+  select {
+    color: #737373;
+    font-weight: 400;
+  }
+
+  .gjs-field-checkbox input:checked+.gjs-chk-icon {
+    border-color: initial;
+  }
+
+  .gjs-field-wrp--checkbox {
+    .gjs-field {
+      border: 1px solid #7373736b;
+      border-radius: 4px;
+    }
+  }
 }
 
 .gjs-mdl-title {

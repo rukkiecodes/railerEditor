@@ -521,6 +521,20 @@
   font-weight: 400;
 }
 
+.traits-container select {
+  color: #737373;
+  font-weight: 400;
+}
+
+.traits-container .gjs-field-checkbox input:checked + .gjs-chk-icon {
+  border-color: initial;
+}
+
+.traits-container .gjs-field-wrp--checkbox .gjs-field {
+  border: 1px solid #7373736b;
+  border-radius: 4px;
+}
+
 .gjs-mdl-title {
   color: #737373;
   font-weight: 600;
